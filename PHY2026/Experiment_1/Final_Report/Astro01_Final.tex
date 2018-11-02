@@ -1,0 +1,319 @@
+% Comments start with % (percent) character and last till the end of the line.
+%
+% The line below tells TeXworks editor to use pdflatex for compilation
+% of this document; remove it if you want to use another engine 
+%
+%!TEX program = pdflatex
+%
+% LaTeX2e document starts with \documentclass[options]{<class-name>}
+% <class-name> can be one of the standard LaTeX document classes: 
+% article, report or book, or some other specialised class.
+%
+\documentclass{article}
+%
+% Preamble of LaTeX document is everything before \begin{document}.
+% Preamble is used to load extension packages and to set up global 
+% parameters and configuration for the entire document.
+%
+% Extension packages providing additional functionality
+\usepackage{amsmath}       % additional math environments
+\usepackage{graphicx}      % graphics import from external files 
+\usepackage{epstopdf}      % automates .eps to .pdf conversion 
+% epstopdf package may require --shell-escape option to pdflatex
+\usepackage{booktabs}      % table typesetting additions
+\usepackage{siunitx}       % number and units formatting
+\usepackage{caption}       % customisation of captions
+\usepackage{url}           % format url addresses
+\usepackage{abstract}		% allows formatting of abstract
+\usepackage[margin=0.7in]{geometry}
+%\usepackage{tikz,pgfplots} % diagrams and data plots
+%
+% set up caption options
+\captionsetup{margin=12pt,font=small,labelfont=bf}
+%
+%removes abstract title
+\renewcommand{\abstractname}{}
+%sets abstract margins
+\setlength{\absleftindent}{10mm}
+\setlength{\absrightindent}{10mm}
+%
+% global options for siunitx
+%\sisetup{seperr,repeatunits=false,per=symbol}
+%
+% some handy commands for referencing;
+% the optional argument overrides the default label, e.g.
+% \figref[FIG.~]{fig:label}
+\newcommand{\figref}[2][\figurename~]{#1\ref{#2}}
+\newcommand{\tabref}[2][\tablename~]{#1\ref{#2}}
+\newcommand{\secref}[2][Section~]{#1\ref{#2}}
+
+
+% The document content starts with \begin{document} 
+% and is finished with \end{document}
+%
+\begin{document}
+\title{Astro01 Photometry} % fill in the title here
+\author{Matthew Evans}% fill in your name here
+\date{7\textsuperscript{th} November 2018} % date of the report
+%\twocolumn[	% makes title and abstract appear over entire page width
+\maketitle % formats the title
+\begin{onecolabstract}
+\noindent
+This experiment used photometry techinques to collect several flux measurements from a well known varaible star, XX Cygni, which were then calibrated to generate a light and this was compared to a reliable source \cite{Web04}. The period generated from the light curve was approximately 3 hours and the magnitudes varied from $12.19 \pm{0.0073}$ to $11.58 \pm{0.0053}$. These results compared fairly well with the ones given from literature of 3.12 hours for the period and 12.13 to 11.28 for the magnitude variation \cite{Web04}. However, the magnitudes given from literature were outside of the errors given by the calculated values indicating that the measurement process could have been improved and other factors, mainly sky background, should have been taken into account. Overall, studying the magnitudes of variable stars is of key importance to Astronomers as additional properties of the star and in turn other physical phenomena, such as the distance to Galaxies, maybe determined.
+
+\end{onecolabstract}
+\vspace{5mm} % takes one free line before rest of text
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+Photometry is the collection of flux measurements from stars, comets or other celestial objects and quantifying these measurements using the magnitude system. This is an important technique in studying stars and other objects. In particular, the photometry of a variable star, XX Cygni \cite{Paper02}, was investigated. As their name suggests, variable stars have a changing flux that varies periodically over time. When the obtained flux is used in conjunction with the magnitude system this could provide more information about the properties, such as the spectral type, temperature or size of the star. The flux $F$ is defined as
+
+\begin{equation}
+\label{eq:flux}
+F = \frac{L}{4\pi d^2} 
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $L$ is the Luminosity of the object and $d$ is the distance (in Parsecs) from the star. In this case flux measuremtns from XX Cygni will provide useful information about the period of the star. This was achieved by using a charged-coupled device, CCD, camera in conjunction with the University of Exeter Observatory telescope \cite{Paper01} and analysing the resulting images produced from the camera. 
+
+
+\section{Theory}
+\label{sec:theory}
+
+The flux of a star, equation \eqref{eq:flux}, is defined as the power per unit area emitted by the star over the surface of a sphere of radius $d$. This can be illustrated in \figref{fig:flux-sphere}.
+
+\vspace{2mm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.32]{"Flux".pdf}
+\caption{Illustration of flux over a sphere, of radius $d$, represented here as a two-dimensional circle with a dashed line. The blue point represents the flux received by the Earth from the star at distance $d$ from the star.}
+\label{fig:flux-sphere}
+\end{figure}
+
+
+\vspace{2mm}
+\noindent
+However, for a variable star the flux changes periodically due to the change in radius of the star with time \cite{Paper02}. This change will alter the temperature and hence the luminosity of the star. Assuming the star is a perfect black body this is demonstrated by the Stefan-Boltzmann law
+
+\begin{equation}
+\label{eq:luminosity}
+L = A\sigma T^4
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $L$ is the luminosity, $A$ is the surface area of the star (normally to be taken as the surface area of a sphere), $\sigma \approx 5.67 \times 10^{-8}$Wm$^{-2}$K$^{-4}$ is the Stefan-Boltzmann constant, and $T$ is the surface temperature of the object \textit{in Kelvins}, K. Therefore, the flux changes periodically due to the relations \eqref{eq:luminosity} and \eqref{eq:flux}. 
+
+\vspace{2mm}
+\noindent
+In order to quantify the flux of an object the magnitude system is used. This system quantifies the flux of an object with reference to a standard star of known magnitude/flux. The scale is logarithmic due to the response of the eye \cite{Paper01}. The apparent magnitude $m$ of an object is
+
+\begin{equation}
+\label{eq:apparent-magnitude}
+m - m_0 = -2.5\log_{10}\bigg(\frac{F}{F_0}\bigg)
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $m_0$ is the apparent magnitude of the standard star, $F$ is the flux of the measured star and $F_0$ is the flux of the standard star \cite{Paper01}. The magnitude scale is reversed, such that the smaller the magnitude number, the higher the flux. Normally, the standard star is chosen to be Vega with an apparent magnitude of $m_0$ = 0. However, in this experiment other standard/calibration stars were considered in the same field of view as the target \cite{Paper01} in order to obtain accurate measurements of $m$ for the target sources - see \secref{ssec:measurements}. In addition to this, the magnitude of the calibration and target sources could be measured over different wavelengths using different filters \cite{Paper01} on the telescope.
+
+\vspace{2mm}
+\noindent
+ 
+\section{Method}
+\label{sec:method}
+
+\subsection{CCD Camera}
+\label{ssec:camera}
+
+All the images chosen for analysis were be obtained using the University of Exeter Observatory telescope by previous University of Exeter students on the 28\textsuperscript{th} September 2015. A CCD camera was used in conjunction with the telescope to take various images of the target field at a wide range of wavelengths. The CCD has contains an array of pixels. When a photon, from a celestial object, is received by the pixels it excites the electrons and produces an image of the object. These images were already be provided for further data analysis during the experiment and taken with the Sloan r filter. The computer program IRAF was then used to analyse the images further. In addition to obtaining multiple images of the target source, other observations must be taken into account in order to obtain accurate images of the target source.
+
+\subsection{Measurements}
+\label{ssec:measurements}
+The CCD produces its own counts from internal noise, such as reading out the CCD and thermal noise \cite{Paper01}. A bias frame is a zero exposure and measures the noise from reading out the CCD. In addition, a \textbf{dark frame} is an image taken with time equal to the exposure time but, with the telescope shutter closed \cite{Paper01}. This dark frame includes noise from the bias frame and the thermal noise from the CCD. In this case the dark frames had already been taken into account, so no further action was required.
+
+\vspace{2mm}
+\noindent
+The pixels do not respond uniformly across the CCD, so a number of \textbf{flatfield} images were taken before hand to account for this variation; but, first the flatfield (in the Sloan r filter) needed to be normalised. The computer program IRAF was used to obtain the median value of these flatfield images. These flatfield images were divided by this median value to produce a single normalised flatfield image. Finally, the target images were divided by this normalised flatfield and a new set of target images were generated. These images were then ready for further analysis.   
+
+\vspace{2mm}
+\noindent
+After dividing by the normalised flatfield, the target source (XX Cygni) was identified using SIMBAD \cite{Web01} and adjusting the view on the `Aladin Lite' page \cite{Web02} to the same resolution as the telecsope - 15 arcminutes. Once the target source was identified the co-ordinates could then be accurately located using IRAF. However, careful consideration had to be taken with the extraction process. In order to account for the Earth's orbit, the telescope flipped its view of the sky halfway through the images so XX Cygni had to be located once again. In addition to this, each image was inspected to ensure that it was of good quality for further analysis. Once the co-ordinates for all the images were obtained, an image was selected with XX Cygni in the centre and this was used as the reference image \cite{Paper03}. The offsets between the target images and this reference images were then calculated. The offsets were then applied to the target images list, using IRAF, and this generated a list of the images that were aligned with XX Cygni in the central field of view.
+
+\vspace{2mm}
+\noindent
+The next step was to then extract the magnitudes of XX Cygni and its associated errors from these aligned images. However, the CCD camera produces uncalibrated magnitudes of celestial objects, therefore a \textbf{flux calibration} was required. This was achieved by observing three calibration stars (of pre-known magnitudes) in the same field of view as the target for each of the images. The three calibration stars chosen were TYC 3948-2105-1, GSC 03948-02563 and TYC 3948-2542-1 these were identified using SIMBAD \cite{Web02}. Care was taken when extracting the magnitudes and errors for these calibration stars because approximately half way through the images a Meridian flip occurred due to the telescope mechnaics. This flip essentially inverted all the astronomical objects in the sky about XX Cygni, so two lists of data were required when extracting the magnitudes of these calibration stars and then `joined' around the Meridian flip. 
+
+\subsection{Analysis}
+\label{ssec:analysis}
+
+The uncalibrated magnitudes with associated errors for XX Cygni and the calibrated stars were then plotted as light curves. All three of the calibration star light curves were then compared with the uncalibrated light curve for XX Cygni and each other to check that the trend of all the light curves were similar, as shown in \figref{fig:combination-graph}. This shows that the trends of the light curves seem similar. The changes in all the light curves could therefore be due to passing clouds or weather conditions effecting the viewing of the sky and the rise in magnitude for \figref{fig:uncalibrated-graph} could be due to the variable star's magnitude changing. Therefore, these preliminary checks verified that the calibrator star measurements were acceptable to be used for calibrating the XX Cygni light curve.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.1]{"Uncalibrated_Graph".pdf}
+\caption{Uncalibrated magnitudes light curve for the target source: XX Cygni}
+\label{fig:uncalibrated-graph}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.1]{"Combination_Graph".pdf}
+\caption{A plot of the uncalibrated XX Cygni values against the calibration stars. XX Cygni is  shown in red, TYC 3948-2105-1 (Calibrator 1) is shown in green, GSC 03948-02563 (Calibrator 2) is shown in magenta and TYC 3948-2542-1 (Calibrator 3) is shown in yellow.}
+\label{fig:combination-graph}
+\end{figure}  
+
+\newpage
+\noindent
+After these preliminary checks, the measured magnitudes and associated errors for these three calibration stars were then compared with the known values from a reliable source (with the Sloan r filter) \cite{Web03} and the residuals obtained. Then, the offsets for each of the images can be used to convert the uncalibrated magnitudes of XX Cygni to calibrated magnitudes.
+
+%\vspace{2mm}
+%\noindent
+%Measurements of the \textbf{sky background} will also be taken in order to take into account other effects, such as light pollution, that may effect the image quality of the target source. A measurement around the annulus of the source \cite{Paper01} is normally taken. This can be used to gain a useful measurement of the sky background and hence an accurate image of the target source.
+
+\newpage
+\subsection{Safety}
+\label{ssec:safety}
+
+With this experiment, there were only a few safety pre-cautions that needed to be addressed. Most of the experiment involved data reduction and analysis of images which is based on the third floor Mac suite in the Physics building. However, there were many computers contained within this room with abundant electrical sources. So, no consumption of food or drink occurred and care was taken when moving around the room. In addition to this, timed breaks were also undertaken in order to avoid repetitive strain injury from looking at computer screens.
+
+\newpage
+\section{Results}
+\label{sec:results}
+
+\figref{fig:calibrated-graph} shows the light curve for the calibrated XX Cygni magnitudes. This shows that the apparent magnitude for XX Cygni is varying over a relatively short time period of a few hours. In addition, the apparent magnitude axis has been inverted to accommodate for the fact that the magnitude scale is reversed, as mentioned in \secref{sec:theory}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.1]{"Calibrated_Graph".pdf}
+\caption{Calibrated magnitudes light curve for the target source: XX Cygni}
+\label{fig:calibrated-graph}
+\end{figure}
+
+
+
+\newpage
+
+\vspace{2mm}
+\noindent
+Furthermore, \figref{fig:matteo-graph} shows a calibrated light curve for XX Cygni using the sloan r filter on a different night: 1\textsuperscript{st} October 2015. These magnitudes were obtained from another University of Exeter student, M.Pallot, working on the same `Astro01' experiment. When comparing \figref{fig:calibrated-graph} and \figref{fig:matteo-graph} it is clear to see that these plots produce a characteristic light for XX Cygni and both of the plots between zero and two hours show the same trends.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.1]{"Matteo_graph".pdf}
+\caption{Calibrated light curve for XX Cygni on a different night of observation. Magnitudes and times obtained from fellow University of Exeter student, M.Pallot.}
+\label{fig:matteo-graph}
+\end{figure}
+
+\newpage
+\vspace{2mm}
+\noindent
+\figref{fig:reference-graph} shows a previous light curve for XX Cygni from another external reliable source \cite{Web04}. When comparing all three of these light curves, it's clear to see that they all share similar characteristics. See \secref{sec:discussion} for further details.
+
+\vspace{15mm}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.88]{"reference_graph".pdf}
+\caption{A previous light curve for XX Cygni from a reliable source \cite{Web04}.}
+\label{fig:reference-graph}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+When obtaining the results to plot \figref{fig:calibrated-graph} several steps were taken as mentioned in \secref{sec:method}. First the residuals between the uncalibrated observed magnitudes and known magnitudes, obtained from a reliable literature source \cite{Web03}, for every observation in the calibration stars were determined using 
+
+\begin{equation}
+\label{eq:residuals}
+F_n = m_{obs_n} - m_{known} 
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $m_{obs_n}$ is the uncalibrated magnitude for the $n^{th}$ image, $m_{known}$ is the literature magnitude \cite{Web03} for the first calibration star, TYC 3948-2105-1, and $F_n$ is the calibration value for the $n^{th}$ measurement of the first calibration star. Equation \eqref{eq:residuals} was then used for the remaining two calibration stars.
+
+\vspace{2mm}
+\noindent
+Once this had been achieved, the XX Cygni magnitudes could then be calibrated using 
+
+\begin{equation}
+\label{eq:calibration}
+X_{cal_n} = X_{obs_n} - \bigg(\frac{F_n + G_n + H_n}{3}\bigg)  
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $X_{cal_n}$ and $X_{obs_n}$ are the $n^{th}$ calibrated and observed value for XX Cygni respectively, $F_n$, $G_n$ and $H_n$ are the calibrated values for the first, second and third calibration stars respectively and were obtained by using equation \eqref{eq:residuals}. 
+
+\vspace{2mm}
+\noindent
+Finally, the associated errors could then be determined using the standard propagation of errors rule
+
+\begin{equation}
+\label{eq:propogation-error}
+\delta{X_{cal_n}} = \sqrt{\bigg(\frac{\partial{X_{cal_n}}}{\partial{X_{obs_n}}}\bigg)^2(\delta{X_{obs_n})^2} + \bigg(\frac{\partial{X_{cal_n}}}{\partial{F_{n}}}\bigg)^2(\delta{F_{n}})^2 + \bigg(\frac{\partial{X_{cal_n}}}{\partial{G_{n}}}\bigg)^2(\delta{G_{n}})^2 + \bigg(\frac{\partial{X_{cal_n}}}{\partial{H_{n}}}\bigg)^2(\delta{H_{n}})^2}
+\end{equation}  
+
+\vspace{2mm}
+\noindent
+where $\delta{X_{cal_n}}$ and $\delta{X_{obs_n}}$ are the errors in the calibrated and uncalibrated magnitudes in XX Cygni for the $n^{th}$ value and $\delta{F_{n}}$, $\delta{G_{n}}$ and $\delta{H_{n}}$ are the errors in the measured magnitudes of the three calibration stars for the $n^{th}$ values. The errors in the literature values \cite{Web03} for the calibration stars were not propagated as these were systematic \cite{Paper03}. 
+
+\vspace{2mm}
+\noindent
+The final calibrated magnitudes for XX Cygni obtained from equation \eqref{eq:calibration} were then plot as a light curve in \figref{fig:calibrated-graph} along with the corresponding errors as errorbars obtained from using equation \eqref{eq:propogation-error}. This light curve shows that the errors for each of the data points is relatively small. However, when considering a single point, about $\frac{2}{3}$ of the data points either side lie roughly within the error bar, so the propagation process has yielded a fairly reliable data spread for \figref{fig:calibrated-graph}.
+
+\section{Discussion}
+\label{sec:discussion}
+
+The light curves in \secref{sec:results} all follow the same variation in magnitudes and roughly have the same period. The published period from \figref{fig:reference-graph} is approximately 3.12 hours \cite{Web04}. When comparing \figref{fig:calibrated-graph} and \figref{fig:matteo-graph} to it, it is clear to see that they represent different portions of the full XX Cygni light curve given in \figref{fig:reference-graph}. It can be noticed that \figref{fig:calibrated-graph} represents approximately $\frac{3}{4}$ of a period in \figref{fig:reference-graph} and the time of 2.5 hours roughly accounts for this. In addition \figref{fig:matteo-graph} was observed over a longer duration of 3 hours and this gives a clear parallel to one full cycle displayed in \figref{fig:reference-graph}.
+
+\vspace{2mm}
+\noindent
+As previously mentioned, all three light curves roughly show the same variation in magnitude over this time scale. From points discussed in \secref{sec:theory} the magnitude variation in the light curves is due to the amount of luminosity received by Earth from XX Cygni changing on a periodic scale. This change is governed by the Stefan-Boltzmann law, given by equation \eqref{eq:luminosity}, and this dictates the change in luminosity from XX Cygni. Hence, the flux will also be chaning due to equation \eqref{eq:flux} and this in turn impacts the magnitude due to the relation given in \eqref{eq:apparent-magnitude}. \figref{fig:calibrated-graph} show that the apparent magnitude of XX Cygni varies from $12.19 \pm{0.0073}$ to $11.58 \pm{0.0053}$ due to these factors. These values share strong similarities to the published values of 12.13 to 11.28 \cite{Web04}. In addition, by the average value for XX Cygni given in \figref{fig:calibrated-graph} is $12.046 \pm{0.139}$ where the error is the standard deviation of the calibrated XX Cygni results. This value shows some similarities to that given in literature $11.447 \pm{0.136}$ from another reliable source \cite{Web03}, even though it lies outside of the error region. 
+
+\vspace{2mm}
+\noindent
+From the periods and magnitudes shown in \figref{fig:calibrated-graph} and \figref{fig:matteo-graph}, it can be noted that XX Cygni is a special type of variable star: a RR Lyrae star. These particular type of variable stars have a short period of 1.5 to 24 hours and have a magnitude 100 times that of the sun's luminosity \cite{Book01}. So, by inspecting these two light curves it is clear to see that XX Cygni certainly has these characteristics. The period of XX Cygni indicated in \figref{fig:calibrated-graph} indicates that it is approximately 3 hours which is typical of that for a RR Lyrae star and the magnitude amplitude given in \figref{fig:calibrated-graph} is 0.91 and this lies in the range for RR Lyrae stars of 0.3 to 2 given by \cite{Web05}.
+
+\vspace{2mm}
+\noindent
+Although, the final calibrated light curve obtained for XX Cygni shares many similarities to the ones from the published light curve, there are some differences to note. Between the observing time of 0.5 and 1.0 hours there is a gap in the data points. This gap was due to technical issues and coincides with the meridian flip of the telescope. In this time period, XX Cygni could not be found so no magnitudes for the star could be obtained. This was also the case for \figref{fig:matteo-graph}. This is a significantly long time in the overall viewing of the star, accounting for approximately $20\%$ of the viewing time for \figref{fig:calibrated-graph}. Within this long time period, the magnitude may have risen or fallen significantly has and the light curves generated in \figref{fig:calibrated-graph} and \figref{fig:matteo-graph} may not be in accordance with the published one.
+
+\vspace{2mm}
+\noindent
+In addition, to this the light curves in \figref{fig:calibrated-graph} and \figref{fig:matteo-graph} were both taken with the sloan r filter. This filter mainly captures wavelengths in the 6000{\AA} region \cite{Paper01}. However, the filters used for \figref{fig:reference-graph} were different: SBIG LRGB filters \cite{Web04}. There could differences in the sloan and SBIG filters and this could mean that the magnitudes could all vary slightly. Therefore, a direct comparsion for the results obtained to external sources such as \cite{Web04} may not be quite so reliable. Furhtermore, a different calibration star was used for \figref{fig:reference-graph}: GSC 3948:2431 \cite{Web04}. Again, this could mean that there are differences for the light curves obtained in the experiment to the one from the published value \cite{Web04}. Finally, a sky background check was not included as part of the measurement process for obtaining the light curves. From comparing the average magnitude of XX Cygni obtained from the experiment, $12.046 \pm{0.139}$ with the one given in literature $11.447 \pm{0.136}$ \cite{Web03} it's clear to see that the measured one is outside of the error region of the literature value. Therefore, all of the magnitudes in this experiment may be slightly effected by this as some external effects, such as light pollution, would have impacted on the final resulting magnitudes and light curves in \figref{fig:calibrated-graph}.
+
+%\vspace{2mm}
+%\noindent
+%Measurements of the \textbf{sky background} will also be taken in order to take into account other effects, such as light pollution, that may effect the image quality of the target source. A measurement around the annulus of the source \cite{Paper01} is normally taken. This can be used to gain a useful measurement of the sky background and hence an accurate image of the target source.
+
+\vspace{2mm}
+\noindent
+By addressing the technical issues of the telescope there could have been more data points to add to the light curve, therefore making it more reliable. Also, if there were more time, by studying what filters and calibration stars were used for previous light curves of XX Cygni and, in particular, taking into account the sky background all the results obtained from this experiment would give a better representation to the varying magnitude of XX Cygni.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Overall, the experiment generated some fairly good, reliable results and the light curves produced correspond well with the one given from literature \cite{Web04}. However, some factors led to the results being slightly different to those from published sources. For example, from the technicalities of the telescope there were many results missing in \figref{fig:calibrated-graph} and \figref{fig:matteo-graph} leading to some unreliability between 0.5 and 1.0 hours after observation had commenced. Also, by not taking into account some factors, such as the sky background, the magnitudes generated for XX Cygni were slightly different to those from \cite{Web04} and average value from \cite{Web03}. Despite, these discrepancies though, the experiment did correspond well with literature values and some interesting properties of XX Cygni were discovered.
+
+\begin{thebibliography}{9}
+\bibitem{Paper01} J.Hatchell and S.Matt,`Astro01 Photometry', see ELE PHY2026.
+\bibitem{Paper02} J.Hatchell, `PHY2026 Astro Lab Target: XX Cygni', see ELE PHY2026. 
+\bibitem{Web01} \url{http://simbad.u-strasbg.fr/simbad/}
+\bibitem{Web02} \url{http://aladin.u-strasbg.fr/AladinLite/?target=V*%20XX%20Cyg&fov=0.033334&survey=P%2fDSS2%2fcolor}
+\bibitem{Paper03} J.Hatchell and S.Matt, `IRAF photometry cookbook for the 2nd year laboratory', see ELE PHY2026.
+\bibitem{Web03} \url{http://www.aavso.org/apass}
+\bibitem{Web04} \url{http://www.perseus.gr/Astro-Photometry-Cyg-XX-20100828.htm}
+\bibitem{Paper03} J.Hatchell and S.Matt, `IRAF photometry cookbook for the 2nd year laboratory', see ELE PHY2026.
+\bibitem{Book01} M.Zeilik, \textit{Astronomy, The Evolving Universe}, 6\textsuperscript{th} Edition, pages 354--355.
+\bibitem{Web05} \url{https://www.aavso.org/types-variables} 
+%\bibitem{Book01} Young and Freedman, \textit{University Physics}, 13\textsuperscript{th} Edition, pages 1202--1205.
+%\bibitem{Book02} Young and Freedman, \textit{University Physics}, 13\textsuperscript{th} Edition, pages 1211--1212.
+
+%\bibitem{Web02} \url{http://ecommons.luc.edu/cgi/viewcontent.cgi?article=1667&context=luc_theses} See page 22 for refractive index values.
+\end{thebibliography}
+
+\end{document}

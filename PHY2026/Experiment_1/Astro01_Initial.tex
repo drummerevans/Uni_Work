@@ -1,0 +1,187 @@
+% Comments start with % (percent) character and last till the end of the line.
+%
+% The line below tells TeXworks editor to use pdflatex for compilation
+% of this document; remove it if you want to use another engine 
+%
+%!TEX program = pdflatex
+%
+% LaTeX2e document starts with \documentclass[options]{<class-name>}
+% <class-name> can be one of the standard LaTeX document classes: 
+% article, report or book, or some other specialised class.
+%
+\documentclass{article}
+%
+% Preamble of LaTeX document is everything before \begin{document}.
+% Preamble is used to load extension packages and to set up global 
+% parameters and configuration for the entire document.
+%
+% Extension packages providing additional functionality
+\usepackage{amsmath}       % additional math environments
+\usepackage{graphicx}      % graphics import from external files 
+\usepackage{epstopdf}      % automates .eps to .pdf conversion 
+% epstopdf package may require --shell-escape option to pdflatex
+\usepackage{booktabs}      % table typesetting additions
+\usepackage{siunitx}       % number and units formatting
+\usepackage{caption}       % customisation of captions
+\usepackage{url}           % format url addresses
+\usepackage{abstract}		% allows formatting of abstract
+\usepackage[margin=0.3in]{geometry}
+%\usepackage{tikz,pgfplots} % diagrams and data plots
+%
+% set up caption options
+\captionsetup{margin=12pt,font=small,labelfont=bf}
+%
+%removes abstract title
+\renewcommand{\abstractname}{}
+%sets abstract margins
+\setlength{\absleftindent}{10mm}
+\setlength{\absrightindent}{10mm}
+%
+% global options for siunitx
+%\sisetup{seperr,repeatunits=false,per=symbol}
+%
+% some handy commands for referencing;
+% the optional argument overrides the default label, e.g.
+% \figref[FIG.~]{fig:label}
+\newcommand{\figref}[2][\figurename~]{#1\ref{#2}}
+\newcommand{\tabref}[2][\tablename~]{#1\ref{#2}}
+\newcommand{\secref}[2][Section~]{#1\ref{#2}}
+
+
+% The document content starts with \begin{document} 
+% and is finished with \end{document}
+%
+\begin{document}
+\title{Astro01 Photometry \\ \large{(Initial Report)}} % fill in the title here
+\author{Matthew Evans}% fill in your name here
+\date{11\textsuperscript{th} October 2018} % date of the report
+%\twocolumn[	% makes title and abstract appear over entire page width
+\maketitle % formats the title
+%\begin{onecolabstract}
+%\noindent
+
+%Enter abstract here.
+
+%\end{onecolabstract}
+%\vspace{5 mm} % takes one free line before rest of text
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+Photometry is the collection of flux measurements from stars, comets or other celestial objects and quantifying these measurements using the magnitude system. This is an important technique in studying stars and other objects. When the obtained flux is used in conjunction with the magnitude system this could provide more information about the properties, such as the spectral type, temperature or size, of the star. The flux $F$ is defined as
+
+\begin{equation}
+\label{eq:flux}
+F = \frac{L}{4\pi d^2} 
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $L$ is the Luminosity of the object and $d$ is the distance (in Parsecs) from the star. In this case, the variable star XX Cygni \cite{Paper02} will be analysed for photometry purposes and the flux will provide useful information about the period of the star. This will be achieved by using a charged-coupled device, CCD, camera in conjunction with the University of Exeter Observatory telescope \cite{Paper01} and analysing the resulting images produced from the camera. 
+
+
+\section{Theory}
+\label{sec:theory}
+
+The flux of a star, \eqref{eq:flux}, is defined as the power per unit area emitted by the star over the surface of a sphere of radius $d$. This can be illustrated in the diagram below.
+
+\vspace{2mm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.32]{"Flux".pdf}
+\caption{Illustration of flux over a sphere, of radius $d$, represented here as a two-dimensional circle with a dashed line. The blue point represents the flux received by the Earth from the star at distance $d$ from the star.}
+\label{fig:flux-sphere}
+\end{figure}
+
+
+\vspace{2mm}
+\noindent
+However, for a variable star the flux changes periodically due to the change in radius of the star with time \cite{Paper02}. This change will alter the temperature and hence the luminosity of the star. Assuming the star is a perfect black body this is demonstrated by the Stefan-Boltzmann law
+
+\begin{equation}
+\label{eq:luminosity}
+L = A\sigma T^4
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $L$ is the luminosity, $A$ is the surface area of the star (normally to be taken as the surface area of a sphere), $\sigma \approx 5.67 \times 10^{-8}$Wm$^{-2}$K$^{-4}$ is the Stefan-Boltzmann constant, and $T$ is the surface temperature of the object \textit{in Kelvins}, K. Therefore, the flux changes periodically due to the relations \eqref{eq:luminosity} and \eqref{eq:flux}. 
+
+\vspace{2mm}
+\noindent
+In order to quantify the flux of an object the magnitude system is used. This system quantifies the flux of an object with reference to a standard star of known magnitude/flux. The scale is logarithmic due to the response of the eye \cite{Paper01}. The apparent magnitude $m$ of an object is
+
+\begin{equation}
+\label{eq:apparent-magnitude}
+m - m_0 = -2.5\log_{10}\bigg(\frac{F}{F_0}\bigg)
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $m_0$ is the apparent magnitude of the standard star, $F$ is the flux of the measured star and $F_0$ is the flux of the standard star \cite{Paper01}. The magnitude scale is reversed, such that the smaller the magnitude number, the higher the flux. Normally, the standard star is chosen to be Vega with an apparent magnitude of $m_0$ = 0. However, in this experiment other standard/calibration stars will be considered in the same field of view as the target \cite{Paper01} in order to obtain accurate measurements of $m$ for the target sources - see \secref{ssec:measurements}. In addition to this, the magnitude of the calibration and target sources can be measured over different wavelengths using different filters \cite{Paper01} on the telescope.
+
+\vspace{2mm}
+\noindent
+ 
+\section{Method}
+\label{sec:method}
+
+\subsection{CCD Camera}
+\label{ssec:camera}
+
+The fluxes/magnitudes will be obtained using the University of Exeter Observatory telescope. A CCD camera will be used in conjunction with the telescope to take various images of the target field at a wide range of wavelengths. The CCD has contains an array of pixels. When a photon, from a celestial object, is received by the pixels it excites the electrons and produces an image of the object. These images will already be provided for further data analysis during the experiment. In addition obtaining multiple images of the target source, other observations must be made in order to obtain an accurate image of the target source.
+
+\subsection{Measurements}
+\label{ssec:measurements}
+The CCD produces its own counts from internal noise, such as reading out the CCD and thermal noise \cite{Paper01}. A bias frame is a zero exposure and measures the noise from reading out the CCD. In addition, a \textbf{dark frame} is an image taken with time equal to the exposure time but, with the telescope shutter closed \cite{Paper01}. This dark frame includes noise from the bias frame and the thermal noise from the CCD. Therefore, a dark frame must be taken and subtracted from the images to account for this noise.
+
+\vspace{2mm}
+\noindent
+The CCD camera produces uncalibrated magnitudes of celestial objects, therefore the a \textbf{flux calibration} is required. By observing calibration stars (of pre-known magnitudes) in the same field of view as the target and comparing these measurements with the known values, the residual can be obtained. This will be repeated for many calibrators and averaged in order to obtain a reliable residual/offset. After that, this offset can be used to convert the uncalibrated magnitudes of the target sources to calibrated magnitudes in conjunction with the magnitude scale \eqref{eq:apparent-magnitude}.
+
+\vspace{2mm}
+\noindent
+Measurements of the \textbf{sky background} will also be taken in order to take into account other effects, such as light pollution, that may effect the image quality of the target source. A measurement around the annulus of the source \cite{Paper01} is normally taken. This can be used to gain a useful measurement of the sky background and hence an accurate image of the target source.
+
+\vspace{2mm}
+\noindent
+The pixels do not respond uniformly across the CCD, so a \textbf{flatfield} is taken to account for this variation. This is simply found by observing a lit panel in inside the dome or by observing a blank patch of sky at twilight \cite{Paper01}. However, these measurements should be provided and the target images need to be divided by it.
+
+\subsection{Analysis}
+\label{ssec:analysis}
+
+Once all of the considerations in \secref{ssec:measurements} have been accounted for, the data reduction process can be used to obtain reliable magnitude measurements from the target images. These observed magnitudes can then be used to generate a light curve (a plot of apparent magnitude vs time) \cite{Paper01}. Then further data analysis is undertaken to investigate other interesting properties of the star, such as the period.
+
+\subsection{Safety}
+\label{ssec:safety}
+
+With this experiment, there are only a few safety pre-cautions that need to be announced. Most of the experiment involves data reduction and analysis of images which is based on the third floor Mac suite in the Physics building. However, there are many computers contained within this room with abundant electrical sources. So, there should be no consumption of food or drink and care needs to be taken when moving around the room.
+
+%\section{Results}
+%\label{sec:results}
+
+
+
+
+%\section{Discussion}
+%\label{sec:discussion}
+
+
+
+
+%\section{Conclusion}
+%\label{sec:conclusion}
+
+
+\begin{thebibliography}{9}
+\bibitem{Paper01} J.Hatchell and S.Matt,`Astro01 Photometry', see ELE PHY2026.
+\bibitem{Paper02} J.Hatchell, `PHY2026 Astro Lab Target: XX Cygni', see ELE PHY2026. 
+%\bibitem{Book01} Young and Freedman, \textit{University Physics}, 13\textsuperscript{th} Edition, pages 1202--1205.
+%\bibitem{Book02} Young and Freedman, \textit{University Physics}, 13\textsuperscript{th} Edition, pages 1211--1212.
+%\bibitem{Web01} \url{http://simbad.u-strasbg.fr/simbad/}
+%\bibitem{Web02} \url{http://ecommons.luc.edu/cgi/viewcontent.cgi?article=1667&context=luc_theses} See page 22 for refractive index values.
+\end{thebibliography}
+
+\end{document}
