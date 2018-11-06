@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  2 NOV 2018 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  6 NOV 2018 22:29
 entering extended mode
 **./Astro01_Final.tex
 (Astro01_Final.tex
@@ -658,7 +658,11 @@ df>]
 File: "Uncalibrated_Graph".pdf Graphic file (type pdf)
 <use "Uncalibrated_Graph".pdf>
 Package pdftex.def Info: "Uncalibrated_Graph".pdf  used on input line 158.
-(pdftex.def)             Requested size: 508.78233pt x 381.58678pt.
+(pdftex.def)             Requested size: 522.65758pt x 391.99321pt.
+
+Overfull \hbox (9.54013pt too wide) in paragraph at lines 158--159
+ [][] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -667,7 +671,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: "Combination_Graph".pdf Graphic file (type pdf)
 <use "Combination_Graph".pdf>
 Package pdftex.def Info: "Combination_Graph".pdf  used on input line 165.
-(pdftex.def)             Requested size: 508.78233pt x 381.58678pt.
+(pdftex.def)             Requested size: 522.65758pt x 391.99321pt.
+
+Overfull \hbox (9.54013pt too wide) in paragraph at lines 165--166
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -676,19 +685,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: "Calibrated_Graph".pdf Graphic file (type pdf)
 <use "Calibrated_Graph".pdf>
 Package pdftex.def Info: "Calibrated_Graph".pdf  used on input line 192.
-(pdftex.def)             Requested size: 508.78233pt x 381.58678pt.
- [6 <./Calibrated_Graph.pdf>]
+(pdftex.def)             Requested size: 522.65758pt x 391.99321pt.
+
+Overfull \hbox (9.54013pt too wide) in paragraph at lines 192--193
+ [][] 
+ []
+
+[6 <./Calibrated_Graph.pdf>]
 <"Matteo_graph".pdf, id=165, 462.52798pt x 346.89601pt>
 File: "Matteo_graph".pdf Graphic file (type pdf)
 <use "Matteo_graph".pdf>
 Package pdftex.def Info: "Matteo_graph".pdf  used on input line 207.
-(pdftex.def)             Requested size: 508.78233pt x 381.58678pt.
- [7 <./Matteo_graph.pdf>]
+(pdftex.def)             Requested size: 522.65758pt x 391.99321pt.
+
+Overfull \hbox (9.54013pt too wide) in paragraph at lines 207--208
+ [][] 
+ []
+
+[7 <./Matteo_graph.pdf>]
 <"reference_graph".pdf, id=207, 526.96875pt x 368.87813pt>
 File: "reference_graph".pdf Graphic file (type pdf)
 <use "reference_graph".pdf>
 Package pdftex.def Info: "reference_graph".pdf  used on input line 220.
-(pdftex.def)             Requested size: 463.73392pt x 324.61374pt.
+(pdftex.def)             Requested size: 469.0007pt x 328.30049pt.
  [8 <./reference_graph.pdf>] [9]
 Underfull \hbox (badness 10000) in paragraph at lines 306--307
 []$\OT1/cmtt/m/n/10 http : / / aladin . u-[]strasbg . fr / AladinLite / ?target
@@ -702,7 +721,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  15216 strings out of 493305
- 300430 string characters out of 3136285
+ 300368 string characters out of 3136285
  326362 words of memory out of 3000000
  18670 multiletter control sequences out of 15000+200000
  542806 words of font info for 63 fonts, out of 3000000 for 9000
@@ -722,7 +741,7 @@ amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:
 1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 sy9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Astro01_Final.pdf (10 pages, 452333 bytes).
+Output written on Astro01_Final.pdf (10 pages, 451000 bytes).
 PDF statistics:
  279 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
