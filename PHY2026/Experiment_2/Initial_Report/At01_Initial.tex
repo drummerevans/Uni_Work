@@ -96,7 +96,7 @@ S_z = m_s\hbar
 where $S_z$ is the electron spin angular momentum by considering the z-component, $m_s = \pm\frac{1}{2}$ refers to the spin quantum number either `spin up' (positive) or `spin down' (negative) respectively and $\hbar = \frac{h}{2\pi}$. This concept can be likened to an anaology of a spinning sphere \cite{Book01} where the spin angular momentum is the momentum associated with the body about z-axis. The magnitude of the spin angular momentum is
 
 \begin{equation}
-\label{eq:spin-mag}
+\label{eq:spin-magnitude}
 S = \hbar\sqrt{s(s+1)}
 \end{equation}
 
@@ -144,7 +144,7 @@ For a more detailed derivation of the energies levels for the hydrogen atom usin
 Electrons are negatively charged particles, therefore they have an associated magnetic moment
 
 \begin{equation}
-\label{eq:spin}
+\label{eq:magnetic-moment}
 \boldsymbol{\mu} = -g\frac{e}{2m}\textbf{S}
 \end{equation}
 
@@ -164,21 +164,20 @@ Electrons are negatively charged particles, therefore they have an associated ma
 The magnetic energy is given by \cite{Paper02}
 
 \begin{equation}
-\label{eq:potential}
-U = -\boldsymbol{\mu} \cdot \textbf{B} = \mu_zB
+\label{eq:potential1}
+U = -\boldsymbol{\mu} \cdot \textbf{B} = - \mu_zB
 \end{equation}
 
 \vspace{2mm}
 \noindent
-By substituting the z-component, $\mu_z = -g\frac{e}{2m}S_z$, of the magnetic moment into \eqref{eq:potential} we have
-
-\vspace{2mm}
-\noindent
-Now, by simply substituting \eqref{eq:spin} in to \eqref{eq:potential} we get
+Where $\mu_z$ is the z-component, $\mu_z = -g\frac{e}{2m}S_z$, of the magnetic moment. By substituting \eqref{eq:spin} into \eqref{eq:potential1}, we now have
 
 \begin{equation}
 \label{eq:potential2}
-U = -\Big(-g\frac{e}{2m}S_z\Big)B = g\frac{e}{2m}(m_s\hbar)B = g\mu_BBm_s
+\begin{split}
+U & = g\frac{e}{2m}(m_s\hbar)B \\
+  & = g\mu_BB
+\end{split}
 \end{equation}
 
 \vspace{2mm}
@@ -268,7 +267,9 @@ The final preliminary check is to see that removing energy from a circuit will p
 \noindent
 After the preliminary checks have been made, the sample can be placed in one of the three coils provided and the experiment is set-up as described in \figref{fig:electron_setup}. Once all the relevant connections have been made to the oscilloscope and the ESR unit, the frequency and current can be measured at different resonances. Once several resonance measurements for the current have been obtained, \eqref{eq:magnetic-equation} can be used with the measured currents to obtain the corresponding magnetic fields. Then, these magnetic field measurements along with the corresponding frequency measurements can be used in \eqref{eq:frequency-equation} to obtain a value for $g$ by plotting an appropriate straight-line graph or by using the individual results to obtain several values of $g$ and then averaging to obtain a single final value.
 
-
+\subsection{Safety}
+\label{ssec:safety}
+During both experiments there are many sensitive electrical components used; such as a radio frequency oscillator, an oscolliscope and power supplies. Therefore, no food or drink should be consumed whilst working in the laboratory and any exposed metal should not be touched when any power supply is switched on \cite{Paper01}. In addition to this,  the glass discharge tubes for the Atomic Spectroscopy experiment are fragile. So, when they require moving or changing the demonstrator or laboratory technician should be present to handle these pieces of equipment. 
 
 
 %\section{Results}
