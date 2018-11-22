@@ -1,0 +1,326 @@
+% Comments start with % (percent) character and last till the end of the line.
+%
+% The line below tells TeXworks editor to use pdflatex for compilation
+% of this document; remove it if you want to use another engine 
+%
+%!TEX program = pdflatex
+%
+% LaTeX2e document starts with \documentclass[options]{<class-name>}
+% <class-name> can be one of the standard LaTeX document classes: 
+% article, report or book, or some other specialised class.
+%
+\documentclass{article}
+%
+% Preamble of LaTeX document is everything before \begin{document}.
+% Preamble is used to load extension packages and to set up global 
+% parameters and configuration for the entire document.
+%
+% Extension packages providing additional functionality
+\usepackage{amsmath}       % additional math environments
+\usepackage{graphicx}      % graphics import from external files 
+\usepackage{epstopdf}      % automates .eps to .pdf conversion 
+% epstopdf package may require --shell-escape option to pdflatex
+\usepackage{booktabs}      % table typesetting additions
+\usepackage{siunitx}       % number and units formatting
+\usepackage{caption}       % customisation of captions
+\usepackage{url}           % format url addresses
+\usepackage{abstract}		% allows formatting of abstract
+\usepackage[margin=0.7in]{geometry}
+%\usepackage{tikz,pgfplots} % diagrams and data plots
+%
+% set up caption options
+\captionsetup{margin=12pt,font=small,labelfont=bf}
+%
+%removes abstract title
+\renewcommand{\abstractname}{}
+%sets abstract margins
+\setlength{\absleftindent}{10mm}
+\setlength{\absrightindent}{10mm}
+%
+% global options for siunitx
+%\sisetup{seperr,repeatunits=false,per=symbol}
+%
+% some handy commands for referencing;
+% the optional argument overrides the default label, e.g.
+% \figref[FIG.~]{fig:label}
+\newcommand{\figref}[2][\figurename~]{#1\ref{#2}}
+\newcommand{\tabref}[2][\tablename~]{#1\ref{#2}}
+\newcommand{\secref}[2][Section~]{#1\ref{#2}}
+
+
+% The document content starts with \begin{document} 
+% and is finished with \end{document}
+%
+\begin{document}
+\title{At01 Atomic Spectroscopy \& Electron Spin Resonance \\ \large{(Initial Report)}} % fill in the title here
+\author{Matthew Evans}% fill in your name here
+\date{15\textsuperscript{th} November 2018} % date of the report
+%\twocolumn[	% makes title and abstract appear over entire page width
+\maketitle % formats the title
+%\begin{onecolabstract}
+%\noindent
+
+%Enter abstract here.
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+Two key atomic concepts were be investigated during this experiment: the atomic spectrum of hydrogen and the spin resonance of electrons. These two experiments are closely linked and are of key importance when studying atomic characteristics. By studying the electron spin we can find that some energy levels of atoms obtained from spectroscopic techniques are further split into smaller energy levels called \textit{multiplets} \cite{Book01}. From this other phenomena can be more accurately investigated, such as investigating the chemical composition of stars. 
+
+\vspace{2mm}
+\noindent
+Electrons occupy energy levels in atoms that orbit around the nucleus. When electrons gain energy, for example from a collision with an external electron or absorption of a quantum  `packet' of energy called a \textit{photon}, they move up to the next energy level and are then said to be \textit{excited}. After a  period of time, they de-excite back to their original energy level emitting a photon equivalent to the energy difference of the two levels 
+
+\begin{equation}
+\label{eq:energy-diff}
+h \nu = E_f - E_i
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $h = 6.63 \times 10^{-34}$ Js, is the Planck constant, $\nu$ is the photon frequency, $E_f$ is the excited energy level, $E_i$ is the original equilibrium energy level. These photon energies can act as `finger prints' for atoms and hence the particular type of atomic species can be identified by analysing the emitted or absorption spectrum of an atom. Where the absorption spectrum will have particular wavelengths of light missing from a continuous spectrum due to the absorption of photons by the atom from the excitation process. 
+In this experiment we will be analysing the \textit{emitted} spectrum of hydrogen \cite{Paper01}.
+
+\vspace{2mm}
+\noindent
+In addition, all electrons have a spin angular momentum associated with them \cite{Paper02}. The electron spin component is given by
+
+\begin{equation}
+\label{eq:spin}
+S_z = m_s\hbar
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $S_z$ is the electron spin angular momentum by considering the z-component, $m_s = \pm\frac{1}{2}$ refers to the spin quantum number either `spin up' (positive) or `spin down' (negative) respectively and $\hbar = \frac{h}{2\pi}$. This concept can be likened to an anaology of a spinning sphere \cite{Book01} where the spin angular momentum is the momentum associated with the body about z-axis. The magnitude of the spin angular momentum is
+
+\begin{equation}
+\label{eq:spin-magnitude}
+S = \hbar\sqrt{s(s+1)}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $s = \mid{m_s}\mid = \frac{1}{2}$ and is the spin quantum number. Because electrons have a charge associated with them, they will be affected as they pass through a magnetic field. %Therefore, the spinning motion of the electron will be changing as it passes through the field.
+ This experiment investigates this effect further and obtains some fundamental information from this process.
+
+\section{Theory}
+\label{sec:theory}
+
+The energy levels of a simplified diagram for the hydrogen atom is shown in \figref{fig:levels}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{"levels".pdf}
+\caption{A simplified diagram showing the energy levels of the hydrogen atom. Where n is the principle quantum number. n = 1 is the ground state and n = $\infty$ correspons to the ionisation energy required to liberate the bound electron \cite{Paper01}.}
+\label{fig:levels}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+These energy levels can be determined by using the Bohr model or by solution to the Schr\"{o}dinger equation \cite{Paper01} and is given by
+
+\begin{equation}
+\label{eq:energy-levels}
+E_n = -\frac{Ry}{n^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $Ry$ is the Rydberg constant and has a value of 13.6 eV and $n$ is the energy level number in the atom. The experiment considered transitions to the $n = 2$ energy level, i.e. the Balmer Series, for the photon energies as the first few photons in the Balmer Series lie in the visible region of light. This because the first first few energy transitions for this series is in the visible region and can easily be observed. The transitions occur by exposing the the spectral tube to an electric field and this ionises the gas releasing electrons \cite{Paper01}. These free electrons then collide with other electrons bound by hydrogen atoms, as mentioned in \secref{sec:introduction}. This excites the bound electrons in the atoms to an excited state. Then, these electrons would de-excite via the emission of a photon, producing a constant output beam. Therefore by considering the relation \eqref{eq:energy-diff}, equation \eqref{eq:energy-levels} becomes
+
+\begin{equation}
+\label{eq:balmer-series}
+E_n = -Ry\Bigg(\frac{1}{n^2} - \frac{1}{2^2}\Bigg) = Ry\Bigg(\frac{1}{2^2} - \frac{1}{n^2}\Bigg)
+\end{equation}
+
+\vspace{2mm}
+\noindent
+For a more detailed derivation of the energies levels for the hydrogen atom using the Bohr model please refer to \cite{Book02}.
+
+\vspace{2mm}
+\noindent
+Electrons are negatively charged particles, therefore they have an associated magnetic moment
+
+\begin{equation}
+\label{eq:magnetic-moment}
+\boldsymbol{\mu} = -g\frac{e}{2m}\textbf{S}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+\textbf{$\mu$} is the magnetic moment, $g$ is the spectroscopic splitting factor, $e$ and $m$ are the charge and mass of the electron respectively \cite{Paper02}. As mentioned in \secref{sec:introduction} the spinning motion of the electron is effected as it passes through a magnetic field \textbf{B} because the magnetic dipoles of the electron and field interact with each other. This means that the electron will precess about the magnetic field, \textbf{B}, in one of two orientations as shown in \figref{fig:spin} \cite{Paper02}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{"spin".pdf}
+\caption{Left: orientation of electron `spin up' and `spin down' are given in a magnetic field \textbf{B}. Right: dependence of the two energy states on \textbf{B} is shown \cite{Paper02}.}
+\label{fig:spin}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+The magnetic energy is given by \cite{Paper02}
+
+\begin{equation}
+\label{eq:potential1}
+U = -\boldsymbol{\mu} \cdot \textbf{B} = - \mu_zB
+\end{equation}
+
+\vspace{2mm}
+\noindent
+Where $\mu_z$ is the z-component, $\mu_z = -g\frac{e}{2m}S_z$, of the magnetic moment. By substituting \eqref{eq:spin} into \eqref{eq:potential1}, we now have
+
+%\begin{split} for splitting equations
+% & \\ = 
+% & =
+%\end{split}
+
+\begin{equation}
+\label{eq:potential2}
+U = g\frac{e}{2m}(m_s\hbar)B = g\mu_BB
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\mu_B = \frac{e\hbar}{2m}$ is the Bohr magneton. Therefore, from \figref{fig:spin} and \eqref{eq:potential2} we can see that the difference in energy be determined by \cite{Paper02}
+
+\begin{equation}
+\label{eq:potential-difference}
+\Delta U = g\mu_BB\Big(\frac{1}{2} - \Big(-\frac{1}{2}\Big)\Big) = g\mu_BB.
+\end{equation}
+
+\vspace{2mm}
+\noindent
+For further information regarding this derivation arriving it equation \eqref{eq:potential-difference}, please refer to \cite{Book01}. By considering the electron energy changes involved with the atomic spectroscopy mentioned earlier, we can therefore deduce that the electron can either go up or down an energy state by photon absorption or emission receptively. Hence the energy of the photon required for such a transition is given by
+
+\begin{equation}
+\label{eq:frequency-equation}
+h\nu = g\mu_BB
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\nu$ is again the frequency of the absorbed or emitted photon. 
+
+\newpage 
+\section{Method}
+\label{sec:method}
+
+\subsection{Atomic Spectroscopy}
+\label{ssec:atomic-method}
+The exerimental set-up is shown in \figref{fig:atom_picture}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{"atom_picture".pdf}
+\caption{Experimental set-up for the atomic spectroscopy experiment.}
+\label{fig:atom_picture}
+\end{figure}
+
+\noindent
+First the Hydrogen spectral tube, marker and ruler used to determine $l$ were carefully set-up. The tube was positioned in the centre of the ruler and the measurement taken along with the uncertainty. Then, the diffraction grating was positioned to make the distance from the spectral tube, $d$, as big as possible. This was carefully measured, along with the associated uncertainty. The low pressure hydrogen gas in the tube was then exposed to an electric field by carefully adjusting the voltage source as shown in \figref{fig:atom_picture} so that the spectral tube produced as constant output beam ready for observation. These emission lines were then observed through a diffraction grating as shown in \figref{fig:grating_plan} and the marker shown in \figref{fig:atom_picture} was adjusted so that the spectral line position could be measured. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{"grating_plan".pdf}
+\caption{A plan view of the experimental set-up \cite{Paper01}.}
+\label{fig:grating_plan}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+The difference between the central position of the tube and measured position was then determined along with the associated uncertainties in order to get a value for $l$. The diffraction grating was then moved in 50mm decrements towards the tube until the lines spectral lines were unclear to view. After this had been undertaken, the diffraction grating was moved back to its original value of $d$ and the above process was then undertaken a total three times to improve accuracy and reduce errors.
+
+\vspace{2mm}
+\noindent
+The next step was then to use the marker, as shown in \figref{fig:atom_picture}, to measure the length $l$ of mercury emission lines along the ruler using the mercury lamp in place of the spectral tube in \figref{fig:grating_plan} to determine the grating spacing constant $d_g$. This process was similar to measuring the hydrogen emission lines as outlined above. These measurements were performed for the three furthest distances of $d$ as these were the most accurate. This was repeated a total of three times to reduce uncertainty and improve accuracy. An average of these obtained values of $d_g$ was taken along with its unceratinty carefully determined. Then, by using the known wavelengths of mercury given in \cite{Paper01} and the diffraction grating equation 
+
+\begin{equation}
+\label{eq:grating-equation}
+m\lambda = d_gsin\alpha
+\end{equation}
+
+\vspace{2mm}
+\noindent
+we can determine $d_g$ the grating constant and since we were observing the first bright fringe order, $m$ = 1 in this case. By using the obtained values of $l$ and $d$ an appropriate graph was plotted of $l$ vs $\sqrt{d^2 + l^2}$. The gradient of this graph, $\frac{\lambda}{d_g}$ and the gradient error was used in conjunction with the determined value of $d_g$ and its associated error to determine the wavelength, $\lambda$ of the sample and error respectively for each of the bright fringes observed.
+
+\vspace{2mm}
+\noindent
+Once the wavelengths were determined, the energies can were obtained from the relation 
+
+\begin{equation}
+\label{eq:energy-wavelength}
+E = \frac{hc}{\lambda}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where, $c$ is the speed of light and $\lambda$ is the wavelength of the emission lines. Then a graph can be plot using \eqref{eq:balmer-series} to determine a value for the Rydberg constant $Ry$.
+
+\subsection{Electron Spin Resonance}
+\label{ssec:electron-method}
+
+The sample for testing will be an organic compound called DPPH (1, 1-diphenyl-2-picrylhydrazil) molecule \cite{Paper02}. The experimental set-up is shown in \figref{fig:electron_setup}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{"electron_setup".pdf}
+\caption{The experimental set-up for investigating the electron spin resonance of DPPH \cite{Paper02}.}
+\label{fig:electron_setup}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+A series of preliminary experiments will be conducted before the main experiment commences. First, the magnetic field produced by the Helmholtz pair of coils will be measured over a range of DC currents using a Gauss meter. A relation describing the magnetic field for this set-up in \figref{fig:electron_setup} is given by
+
+\begin{equation}
+\label{eq:magnetic-equation}
+B = \mu_0\Bigg(\frac{4}{5}\Bigg)^{3/2}\frac{nI}{r}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\mu_0$ is the permeability of free space, $n$ is the number of turns per coil ( $n$ = 320 in this case), $I$ is the current through each coil and $r$ is the coil radius (6.75cm) \cite{Paper02}. Once a range of magnetic field measurements have been obtained in conjunction with the corresponding currents, these currents can be used in \eqref{eq:magnetic-equation} to obtain the magnetic field. By comparing the measured value of the magnetic field to that obtained in \eqref{eq:magnetic-equation} we can justify if \eqref{eq:magnetic-equation} is reliable.
+
+\vspace{2mm}
+\noindent
+The final preliminary check is to see that removing energy from a circuit will put load on the circuit and reduce the output voltage \cite{Paper02}. The current output from the ESR unit, see \figref{fig:electron_setup} will be connected to a multimeter to measure the DC current. By using a passive circuit and a medium coil, the resonant frequency of the passive circuit along with that of the oscillator will be observed. When these two resonant frequencies coincide, the voltage should reach a maximum \cite{Paper02}.
+
+\vspace{2mm}
+\noindent
+After the preliminary checks have been made, the sample can be placed in one of the three coils provided and the experiment is set-up as described in \figref{fig:electron_setup}. Once all the relevant connections have been made to the oscilloscope and the ESR unit, the frequency and current can be measured at different resonances. Once several resonance measurements for the current have been obtained, \eqref{eq:magnetic-equation} can be used with the measured currents to obtain the corresponding magnetic fields. Then, these magnetic field measurements along with the corresponding frequency measurements can be used in \eqref{eq:frequency-equation} to obtain a value for $g$ by plotting an appropriate straight-line graph or by using the individual results to obtain several values of $g$ and then averaging to obtain a single final value.
+
+\subsection{Safety}
+\label{ssec:safety}
+During both experiments there are many sensitive electrical components used; such as a radio frequency oscillator, an oscolliscope and power supplies. Therefore, no food or drink should be consumed whilst working in the laboratory and any exposed metal should not be touched when any power supply is switched on \cite{Paper01}. In addition to this,  the glass discharge tubes for the Atomic Spectroscopy experiment are fragile. So, when they require moving or changing the demonstrator or laboratory technician should be present to handle these pieces of equipment. 
+
+
+%\section{Results}
+%\label{sec:results}
+
+
+
+
+%\section{Discussion}
+%\label{sec:discussion}
+
+
+
+
+%\section{Conclusion}
+%\label{sec:conclusion}
+
+
+\begin{thebibliography}{9}
+\bibitem{Paper01} Atomic Spectroscopy worksheet.
+\bibitem{Paper02} Electron Spin Resonance worksheet. 
+\bibitem{Book01} Young and Freedman, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 41, pages 1519 - 1527.
+\bibitem{Book02} Young and Freedman, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 39, pages 1427 - 1437.
+%\bibitem{Book02} Young and Freedman, \textit{University Physics}, 13\textsuperscript{th} Edition, pages 1211--1212.
+%\bibitem{Web01} \url{http://simbad.u-strasbg.fr/simbad/}
+%\bibitem{Web02} \url{http://ecommons.luc.edu/cgi/viewcontent.cgi?article=1667&context=luc_theses} See page 22 for refractive index values.
+\end{thebibliography}
+
+\end{document}
