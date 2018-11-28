@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  19 NOV 2018 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  28 NOV 2018 21:23
 entering extended mode
 **./At01_Final.tex
 (At01_Final.tex
@@ -662,64 +662,100 @@ File: "spin".pdf Graphic file (type pdf)
 <use "spin".pdf>
 Package pdftex.def Info: "spin".pdf  used on input line 157.
 (pdftex.def)             Requested size: 205.0677pt x 88.53142pt.
-[2 <./levels.pdf> <./spin.pdf>] [3]
-<"atom_picture".pdf, id=36, 963.6pt x 542.025pt>
+[2 <./levels.pdf> <./spin.pdf>]
+<"atom_picture".pdf, id=33, 963.6pt x 542.025pt>
 File: "atom_picture".pdf Graphic file (type pdf)
 <use "atom_picture".pdf>
-Package pdftex.def Info: "atom_picture".pdf  used on input line 217.
-(pdftex.def)             Requested size: 578.16447pt x 325.2175pt.
-
-Overfull \hbox (65.04703pt too wide) in paragraph at lines 217--218
- [][] 
- []
-
+Package pdftex.def Info: "atom_picture".pdf  used on input line 216.
+(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
 
 
 pdfTeX warning: pdflatex (file ./grating_plan.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<"grating_plan".pdf, id=37, 572.89032pt x 608.2725pt>
+<"grating_plan".pdf, id=34, 572.89032pt x 608.2725pt>
 File: "grating_plan".pdf Graphic file (type pdf)
 <use "grating_plan".pdf>
-Package pdftex.def Info: "grating_plan".pdf  used on input line 227.
+Package pdftex.def Info: "grating_plan".pdf  used on input line 226.
 (pdftex.def)             Requested size: 171.86841pt x 182.48315pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./atom_picture.pdf>]
+[3 <./atom_picture.pdf>]
 
 pdfTeX warning: pdflatex (file ./electron_setup.pdf): PDF inclusion: found PDF 
 version <1.7>, but at most version <1.5> allowed
-<"electron_setup".pdf, id=57, 711.4078pt x 497.60907pt>
+<"electron_setup".pdf, id=54, 711.4078pt x 497.60907pt>
 File: "electron_setup".pdf Graphic file (type pdf)
 <use "electron_setup".pdf>
-Package pdftex.def Info: "electron_setup".pdf  used on input line 269.
+Package pdftex.def Info: "electron_setup".pdf  used on input line 268.
 (pdftex.def)             Requested size: 213.42398pt x 149.28386pt.
-[5 <./grating_plan.pdf> <./electron_setup.pdf>] [6] (At01_Final.aux) ) 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./grating_plan.pdf>]
+<"pre_exp2".pdf, id=62, 963.6pt x 542.025pt>
+File: "pre_exp2".pdf Graphic file (type pdf)
+<use "pre_exp2".pdf>
+Package pdftex.def Info: "pre_exp2".pdf  used on input line 292.
+(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
+ [5 <./electron_setup.pdf> <./pre_exp2.pdf>]
+<"electron_picture".pdf, id=77, 963.6pt x 542.025pt>
+File: "electron_picture".pdf Graphic file (type pdf)
+<use "electron_picture".pdf>
+Package pdftex.def Info: "electron_picture".pdf  used on input line 307.
+(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
+<"resonance".pdf, id=78, 963.6pt x 542.025pt>
+File: "resonance".pdf Graphic file (type pdf)
+<use "resonance".pdf>
+Package pdftex.def Info: "resonance".pdf  used on input line 318.
+(pdftex.def)             Requested size: 366.17181pt x 205.97163pt.
+ [6 <./electron_picture.pdf> <./resonance.pdf
+
+pdfTeX warning: pdflatex (file ./resonance.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+<"Red_Plot".pdf, id=93, 462.52798pt x 346.89601pt>
+File: "Red_Plot".pdf Graphic file (type pdf)
+<use "Red_Plot".pdf>
+Package pdftex.def Info: "Red_Plot".pdf  used on input line 342.
+(pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
+<"Blue_Plot".pdf, id=94, 462.52798pt x 346.89601pt>
+File: "Blue_Plot".pdf Graphic file (type pdf)
+<use "Blue_Plot".pdf>
+Package pdftex.def Info: "Blue_Plot".pdf  used on input line 349.
+(pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./Red_Plot.pdf>] [8 <./Blue_Plot.pdf>] (At01_Final.aux) ) 
 Here is how much of TeX's memory you used:
- 15224 strings out of 493305
- 300260 string characters out of 3136285
- 325315 words of memory out of 3000000
- 18671 multiletter control sequences out of 15000+200000
+ 15255 strings out of 493305
+ 300958 string characters out of 3136285
+ 325364 words of memory out of 3000000
+ 18697 multiletter control sequences out of 15000+200000
  545255 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,63p,999b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.p
-fb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi5.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
-pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX 2.9/font
+ 42i,6n,63p,1065b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+5.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
 C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on At01_Final.pdf (6 pages, 776413 bytes).
+Output written on At01_Final.pdf (8 pages, 1629646 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 240 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

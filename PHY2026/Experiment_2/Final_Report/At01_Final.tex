@@ -52,7 +52,7 @@
 % and is finished with \end{document}
 %
 \begin{document}
-\title{At01 Atomic Spectroscopy \& Electron Spin Resonance \\ \large{(Initial Report)}} % fill in the title here
+\title{At01 Atomic Spectroscopy \& Electron Spin Resonance} % fill in the title here
 \author{Matthew Evans}% fill in your name here
 \date{15\textsuperscript{th} November 2018} % date of the report
 %\twocolumn[	% makes title and abstract appear over entire page width
@@ -204,7 +204,6 @@ h\nu = g\mu_BB
 \noindent
 where $\nu$ is again the frequency of the absorbed or emitted photon. 
 
-\newpage 
 \section{Method}
 \label{sec:method}
 
@@ -214,7 +213,7 @@ The exerimental set-up is shown in \figref{fig:atom_picture}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{"atom_picture".pdf}
+\includegraphics[scale=0.5]{"atom_picture".pdf}
 \caption{Experimental set-up for the atomic spectroscopy experiment.}
 \label{fig:atom_picture}
 \end{figure}
@@ -262,18 +261,18 @@ where, $c$ is the speed of light and $\lambda$ is the wavelength of the emission
 \subsection{Electron Spin Resonance}
 \label{ssec:electron-method}
 
-The sample for testing will be an organic compound called DPPH (1, 1-diphenyl-2-picrylhydrazil) molecule \cite{Paper02}. The experimental set-up is shown in \figref{fig:electron_setup}. 
+The sample tested was an organic compound called DPPH (1, 1-diphenyl-2-picrylhydrazil) molecule \cite{Paper02}. The experimental geometry is shown in \figref{fig:electron_setup}. 
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{"electron_setup".pdf}
-\caption{The experimental set-up for investigating the electron spin resonance of DPPH \cite{Paper02}.}
+\caption{The experimental geometry for investigating electron spin resonance of DPPH \cite{Paper02}.}
 \label{fig:electron_setup}
 \end{figure}
 
 \vspace{2mm}
 \noindent
-A series of preliminary experiments will be conducted before the main experiment commences. First, the magnetic field produced by the Helmholtz pair of coils will be measured over a range of DC currents using a Gauss meter. A relation describing the magnetic field for this set-up in \figref{fig:electron_setup} is given by
+A series of preliminary experiments were conducted before the main experiment. First, the magnetic field produced by the Helmholtz pair of coils were be measured over a range of DC currents using a Gauss meter. A relation describing the magnetic field for this set-up in \figref{fig:electron_setup} is given by
 
 \begin{equation}
 \label{eq:magnetic-equation}
@@ -282,23 +281,75 @@ B = \mu_0\Bigg(\frac{4}{5}\Bigg)^{3/2}\frac{nI}{r}
 
 \vspace{2mm}
 \noindent
-where $\mu_0$ is the permeability of free space, $n$ is the number of turns per coil ( $n$ = 320 in this case), $I$ is the current through each coil and $r$ is the coil radius (6.75cm) \cite{Paper02}. Once a range of magnetic field measurements have been obtained in conjunction with the corresponding currents, these currents can be used in \eqref{eq:magnetic-equation} to obtain the magnetic field. By comparing the measured value of the magnetic field to that obtained in \eqref{eq:magnetic-equation} we can justify if \eqref{eq:magnetic-equation} is reliable.
+where $\mu_0$ is the permeability of free space, $n$ is the number of turns per coil ( $n$ = 320 in this case), $I$ is the current through each coil and $r$ is the distance between the two coils in this case it is the coil radius (6.75cm) \cite{Paper02}. Once a range of magnetic field measurements had been obtained in conjunction with the corresponding currents, these currents were used in \eqref{eq:magnetic-equation} to obtain the magnetic field. When comparing the values of the magnetic field measured using the Gauss meter to the ones obtained by relation \eqref{eq:magnetic-equation}, they were of the same order of magnitude. Therefore, this verified that \eqref{eq:magnetic-equation} is a valid way of determining the magnetic field from a range of currents and the next steps in the experimental method could proceed.
 
 \vspace{2mm}
 \noindent
-The final preliminary check is to see that removing energy from a circuit will put load on the circuit and reduce the output voltage \cite{Paper02}. The current output from the ESR unit, see \figref{fig:electron_setup} will be connected to a multimeter to measure the DC current. By using a passive circuit and a medium coil, the resonant frequency of the passive circuit along with that of the oscillator will be observed. When these two resonant frequencies coincide, the voltage should reach a maximum \cite{Paper02}.
+The final preliminary check was to see that removing energy from a circuit will put load on the circuit and reduce the output voltage \cite{Paper02}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{"pre_exp2".pdf}
+\caption{Preliminary Experimental set-up demonstrating a reduction in output voltage due to a load put on a circuit.}
+\label{fig:pre_exp2}
+\end{figure}
 
 \vspace{2mm}
 \noindent
-After the preliminary checks have been made, the sample can be placed in one of the three coils provided and the experiment is set-up as described in \figref{fig:electron_setup}. Once all the relevant connections have been made to the oscilloscope and the ESR unit, the frequency and current can be measured at different resonances. Once several resonance measurements for the current have been obtained, \eqref{eq:magnetic-equation} can be used with the measured currents to obtain the corresponding magnetic fields. Then, these magnetic field measurements along with the corresponding frequency measurements can be used in \eqref{eq:frequency-equation} to obtain a value for $g$ by plotting an appropriate straight-line graph or by using the individual results to obtain several values of $g$ and then averaging to obtain a single final value.
+The current output from the ESR unit, see \figref{fig:pre_exp2} was be connected to a multimeter to measure the DC current. Then a passive circuit with a medium inductor coil was positioned close to a medium inductor coil attached to the basic ESR unit, see \figref{fig:pre_exp2}. By adjusting the frequency of the passive circuit, the current reading on the multimeter dropped. This therefore demonstrated that by removing energy from a resonant circuit placed a load on the circuit and the output voltage was reduced. After this principle was checked, the main experiment commenced.
+
+\vspace{2mm}
+\noindent
+Upon successful completion of the preliminary checks, the DPPH sample was placed in one of the three coils provided and the experiment was set-up in the configuration as shown in \figref{fig:electron_picture}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{"electron_picture".pdf}
+\caption{The experimental set-up for investigating the electron spin resonance of DPPH.}
+\label{fig:electron_picture}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+Once all the relevant connections had been made to the oscilloscope and the ESR unit, the frequency was altered on the radio frequency oscillator over a range of frequencies from 15 to 130 MHz \cite{Paper02} at different resonances as shown in \figref{fig:resonance}. The range of frequencies were covered by using a selection of sizes for the coils to insert the DPPH sample: small, medium and large.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.38]{"resonance".pdf}
+\caption{A picture showing the resonant frequency condition as shown on the oscilloscope trace.}
+\label{fig:resonance}
+\end{figure}
+
+
+\vspace{2mm}
+\noindent
+Along with these resonant frequencies, the current and corresponding error in the current, obtained from the modulating current, were measured at different resonances from the radio frequency oscillator unit. These resonances were due to a radio frequency photon coming in and exiting an electron from one spin state to another. This takes energy out of the system and is observed as dips on the oscilloscope trace at resonance as shown in \figref{fig:resonance}. Once several resonance measurements for the current had been obtained, using the small, medium and large coils they were all repeated a total of three times and an average current, with corresponding error was taken. This was done to improve accuracy and reliability. Then \eqref{eq:magnetic-equation} was used to obtain the corresponding magnetic fields. These magnetic field measurements along with the corresponding frequency measurements were used in \eqref{eq:frequency-equation} to obtain a value for $g$ by plotting an appropriate straight-line graph. 
+% Or you could use the individual results to obtain several values of $g$ and then averaging to obtain a single final value.
+
 
 \subsection{Safety}
 \label{ssec:safety}
-During both experiments there are many sensitive electrical components used; such as a radio frequency oscillator, an oscolliscope and power supplies. Therefore, no food or drink should be consumed whilst working in the laboratory and any exposed metal should not be touched when any power supply is switched on \cite{Paper01}. In addition to this,  the glass discharge tubes for the Atomic Spectroscopy experiment are fragile. So, when they require moving or changing the demonstrator or laboratory technician should be present to handle these pieces of equipment. 
+During both experiments there were many sensitive electrical components used; such as a radio frequency oscillator, an oscolliscope and power supplies. Therefore, no food or drink were consumed whilst working in the laboratory and any exposed metal should not be touched when any power supply is switched on \cite{Paper01}. In addition to this,  the glass discharge tubes for the Atomic Spectroscopy experiment are fragile. So, when they required moving or changing the demonstrator or laboratory technician were present to handle these pieces of equipment. 
 
 
-%\section{Results}
-%\label{sec:results}
+\section{Results}
+\label{sec:results}
+
+\figref{fig:Red_Plot} and \figref{fig:Blue_Plot} show a plot of $l$ against $\sqrt{d^2+l^2}$ for the two observed hydrogen emission lines.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{"Red_Plot".pdf}
+\caption{A graph of length $l$ against $\sqrt{d^2+l^2}$ for the H$_\alpha$ transition.}
+\label{fig:Red_Plot}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{"Blue_Plot".pdf}
+\caption{A graph of length $l$ against $\sqrt{d^2+l^2}$ for the H$_\beta$ transition.}
+\label{fig:Blue_Plot}
+\end{figure}
 
 
 
@@ -306,13 +357,13 @@ During both experiments there are many sensitive electrical components used; suc
 %\section{Discussion}
 %\label{sec:discussion}
 
-
+% When setting up the circuit, the distance between the Helmoholtz coils was slightly different to that of the radius of a coil. This was because the ESR basic unit had to fit between the two coils in order to ensure that the DPPH was central in position as shown in \figref{fig:electron_picture}. Therefore, the actual measured value of $r$ for use in  \eqref{eq:magnetic-equation} was now $7.5 \pm1.0$ cm. The large error was used to ensure that had the value of $6.75$cm in the range and to accomodate parallax error when setting up the coils. This was all noted and used later in \eqref{eq:magnetic-equation} when determining generated the magnetic fields. 
 
 
 %\section{Conclusion}
 %\label{sec:conclusion}
 
-
+\newpage
 \begin{thebibliography}{9}
 \bibitem{Paper01} Atomic Spectroscopy worksheet.
 \bibitem{Paper02} Electron Spin Resonance worksheet. 
