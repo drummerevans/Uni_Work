@@ -238,12 +238,12 @@ The next step was then to use the marker, as shown in \figref{fig:atom_picture},
 
 \begin{equation}
 \label{eq:grating-equation}
-m\lambda = d_gsin\alpha
+m\lambda = d_gsin\alpha \implies \lambda = d_g\frac{l}{\sqrt{l^2+d^2}}
 \end{equation}
 
 \vspace{2mm}
 \noindent
-we can determine $d_g$ the grating constant and since we were observing the first bright fringe order, $m$ = 1 in this case. By using the obtained values of $l$ and $d$ an appropriate graph was plotted of $l$ vs $\sqrt{d^2 + l^2}$. The gradient of this graph, $\frac{\lambda}{d_g}$ and the gradient error was used in conjunction with the determined value of $d_g$ and its associated error to determine the wavelength, $\lambda$ of the sample and error respectively for each of the bright fringes observed.
+we can rearrange to determine $d_g$ the grating constant and since we were observing the first bright fringe order, $m$ = 1 in this case. The obtained value of $d_g$, $1.69 \pm 0.02 \times 10^{-6}$m was then compared against the known value $1.67 \times 10 ^{-6}$m \cite{Paper01} and this shows that this is correct with the known value lying within its associated error. Therefore, this check verified that the obtained value of $d_g$ could be used for further calculations. Next, by using the obtained values of $l$ and $d$ an appropriate graph was plotted of $l$ vs $\sqrt{d^2 + l^2}$. The gradient of this graph, $\frac{\lambda}{d_g}$ and the gradient error was used in conjunction with the determined value of $d_g$ and its associated error to determine the wavelength, $\lambda$ of the sample and error respectively for each of the bright fringes observed.
 
 \vspace{2mm}
 \noindent
@@ -335,29 +335,116 @@ During both experiments there were many sensitive electrical components used; su
 \section{Results}
 \label{sec:results}
 
-\figref{fig:Red_Plot} and \figref{fig:Blue_Plot} show a plot of $l$ against $\sqrt{d^2+l^2}$ for the two observed hydrogen emission lines.
+\subsection{Atomic Spectroscopy}
+\label{ssec:atomic-results}
+
+\figref{fig:Red_Plot} and \figref{fig:Blue_Plot} show a plot of $l$ against $\sqrt{d^2+l^2}$ for the two observed hydrogen transitions from the Balmer series: the Hydrogen $\alpha$, H$_\alpha$, and Hydrogen $\beta$, H$_\beta$, transitions.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.8]{"Red_Plot".pdf}
+\includegraphics[scale=1.0]{"Red_Plot".pdf}
 \caption{A graph of length $l$ against $\sqrt{d^2+l^2}$ for the H$_\alpha$ transition.}
 \label{fig:Red_Plot}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.8]{"Blue_Plot".pdf}
+\includegraphics[scale=1.0]{"Blue_Plot".pdf}
 \caption{A graph of length $l$ against $\sqrt{d^2+l^2}$ for the H$_\beta$ transition.}
 \label{fig:Blue_Plot}
 \end{figure}
 
+\vspace{2mm}
+\noindent
+By determining the gradient from \figref{fig:Red_Plot} and \figref{fig:Blue_Plot} equation \eqref{eq:grating-equation} was used in the form 
+
+\begin{equation}
+\label{eq:wavelength}
+\lambda = \sigma d_g
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\sigma = \frac{l^2}{\sqrt{l^2+d^2}}$ is the value of the gradient. This equation was used to determine the wavelength for the H$_\alpha$ and H$_\beta$ transitions. The associated errors for the wavelengths were determined by using
+
+\begin{equation}
+\label{eq:wavelength-error}
+\delta\lambda = \sqrt{\bigg(\frac{\partial{\lambda}}{\partial{\sigma}}\bigg)^2(\delta\sigma)^2 + \bigg(\frac{\partial{\lambda}}{\partial{d_g}}\bigg)^2(\delta d_g)^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\delta\lambda$ is the error in the wavelength (for H$_\alpha$ or H$_\beta$), $\delta\sigma$ is the error in the gradient and $\delta d_g$ is the error for the determined grating constant. The error for the grating constant was obtained by the usual propagation of errors routine  when determining the values of $l$ and $d$ to obtain $d_g$ as mentioned in \secref{ssec:atomic-method}. \tabref{tab:table1} shows the determined wavelengths from \figref{fig:Red_Plot} and \figref{fig:Blue_Plot} compared to the theoretical values obtained by performing calculations using equations \eqref{eq:balmer-series} and \eqref{eq:energy-wavelength} and using information from \cite{Paper01}.
 
 
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of Experimental Values and Theoretical Values for the transition wavelengths.}
+\label{tab:table1}
+\begin{tabular}{|c|c|c|}
+\hline
+Value & H$_\alpha$ Wavelength, $\lambda_{\alpha}$ (nm) & H$_\beta$ Wavelength, $\lambda_{\beta}$ (nm) \\
+\hline
+Experimental & $685 \pm 13$ & $507 \pm 8$ \\
+\hline
+Theoretical \cite{Paper01} & $658$ & $488$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+
+\vspace{2mm}
+\noindent
+Once the wavelengths had been determined, equation \eqref{eq:energy-wavelength} was used to find the energy emitted from these transitions. The associated uncertainty in the energy was then obtained by using the value $\delta\lambda$ in similar propagation methods used for determining the wavelength uncertainty. 
+
+\vspace{2mm}
+\noindent
+Once having obtained the two energies associated with the two transitions, two values of the Rydberg constant could then be determined by using \eqref{eq:balmer-series} along with their uncertainties by using the uncertainty in the energy of the transitions. These two values were then averaged to determine the value more accurately
+
+\begin{equation}
+\label{eq:Rydberg-const}
+Ry = \frac{Ry_{\alpha} + Ry_{\beta}}{2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $Ry_{\alpha}$ and $Ry_{\beta}$ are the two values of the Rydberg constant determined from the H$_\alpha$ and H$_\beta$ transitions respectively. The uncertainty was then determined by
+
+\begin{equation}
+\label{eq:Rydberg-error}
+\delta Ry = \sqrt{\bigg(\frac{\partial{Ry}}{\partial{Ry_{\alpha}}}\bigg)^2 (\delta Ry_{\alpha})^2 + \bigg(\frac{\partial{Ry}}{\partial{Ry_{\beta}}}\bigg)^2 (\delta Ry_{\beta})^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\delta Ry_{\alpha}$ and $\delta Ry_{\beta}$ are the uncertainties for the two values of the Rydberg constant,  $Ry_{\alpha}$ and $Ry_{\beta}$ respectively. $\delta Ry$ is the final uncertainty for the final value of the Rydberg constant, $Ry$. \tabref{tab:table2} shows a caparison between the experimental and theoretical results of the Rydberg constant.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of Calculated Values and Published Values for the Rydberg Constant}
+\label{tab:table2}
+\begin{tabular}{|c|c|c|}
+\hline
+Value & Rydberg Constant, $Ry$ (eV) \\
+\hline
+Experimental & $13.1 \pm 0.2$ \\
+\hline
+Theoretical \cite{Paper01} & $13.6$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+\subsection{Atomic Spectroscopy}
+\label{ssec:atomic-results}
 
 %\section{Discussion}
 %\label{sec:discussion}
 
-% When setting up the circuit, the distance between the Helmoholtz coils was slightly different to that of the radius of a coil. This was because the radio frequency oscillator had to fit between the two coils in order to ensure that the DPPH was central in position as shown in \figref{fig:electron_picture}. Therefore, the actual measured value of $r$ for use in  \eqref{eq:magnetic-equation} was now $7.5 \pm1.0$ cm. The large error was used to ensure that had the value of $6.75$cm in the range and to accomodate parallax error when setting up the coils. This was all noted and used later in \eqref{eq:magnetic-equation} when determining generated the magnetic fields. 
+% When setting up the circuit, the distance between the Helmoholtz coils was slightly different to that of the radius of a coil. This was because the radio frequency oscillator had to fit between the two coils in order to ensure that the DPPH was central in position as shown in \figref{fig:electron_picture}. Therefore, the actual measured value of $r$ for use in  \eqref{eq:magnetic-equation} was now $7.5 \pm0.7$ cm. The large error was used to ensure that had the value of $6.75$cm in the range and to accomodate parallax error when setting up the coils. This was all noted and used later in \eqref{eq:magnetic-equation} when determining generated the magnetic fields. 
 
 
 %\section{Conclusion}
