@@ -57,10 +57,13 @@
 \date{15\textsuperscript{th} November 2018} % date of the report
 %\twocolumn[	% makes title and abstract appear over entire page width
 \maketitle % formats the title
-%\begin{onecolabstract}
-%\noindent
 
-%Enter abstract here.
+\begin{onecolabstract}
+\noindent
+These experiments investigated the energy transitions involved with electron transitions within the hydrogen atom and energy differences associated with electron spin state changes. The value of the Rydberg constant determined from the atomic spectroscopy experiment was $13.1 \pm 0.2$ eV and the one given from theory is $13.6$ eV \cite{Paper01}. The spectroscopic splitting factor obtained from investigating electron spin resonance was $1.9733 \pm 0.0119$ and the one given from theory is $2.0023$ \cite{Paper02}. These both the experimental values were fairly close to the ones given from theory; however, both of the theoretical values were outside the uncertainty range of the experimental ones. By studying the values of these key atomic constants, many interesting and fundamental concepts, such analysing emission spectra from stars and quantum mechanical properties of atoms, can be investigated in much more detail.
+
+\end{onecolabstract}
+\vspace{5mm} % takes one free line before rest of text
 
 
 \section{Introduction}
@@ -112,7 +115,7 @@ The energy levels of a simplified diagram for the hydrogen atom is shown in \fig
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.30]{"levels".pdf}
+\includegraphics[scale=0.48]{"levels".pdf}
 \caption{A simplified diagram showing the energy levels of the hydrogen atom. Where n is the principle quantum number. n = 1 is the ground state and n = $\infty$ correspons to the ionisation energy required to liberate the bound electron \cite{Paper01}.}
 \label{fig:levels}
 \end{figure}
@@ -154,11 +157,12 @@ Electrons are negatively charged particles, therefore they have an associated ma
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{"spin".pdf}
+\includegraphics[scale=0.85]{"spin".pdf}
 \caption{Left: orientation of electron `spin up' and `spin down' are given in a magnetic field \textbf{B}. Right: dependence of the two energy states on \textbf{B} is shown \cite{Paper02}.}
 \label{fig:spin}
 \end{figure}
 
+\newpage
 \vspace{2mm}
 \noindent
 The magnetic energy is given by \cite{Paper02}
@@ -204,6 +208,7 @@ h\nu = g\mu_BB
 \noindent
 where $\nu$ is again the frequency of the absorbed or emitted photon. 
 
+\newpage
 \section{Method}
 \label{sec:method}
 
@@ -213,7 +218,7 @@ The exerimental set-up is shown in \figref{fig:atom_picture}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{"atom_picture".pdf}
+\includegraphics[scale=0.48]{"atom_setup".pdf}
 \caption{Experimental set-up for the atomic spectroscopy experiment.}
 \label{fig:atom_picture}
 \end{figure}
@@ -223,7 +228,7 @@ First the Hydrogen spectral tube, marker and ruler used to determine $l$ were ca
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.3]{"grating_plan".pdf}
+\includegraphics[scale=0.35]{"grating_plan".pdf}
 \caption{A plan view of the experimental set-up \cite{Paper01}.}
 \label{fig:grating_plan}
 \end{figure}
@@ -265,7 +270,7 @@ The sample tested was an organic compound called DPPH (1, 1-diphenyl-2-picrylhyd
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.3]{"electron_setup".pdf}
+\includegraphics[scale=0.4]{"electron_setup".pdf}
 \caption{The experimental geometry for investigating electron spin resonance of DPPH \cite{Paper02}.}
 \label{fig:electron_setup}
 \end{figure}
@@ -281,7 +286,7 @@ B = \mu_0\Bigg(\frac{4}{5}\Bigg)^{3/2}\frac{nI}{r}
 
 \vspace{2mm}
 \noindent
-where $\mu_0$ is the permeability of free space, $n$ is the number of turns per coil ( $n$ = 320 in this case), $I$ is the current through each coil and $r$ is the distance between the two coils in this case it is the coil radius (6.75cm) \cite{Paper02}. Once a range of magnetic field measurements had been obtained in conjunction with the corresponding currents, these currents were used in \eqref{eq:magnetic-equation} to obtain the magnetic field. When comparing the values of the magnetic field measured using the Gauss meter to the ones obtained by relation \eqref{eq:magnetic-equation}, they were of the same order of magnitude. Therefore, this verified that \eqref{eq:magnetic-equation} is a valid way of determining the magnetic field from a range of currents and the next steps in the experimental method could proceed.
+where $\mu_0$ is the permeability of free space, $n$ is the number of turns per coil ( $n$ = 320 in this case), $I$ is the current through each coil and $r$ is the distance between the two coils in this case it is the coil radius (6.75cm) \cite{Paper02}. However, the actual distance was greater than this and $r = 7.5 \pm 0.7$cm in this case, due to the width of the radio frequency oscillator having to fit between the two coils to acquire the desired experimental set-up as shown in \figref{fig:electron_picture}. More will be mentioned about this discrepancy in \secref{sec:discussion}. Once a range of magnetic field measurements had been obtained in conjunction with the corresponding currents, these currents were used in \eqref{eq:magnetic-equation} to obtain the magnetic field. When comparing the values of the magnetic field measured using the Gauss meter to the ones obtained by relation \eqref{eq:magnetic-equation}, they were of the same order of magnitude. Therefore, this verified that \eqref{eq:magnetic-equation} is a valid way of determining the magnetic field from a range of currents and the next steps in the experimental method could proceed.
 
 \vspace{2mm}
 \noindent
@@ -289,11 +294,12 @@ The final preliminary check was to see that removing energy from a circuit will 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{"pre_exp2".pdf}
+\includegraphics[scale=0.43]{"pre_exp2".pdf}
 \caption{Preliminary Experimental set-up demonstrating a reduction in output voltage due to a load put on a circuit.}
 \label{fig:pre_exp2}
 \end{figure}
 
+\newpage
 \vspace{2mm}
 \noindent
 The current output from the ESR unit, see \figref{fig:pre_exp2} was be connected to a multimeter to measure the DC current. Then a passive circuit with a medium inductor coil was positioned close to a medium inductor coil attached to the basic ESR unit, see \figref{fig:pre_exp2}. By adjusting the frequency of the passive circuit, the current reading on the multimeter dropped. This therefore demonstrated that by removing energy from a resonant circuit placed a load on the circuit and the output voltage was reduced. After this principle was checked, the main experiment commenced.
@@ -304,7 +310,7 @@ Upon successful completion of the preliminary checks, the DPPH sample was placed
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{"electron_picture".pdf}
+\includegraphics[scale=0.44]{"electron_picture".pdf}
 \caption{The experimental set-up for investigating the electron spin resonance of DPPH.}
 \label{fig:electron_picture}
 \end{figure}
@@ -315,7 +321,7 @@ Once all the relevant connections had been made to the oscilloscope and the ESR 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.38]{"resonance".pdf}
+\includegraphics[scale=0.4]{"resonance".pdf}
 \caption{A picture showing the resonant frequency condition as shown on the oscilloscope trace.}
 \label{fig:resonance}
 \end{figure}
@@ -354,6 +360,7 @@ During both experiments there were many sensitive electrical components used; su
 \label{fig:Blue_Plot}
 \end{figure}
 
+\newpage
 \vspace{2mm}
 \noindent
 By determining the gradient from \figref{fig:Red_Plot} and \figref{fig:Blue_Plot} equation \eqref{eq:grating-equation} was used in the form 
@@ -380,7 +387,7 @@ where $\delta\lambda$ is the error in the wavelength (for H$_\alpha$ or H$_\beta
 \vspace{5mm}
 \begin{table*}[h]
 \centering % centre table
-\caption{Table of Experimental Values and Theoretical Values for the transition wavelengths.}
+\caption{Table of Experimental Values and Theoretical Values for the Transition Wavelengths.}
 \label{tab:table1}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -438,19 +445,90 @@ Theoretical \cite{Paper01} & $13.6$ \\
 %\end{center}
 \end{table*}
 
-\subsection{Atomic Spectroscopy}
-\label{ssec:atomic-results}
+\subsection{Electron Spin Resonance}
+\label{ssec:electron-results}
 
-%\section{Discussion}
-%\label{sec:discussion}
+\figref{fig:Electron_Plot} shows the results from the determined magnetic fields at various currents from using \eqref{eq:magnetic-equation} plotted against different frequencies. This shows a direct linear relation between magnetic field and frequency; showing that an increase in frequency causes the magnetic field to increase as a result.
 
-% When setting up the circuit, the distance between the Helmoholtz coils was slightly different to that of the radius of a coil. This was because the radio frequency oscillator had to fit between the two coils in order to ensure that the DPPH was central in position as shown in \figref{fig:electron_picture}. Therefore, the actual measured value of $r$ for use in  \eqref{eq:magnetic-equation} was now $7.5 \pm0.7$ cm. The large error was used to ensure that had the value of $6.75$cm in the range and to accomodate parallax error when setting up the coils. This was all noted and used later in \eqref{eq:magnetic-equation} when determining generated the magnetic fields. 
-
-
-%\section{Conclusion}
-%\label{sec:conclusion}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.0]{"Electron_plot1".pdf}
+\caption{A graph of magnetic field, $B$ against frequency $\nu$.}
+\label{fig:Electron_Plot}
+\end{figure}
 
 \newpage
+\vspace{2mm}
+\noindent
+With reference to \figref{fig:Electron_Plot} equation \eqref{eq:frequency-equation} rearranges to the form of a straight-line graph
+
+\begin{equation}
+\label{eq:g-value}
+B = \frac{h}{g\mu_B}\nu = \gamma\nu
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\gamma = \frac{h}{g\mu_B}$ is the gradient of \figref{fig:Electron_Plot}. Thus, by obtaining the gradient of the graph and the gradient error, the value of $g$ can be determined. The associated uncertainty of $g$ can be obtained by using
+
+\begin{equation}
+\label{eq:g-error}
+\delta g = \sqrt{\bigg(\frac{\partial{g}}{\partial{\gamma}}\bigg)^2 (\delta\gamma)^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\delta g$ is the uncertainty in $g$ and $\delta\gamma$ is the error in the gradient of \figref{fig:Electron_Plot}. \tabref{tab:table3} compares the values for $g$ determined experimentally to a theoretical value given by \cite{Paper02}.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of Calculated Values and Published Values for the Spectroscopic Splitting Factor.}
+\label{tab:table3}
+\begin{tabular}{|c|c|c|}
+\hline
+Value & Spectroscopic Splitting Factor, $g$ \\
+\hline
+Experimental & $1.9733 \pm 0.0119$ \\
+\hline
+Theoretical \cite{Paper02} & $2.0023$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+Comparing the results in \secref{ssec:atomic-results} \tabref{tab:table2} it is clear to see that the experimental value for the Rydberg constant is close to the theoretical \cite{Paper01}. However, the theoretical value does not lie within the small uncertainty range of the experimental. Also \tabref{tab:table1} shows that the experimental values for the wavelengths are slightly different to those given in theory and again the theoretical values do not lie within the uncertainties of the experimental ones. So, these obtained wavelengths clearly impacted on the final result when obtaining the experimental value of the Rydberg constant and the small uncertainties found from the wavelengths then propagated through to give a small final uncertainty for the Rydberg constant.
+
+\vspace{2mm}
+\noindent
+We can find the source of these small uncertainty values by inspecting \figref{fig:Red_Plot} and \figref{fig:Blue_Plot}. The error bars in these figures demonstrate that the uncertainties obtained from the experiment are small. When conducting the experiment, many of the uncertainties, such as the ones in the length $l$ and distance $d$ were had to estimate. But from analysis to \figref{fig:Red_Plot} and \figref{fig:Blue_Plot}, the vertical error bars are the smallest. This, therefore suggesting that more consideration should have been taken when estimating the uncertainty in the length, $l$, of the emission lines across the ruler as described in \secref{ssec:atomic-method}.
+
+\vspace{2mm}
+\noindent
+In addition to this, when conducting the atomic spectroscopy experiment, many factors were hard to measure. For example, the emission lines could only be seen in a dark room. But, in this dark environment the length, $l$, across the ruler was hard to observe due to the dark back ground. Also, some of the emission lines were hard to view at certain distances. Some of the emission lines were faint at large distances, whilst at close distances the angle between $d$ and $l$ was large and this made viewing the emission lines difficult as described in \figref{fig:grating_plan}. Furthermore, the distance, $d$, of the diffraction grating from the ruler was also difficult to determine. This was because many factors, such as parallax, made it hard to obtain a result for this value; hence \figref{fig:Red_Plot} and \figref{fig:Blue_Plot} both show bigger horizontal error bars due to the bigger error in $d$ to accommodate for this discrepancy. All of these values would have impacted on the wavelength values in \tabref{tab:table1} due to using \eqref{eq:grating-equation} to obtain the wavelengths. Hence, the obtained wavelength and associated error would have led to the discrepancies and small error in the experimental value of the Rydberg constant as shown tab{tab:table1}. 
+
+\vspace{2mm}
+\noindent
+By considering \tabref{tab:table3} we can see that the value of the spectroscopic splitting factor, $g$, obtained experimentally different to the one given in theory \cite{Paper02}. Also, the theoretical value does not lie within the uncertainty range of the the experimental therefore showing some discrepancies within the experiment. By looking at \figref{fig:Electron_Plot} we can see that the linear fitting line, obtained by the least squares routine, is very accurate and passes through most of the points. This therefore led to a small error in the gradient of the line, $\delta\gamma$ and when propagated through using \eqref{eq:g-error} the gave a small error in $g$. This again, therefore implies that errors within the experiment were small. A possible reason for these small errors is due to the experiment being repeated many times. This reduced the overall error (within the current) and improved confidence when obtaining the values of the current, and hence the magnetic field. Therefore, the error in the result on $g$ is reduced. 
+
+\vspace{2mm}
+\noindent
+By further inspection, the actual experimental value of $g$ is slightly different to what was predicted in theory. When conducting the experiment, numerous factors were hard to determine. For example, the resonance condition was hard to measure. It was hard to get the period of resonance exactly right due to the difficulty in stabilising the frequency from the supply unit. Also, when the resonance conditions were displayed on the oscilloscope, it was hard to deduce exact values of current as there were discrepancies in viewing the period on the grid lines of the screen as shown in \figref{fig:resonance}. By repeating the experiment three times, this reduced some of the inaccuracies within the measurements, but also showed that there was variation within the measured current. This then gave rise to some variation in the magnetic field as shown in the vertical error bars in \figref{fig:Electron_Plot}. 
+
+\vspace{2mm}
+\noindent
+In addition to viewing the resonance conditions, when setting up the circuit, the distance between the Helmholtz coils was slightly different to that of the radius of a coil, as mentioned in \secref{ssec:electron-method}. This was because the radio frequency oscillator had to fit between the two coils in order to ensure that the DPPH was central in position as shown in \figref{fig:electron_picture}. Therefore, the actual measured value of $r$ for use in \eqref{eq:magnetic-equation} was now $7.5 \pm0.7$ cm. The large error was used to ensure that had the value of $6.75$cm in the range and to accommodate parallax error when setting up the coils. This was all noted and used in equation  \eqref{eq:magnetic-equation} when determining generated the magnetic fields. Therefore, this would have impacted on the values of $g$. If more time had been permitted, in order to have obtained a more accurate value of $g$ a different relation would have needed to have been derived for the magnetic field using the Biot-Savhart law. This would have taken into account the different distance between the two Helmholtz coils and hence would have generated a more reliable value of $g$.
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+Overall, both experiments gave some fairly good values for the Rydberg constant, $Ry$ and spectroscopic splitting factor $g$. Both of the experiments demonstrate some interesting properties associated with electron energy changes. The atomic spectroscopy experiment demonstrated how electrons change energy levels within the hydrogen atom and the electron spin resonance experiment showed how electrons change spin when exposed to a magnetic field. By taking into account careful estimation of errors and experimental set-ups the experimental results obtained in \secref{ssec:atomic-results} \tabref{tab:table2} and \secref{ssec:electron-results} \tabref{tab:table3} would have been more reliable. This would have then showed a stronger correlation between the experimental values and those predicted in theory. However, it is clear to see that these values obtained  for $Ry$ and $g$ from the experiments show strong correlations to those given in theory. This verifies that these physical constants are indeed valid when considering atomic and subatomic physics. 
+
+
 \begin{thebibliography}{9}
 \bibitem{Paper01} Atomic Spectroscopy worksheet.
 \bibitem{Paper02} Electron Spin Resonance worksheet. 

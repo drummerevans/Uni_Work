@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  30 NOV 2018 09:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  1 DEC 2018 13:00
 entering extended mode
 **./At01_Final.tex
 (At01_Final.tex
@@ -646,116 +646,121 @@ pdfTeX warning: pdflatex (file ./levels.pdf): PDF inclusion: found PDF version
 <"levels".pdf, id=1, 523.20468pt x 520.94624pt>
 File: "levels".pdf Graphic file (type pdf)
 <use "levels".pdf>
-Package pdftex.def Info: "levels".pdf  used on input line 115.
-(pdftex.def)             Requested size: 156.96262pt x 156.28508pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+Package pdftex.def Info: "levels".pdf  used on input line 118.
+(pdftex.def)             Requested size: 251.13539pt x 250.05136pt.
 [1
 
 {C:/Users/Matt/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
 pdfTeX warning: pdflatex (file ./spin.pdf): PDF inclusion: found PDF version <1
 .7>, but at most version <1.5> allowed
-<"spin".pdf, id=18, 341.77687pt x 147.55125pt>
+<"spin".pdf, id=21, 341.77687pt x 147.55125pt>
 File: "spin".pdf Graphic file (type pdf)
 <use "spin".pdf>
-Package pdftex.def Info: "spin".pdf  used on input line 157.
-(pdftex.def)             Requested size: 205.0677pt x 88.53142pt.
-[2 <./levels.pdf> <./spin.pdf>]
-<"atom_picture".pdf, id=33, 963.6pt x 542.025pt>
-File: "atom_picture".pdf Graphic file (type pdf)
-<use "atom_picture".pdf>
-Package pdftex.def Info: "atom_picture".pdf  used on input line 216.
-(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
+Package pdftex.def Info: "spin".pdf  used on input line 160.
+(pdftex.def)             Requested size: 290.5117pt x 125.41913pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./levels.pdf>] [3 <./spin.pdf>]
+<"atom_setup".pdf, id=37, 963.6pt x 542.025pt>
+File: "atom_setup".pdf Graphic file (type pdf)
+<use "atom_setup".pdf>
+Package pdftex.def Info: "atom_setup".pdf  used on input line 221.
+(pdftex.def)             Requested size: 462.52275pt x 260.16904pt.
 
 
 pdfTeX warning: pdflatex (file ./grating_plan.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<"grating_plan".pdf, id=34, 572.89032pt x 608.2725pt>
+<"grating_plan".pdf, id=38, 572.89032pt x 608.2725pt>
 File: "grating_plan".pdf Graphic file (type pdf)
 <use "grating_plan".pdf>
-Package pdftex.def Info: "grating_plan".pdf  used on input line 226.
-(pdftex.def)             Requested size: 171.86841pt x 182.48315pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3 <./atom_picture.pdf>]
+Package pdftex.def Info: "grating_plan".pdf  used on input line 231.
+(pdftex.def)             Requested size: 200.5146pt x 212.89856pt.
+[4 <./atom_setup.pdf> <./grating_plan.pdf>]
 
 pdfTeX warning: pdflatex (file ./electron_setup.pdf): PDF inclusion: found PDF 
 version <1.7>, but at most version <1.5> allowed
-<"electron_setup".pdf, id=54, 711.4078pt x 497.60907pt>
+<"electron_setup".pdf, id=61, 711.4078pt x 497.60907pt>
 File: "electron_setup".pdf Graphic file (type pdf)
 <use "electron_setup".pdf>
-Package pdftex.def Info: "electron_setup".pdf  used on input line 268.
-(pdftex.def)             Requested size: 213.42398pt x 149.28386pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4 <./grating_plan.pdf>]
-<"pre_exp2".pdf, id=62, 963.6pt x 542.025pt>
+Package pdftex.def Info: "electron_setup".pdf  used on input line 273.
+(pdftex.def)             Requested size: 284.55807pt x 199.0401pt.
+[5 <./electron_setup.pdf>]
+<"pre_exp2".pdf, id=69, 963.6pt x 542.025pt>
 File: "pre_exp2".pdf Graphic file (type pdf)
 <use "pre_exp2".pdf>
-Package pdftex.def Info: "pre_exp2".pdf  used on input line 292.
-(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
- [5 <./electron_setup.pdf> <./pre_exp2.pdf>]
-<"electron_picture".pdf, id=87, 963.6pt x 542.025pt>
+Package pdftex.def Info: "pre_exp2".pdf  used on input line 297.
+(pdftex.def)             Requested size: 414.33992pt x 233.0662pt.
+ [6 <./pre_exp2.pdf>]
+<"electron_picture".pdf, id=81, 963.6pt x 542.025pt>
 File: "electron_picture".pdf Graphic file (type pdf)
 <use "electron_picture".pdf>
-Package pdftex.def Info: "electron_picture".pdf  used on input line 307.
-(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
-<"resonance".pdf, id=88, 963.6pt x 542.025pt>
+Package pdftex.def Info: "electron_picture".pdf  used on input line 313.
+(pdftex.def)             Requested size: 423.98532pt x 238.49173pt.
+<"resonance".pdf, id=82, 963.6pt x 542.025pt>
 File: "resonance".pdf Graphic file (type pdf)
 <use "resonance".pdf>
-Package pdftex.def Info: "resonance".pdf  used on input line 318.
-(pdftex.def)             Requested size: 366.17181pt x 205.97163pt.
- [6 <./electron_picture.pdf> <./resonance.pdf>]
-<"Red_Plot".pdf, id=114, 462.52798pt x 346.89601pt>
+Package pdftex.def Info: "resonance".pdf  used on input line 324.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+ [7 <./electron_picture.pdf> <./resonance.pdf
+
+pdfTeX warning: pdflatex (file ./resonance.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+<"Red_Plot".pdf, id=98, 462.52798pt x 346.89601pt>
 File: "Red_Plot".pdf Graphic file (type pdf)
 <use "Red_Plot".pdf>
-Package pdftex.def Info: "Red_Plot".pdf  used on input line 345.
+Package pdftex.def Info: "Red_Plot".pdf  used on input line 351.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-<"Blue_Plot".pdf, id=115, 462.52798pt x 346.89601pt>
+<"Blue_Plot".pdf, id=99, 462.52798pt x 346.89601pt>
 File: "Blue_Plot".pdf Graphic file (type pdf)
 <use "Blue_Plot".pdf>
-Package pdftex.def Info: "Blue_Plot".pdf  used on input line 352.
+Package pdftex.def Info: "Blue_Plot".pdf  used on input line 358.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7 <./Red_Plot.pdf>] [8 <./Blue_Plot.pdf>] [9] [10] (At01_Final.aux)
+[8 <./Red_Plot.pdf>] [9 <./Blue_Plot.pdf>]
+<"Electron_plot1".pdf, id=179, 462.52798pt x 346.89601pt>
+File: "Electron_plot1".pdf Graphic file (type pdf)
+<use "Electron_plot1".pdf>
+Package pdftex.def Info: "Electron_plot1".pdf  used on input line 455.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
- ) 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] [11 <./Electron_plot1.pdf>] [12] [13] (At01_Final.aux) ) 
 Here is how much of TeX's memory you used:
- 15264 strings out of 493305
- 301098 string characters out of 3136285
- 325426 words of memory out of 3000000
- 18706 multiletter control sequences out of 15000+200000
+ 15277 strings out of 493305
+ 301357 string characters out of 3136285
+ 326497 words of memory out of 3000000
+ 18718 multiletter control sequences out of 15000+200000
  545255 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,63p,1065b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbx9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi5.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmib10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr17.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb
-><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on At01_Final.pdf (10 pages, 2580851 bytes).
+ 42i,9n,63p,1321b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+5.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C
+:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmti10.pfb>
+Output written on At01_Final.pdf (13 pages, 1683625 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
+ 307 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
