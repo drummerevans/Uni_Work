@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  3 DEC 2018 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  4 DEC 2018 22:01
 entering extended mode
 **./At01_Final.tex
 (At01_Final.tex
@@ -659,11 +659,8 @@ File: "spin".pdf Graphic file (type pdf)
 <use "spin".pdf>
 Package pdftex.def Info: "spin".pdf  used on input line 160.
 (pdftex.def)             Requested size: 290.5117pt x 125.41913pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2 <./levels.pdf>] [3 <./spin.pdf>]
-<"atom_setup".pdf, id=38, 963.6pt x 542.025pt>
+[2 <./levels.pdf>] [3 <./spin.pdf>] [4]
+<"atom_setup".pdf, id=41, 963.6pt x 542.025pt>
 File: "atom_setup".pdf Graphic file (type pdf)
 <use "atom_setup".pdf>
 Package pdftex.def Info: "atom_setup".pdf  used on input line 221.
@@ -672,27 +669,27 @@ Package pdftex.def Info: "atom_setup".pdf  used on input line 221.
 
 pdfTeX warning: pdflatex (file ./grating_plan.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<"grating_plan".pdf, id=39, 572.89032pt x 608.2725pt>
+<"grating_plan".pdf, id=42, 572.89032pt x 608.2725pt>
 File: "grating_plan".pdf Graphic file (type pdf)
 <use "grating_plan".pdf>
 Package pdftex.def Info: "grating_plan".pdf  used on input line 231.
 (pdftex.def)             Requested size: 200.5146pt x 212.89856pt.
-[4 <./atom_setup.pdf> <./grating_plan.pdf>]
+[5 <./atom_setup.pdf> <./grating_plan.pdf>]
 
 pdfTeX warning: pdflatex (file ./electron_setup.pdf): PDF inclusion: found PDF 
 version <1.7>, but at most version <1.5> allowed
-<"electron_setup".pdf, id=62, 711.4078pt x 497.60907pt>
+<"electron_setup".pdf, id=65, 711.4078pt x 497.60907pt>
 File: "electron_setup".pdf Graphic file (type pdf)
 <use "electron_setup".pdf>
 Package pdftex.def Info: "electron_setup".pdf  used on input line 273.
 (pdftex.def)             Requested size: 284.55807pt x 199.0401pt.
-[5 <./electron_setup.pdf>]
-<"pre_exp2".pdf, id=69, 963.6pt x 542.025pt>
+[6 <./electron_setup.pdf>]
+<"pre_exp2".pdf, id=72, 963.6pt x 542.025pt>
 File: "pre_exp2".pdf Graphic file (type pdf)
 <use "pre_exp2".pdf>
 Package pdftex.def Info: "pre_exp2".pdf  used on input line 297.
 (pdftex.def)             Requested size: 414.33992pt x 233.0662pt.
-<"electron_picture".pdf, id=70, 963.6pt x 542.025pt>
+<"electron_picture".pdf, id=73, 963.6pt x 542.025pt>
 File: "electron_picture".pdf Graphic file (type pdf)
 <use "electron_picture".pdf>
 Package pdftex.def Info: "electron_picture".pdf  used on input line 313.
@@ -701,23 +698,23 @@ Package pdftex.def Info: "electron_picture".pdf  used on input line 313.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <./pre_exp2.pdf>]
-<"resonance".pdf, id=82, 963.6pt x 542.025pt>
+[7 <./pre_exp2.pdf>]
+<"resonance".pdf, id=86, 963.6pt x 542.025pt>
 File: "resonance".pdf Graphic file (type pdf)
 <use "resonance".pdf>
 Package pdftex.def Info: "resonance".pdf  used on input line 325.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
- [7 <./electron_picture.pdf> <./resonance.pdf
+ [8 <./electron_picture.pdf> <./resonance.pdf
 
 pdfTeX warning: pdflatex (file ./resonance.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
-<"Red_Plot".pdf, id=98, 462.52798pt x 346.89601pt>
+<"Red_Plot".pdf, id=101, 462.52798pt x 346.89601pt>
 File: "Red_Plot".pdf Graphic file (type pdf)
 <use "Red_Plot".pdf>
 Package pdftex.def Info: "Red_Plot".pdf  used on input line 352.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-<"Blue_Plot".pdf, id=99, 462.52798pt x 346.89601pt>
+<"Blue_Plot".pdf, id=102, 462.52798pt x 346.89601pt>
 File: "Blue_Plot".pdf Graphic file (type pdf)
 <use "Blue_Plot".pdf>
 Package pdftex.def Info: "Blue_Plot".pdf  used on input line 359.
@@ -726,8 +723,8 @@ Package pdftex.def Info: "Blue_Plot".pdf  used on input line 359.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <./Red_Plot.pdf>] [9 <./Blue_Plot.pdf>]
-<"Electron_plot1".pdf, id=179, 462.52798pt x 346.89601pt>
+[9 <./Red_Plot.pdf>] [10 <./Blue_Plot.pdf>]
+<"Electron_plot1".pdf, id=182, 462.52798pt x 346.89601pt>
 File: "Electron_plot1".pdf Graphic file (type pdf)
 <use "Electron_plot1".pdf>
 Package pdftex.def Info: "Electron_plot1".pdf  used on input line 456.
@@ -736,11 +733,11 @@ Package pdftex.def Info: "Electron_plot1".pdf  used on input line 456.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10] [11 <./Electron_plot1.pdf>] [12] [13] (At01_Final.aux) ) 
+[11] [12 <./Electron_plot1.pdf>] [13] [14] (At01_Final.aux) ) 
 Here is how much of TeX's memory you used:
  15277 strings out of 493305
  301357 string characters out of 3136285
- 326497 words of memory out of 3000000
+ 326501 words of memory out of 3000000
  18718 multiletter control sequences out of 15000+200000
  545255 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -762,9 +759,9 @@ cm/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2
 sfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C
 :/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti10.pfb>
-Output written on At01_Final.pdf (13 pages, 1683722 bytes).
+Output written on At01_Final.pdf (14 pages, 1685120 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
+ 310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
