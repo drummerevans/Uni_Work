@@ -54,19 +54,21 @@
 \begin{document}
 \title{Th02 Laws of Radiation \& The Thermoelectric Effect} % fill in the title here
 \author{Matthew Evans}% fill in your name here
-\date{17\textsuperscript{th} January 2019} % date of the report
+\date{6\textsuperscript{th} February 2019} % date of the report
 %\twocolumn[	% makes title and abstract appear over entire page width
 \maketitle % formats the title
-%\begin{onecolabstract}
-%\noindent
 
-%Enter abstract here.
+\begin{onecolabstract}
+\noindent
+These experiments investigated the heat transfer mechanisms involved in radiation and conduction. The value of the Stefan-Boltzmann constant obtained was $0.110$ $(\pm0.001) \times 10^{-8}$ Wm$^{-2}$K$^{-4}$ and the one given by theory was $5.67 \times 10^{-8}$ Wm$^{-2}$K$^{-4}$ \cite{Book01}. The obtained value for the Seebeck coefficient of the thermoelectric module was $51 \pm 4$ mVK$^{-1}$ and the theoretical value was $57$ mVK$^{-1}$ \cite{Paper02}. This value for the Seebeck coefficient was close to the one given by theory however the Stefan-Boltzmann constant was an order of magnitude out, but both of the theoretical values for the Stefan-Boltzmann constant and Seebeck coefficient were outside the uncertainty range of the experimental ones. The efficiency obtained for the thermoelectric module in heat engine mode with a 5 $\Omega$ load resistor was $9.36$ $(\pm0.03) \times 10^{-6}$ and the Carnot efficiency was found to be $0.0259 \pm 0.0001$, furthermore it was discovered that the efficiency did not peak at the anticipated 2.8 $\Omega$ given by \cite{Paper02}. Heat transfer properties is of paramount importance for everyday devices, such as thermocouples, refrigerators and ovens so, by studying these concepts many new devices in the future maybe discovered.
 
+\end{onecolabstract}
+\vspace{5mm} % takes one free line before rest of text
 
 \section{Introduction}
 \label{sec:introduction}
 
-%Temperature and heat are fundamental to many modern and everyday appliances; such as heating food in an oven or using air conditioning units to maintain a cool environment. 
+Temperature and heat are fundamental to many modern and everyday appliances; such as heating food in an oven or using air conditioning units to maintain a cool environment. 
 Just as conventional electrical current is the flow of positive charge around a circuit when a source emf is supplied, heat current is generated when a material is subject to a temperature gradient. Heat current, $\dot{Q}$, is the rate of heat flow and is given by
 
 \begin{equation}
@@ -80,7 +82,7 @@ where $dQ$ is an infinitesimal amount of heat transferred in a time $dt$ and the
 
 \vspace{2mm}
 \noindent
-A black body is a body which has the greatest absorption factor and also the highest emissivity for a given wavelength of electromagnetic radiation \cite{Paper01}. % In other words, a black body does not reflect or transmit incident electromagnetic radiation. When it's cold it appears completely black - hence the name `black body'. 
+A black body is a body which has the greatest absorption factor and also the highest emissivity, of +1, for a given wavelength of electromagnetic radiation \cite{Paper01}. % In other words, a black body does not reflect or transmit incident electromagnetic radiation. When it's cold it appears completely black - hence the name `black body'. 
 Assuming the object we are considering is a black body, for \textbf{radiation} the heat current is given by
 
 \begin{equation}
@@ -90,7 +92,7 @@ Assuming the object we are considering is a black body, for \textbf{radiation} t
 
 \vspace{2mm}
 \noindent
-where $\sigma = 5.67 \times 10^{-8}$ Wm$^{-2}$K$^{-4}$ is the Stefann-Boltzmann constant, $A$ is the surface area of the object and $T$ is the absolute temperature of the object. Equation \eqref{eq:SB-Law} is known as the \textit{Stefan-Boltmann Law}. This shows that the total radiation emitted is proportional to the temperature raised to the fourth power \cite{Paper01}. %Many astrophysical objects, such as stars, can be investigated using this law to find out more about stellar properties.
+where $\sigma = 5.670 \times 10^{-8}$ Wm$^{-2}$K$^{-4}$ is the Stefann-Boltzmann constant \cite{Book01}, $A$ is the surface area of the object and $T$ is the absolute temperature of the object. Equation \eqref{eq:SB-Law} is known as the \textit{Stefan-Boltzmann Law}. This shows that the total radiation emitted is proportional to the temperature raised to the fourth power \cite{Paper01}. Many astrophysical objects, such as stars, can be investigated using this law to find out more about stellar properties.
 In this experiment this dependence was investigated by using a burnished brass cylinder, as the black body, exposed to changing temperatures in an electric oven.
 
 \vspace{2mm}
@@ -104,7 +106,7 @@ In addition to heat transfer via radiation, a heat current is also generated thr
 
 \vspace{2mm}
 \noindent
-where $\kappa$ is the thermal conductivity and is material dependent, $A$ is the cross-sectional area of the rod/object, $T_H$ and $T_C$ are the temperatures of the hot and cold ends of the object respectively and $L$ is the length between the two ends of the object. This experiment were investigating the conduction via the diffusion of mobile charge carriers \cite{Paper02} in a semiconductor. In particular the \textbf{thermoelectric effect} as inverstigated: the generation of an e.m.f due to a temperature gradient, known as the \textit{Seedbeck Effect}, and the generation of a temperature gradient due to an electrical current current, known as the \textit{Peltier Effect} \cite{Paper02}.
+where $\kappa$ is the thermal conductivity and is material dependent, $A$ is the cross-sectional area of the rod/object, $T_H$ and $T_C$ are the temperatures of the hot and cold ends of the object respectively and $L$ is the length between the two ends of the object. This experiment investigated the conduction via the diffusion of mobile charge carriers \cite{Paper02} in a semiconductor. In particular the \textbf{thermoelectric effect} as inverstigated: the generation of an e.m.f due to a temperature gradient, known as the \textit{Seebeck Effect}, and the generation of a temperature gradient due to an electrical current current, known as the \textit{Peltier Effect} \cite{Paper02}. The Seebeck effect is used in the operation of a thermocouple, obtaining temperature readings due to an induced e.m.f induced in a material. Whilst, the Peltier effect is responsible for the operation everyday refrigerators and heaters. 
 
 
 \section{Theory}
@@ -146,22 +148,22 @@ where $\epsilon$ is the emissivity of the material. This is defined as
 
 \vspace{2mm}
 \noindent
-where $M$ is the irradiance of the object \cite{Paper01}. For an ideal absorber (a black body) $\epsilon = 1$ and for an ideal reflector $\epsilon = 0$. In this experiment the object was  assumed to behave like a black body. Therefore, the concept of emissivity was not  investigated. However, if the interested reader wishes to find out more about this and further information about heat current in radiation then please refer to \cite{Book01} for details.
+where $M$ is the irradiance of the object \cite{Paper01}. For an ideal absorber (a black body) $\epsilon = 1$ and for an ideal reflector $\epsilon = 0$. In this experiment the object was  assumed to behave like a black body (with $\epsilon = 1$). Therefore, the concept of emissivity was not investigated. (However, if the interested reader wishes to find out more about this and further information about heat current in radiation then please refer to \cite{Book01} for details.)
 
 \vspace{2mm}
 \noindent
-\figref{fig:Seedbeck} \cite{Paper02} demonstrates how the Seebeck effect occurs in a metal
+\figref{fig:Seebeck} demonstrates how the Seebeck effect occurs in a metal
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.42]{"Seebeck".pdf}
-\caption{A demonstration of the Seebeck effect. $T_H$ and $T_C$ represent the hot and cold ends of the metal respectively. The charge carriers move from the hot to the cold end due to different Fermi distributions of electrons. This sets up an e.m.f, $V$ \cite{Paper02}.}
+\includegraphics[scale=0.8]{"Seebeck".pdf}
+\caption{A demonstration of the Seebeck effect. $T_H$ and $T_C$ represent the hot and cold ends of the metal respectively. The charge carriers move from the hot to the cold end. This sets up an e.m.f, $V$. Image modified from  \cite{Paper02}.}
 \label{fig:Seebeck}
 \end{figure}
 
 \vspace{2mm}
 \noindent
-As mentioned in \secref{sec:introduction}, for conductors the charge carriers are normally electrons with stationary postively charged ions as shown in \figref{fig:Seebeck}. However, for semiconductors depending on whether it is n-type doped (adding extra electrons) or p-type doped (reducing electrons) the charge carriers will either be electrons or positively charged holes respectively. Where doping means adding impurities to the semiconductor to obtain the desired electron amounts. By analysing \figref{fig:Seedbeck} we can see that the charge carriers on the left of the figure have more kinetic energy and therefore move to the cooler end at temperature $T_C$. This net diffusion causes the negative charge carriers to congregate at one end leaving postively charged ions at the other \cite{Paper02}. This therefore induces an e.m.f, $V$, between the two ends of the metal and is known as the Seebeck effect \cite{Paper02}. This effect is described by the following relation \cite{Paper02} 
+As mentioned in \secref{sec:introduction}, for conductors the charge carriers are normally electrons with stationary postively charged ions as shown in \figref{fig:Seebeck}. However, for semiconductors depending on whether it is n-type doped (adding extra electrons) or p-type doped (reducing electrons) the charge carriers will either be electrons or positively charged holes respectively. Where doping means adding impurities to the semiconductor to obtain the desired electron amounts. By analysing \figref{fig:Seebeck} we can see that the charge carriers on the left of the figure have more kinetic energy and therefore move to the cooler end at temperature $T_C$. This net diffusion causes the negative charge carriers to congregate at one end leaving postively charged ions at the other. This therefore induces an e.m.f, $V$, between the two ends of the metal and is known as the Seebeck effect. This effect is described by the following relation \cite{Paper02}:
 
 \begin{equation}
 \label{eq:Seebeck-coeff}
@@ -183,20 +185,19 @@ The opposite of the Seebeck effect is when a current (of charge carriers) flows 
 
 \vspace{2mm}
 \noindent
-relates the rate of removal of heat $\dot{Q}$ to the current, $I$ \cite{Paper02} where $\Pi$ is the Peltier coefficient.
+relates the rate of removal of heat $\dot{Q}$ to the current, $I$ \cite{Paper02} where $\Pi$ is the Peltier coefficient. This indicates how much heat is carried by the charge carriers when travelling through the material.
 
 \vspace{2mm}
 \noindent
-These two phenomena can be investigated further by considering heat engines and heat pumps. A heat engine is a device that uses input heat and converts it into work, with the residual deposited into a cold reservoir. Whereas a heat pump is a device that takes heat from a cold reservoir and deposits it into a warmer place using a net input of work to do so. These concepts are demonstrated in \figref{fig:Heat} \cite{Paper02}.
+These two phenomena can be investigated further by considering heat engines and heat pumps. A heat engine is a device that uses input heat and converts it into work, with the residual deposited into a cold reservoir. Whereas a heat pump is a device that takes heat from a cold reservoir and deposits it into a warmer place using a net input of work to do so. These concepts are demonstrated in \figref{fig:Heat}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.55]{"Heat".pdf}
-\caption{Left: visual representation of a heat pump. Right: visual representation of a heat engine. \cite{Paper02}.}
+\includegraphics[scale=0.7]{"Heat".pdf}
+\caption{Left: visual representation of a heat engine. This receives input heat, $Q_H$ and outputs work, $W$ in addition to 'wasted' heat, $Q_C$ lost to the environment. Right: visual representation of a heat pump. This receives input work, $W$ and transfers heat, $Q_C$ from one environment (cold reservoir) and dumps this heat, $Q_H$ to a different environment (hot reservoir) \cite{Paper02}.}
 \label{fig:Heat}
 \end{figure}
 
-\newpage
 \vspace{2mm}
 \noindent
 By inspecting \figref{fig:Heat} and considering the conservation of energy (1st Law of Thermodynamics) \cite{Paper02} the following equation can be constructed
@@ -208,7 +209,7 @@ Q_C + W = Q_H
 
 \vspace{2mm}
 \noindent
-where $Q_C$ is the heat either the heat rejected (heat engine) or heat removed (heat pump), $W$ is the output/input work done and $Q_H$ is the input heat (heat engine) or heat leaving (heat pump). The efficiency, $\eta$, of a heat engine is
+where $Q_C$ is either the heat rejected (heat engine) or heat removed (heat pump), $W$ is the output/input work done and $Q_H$ is the input heat (heat engine) or heat leaving (heat pump). The efficiency, $\eta$, of a heat engine is
 
 \begin{equation}
 \label{eq:Heat-eff}
@@ -217,7 +218,7 @@ where $Q_C$ is the heat either the heat rejected (heat engine) or heat removed (
 
 \vspace{2mm}
 \noindent
-for the ideal case $Q_H = W$ and the efficiency would be 1. However, in practice some heat is always dissipated and this is never achieved \cite{Book02}. The efficiency of an ideal reversible Carnot engine, $\eta_{ideal}$ is given by
+for the ideal case $Q_H = W$ and the efficiency would be 1. However, in practice some heat is always dissipated to the surroundings and this is never achieved \cite{Book02}. The efficiency of an ideal reversible Carnot engine, $\eta_{ideal}$ is given by
 
 \begin{equation}
 \label{eq:Reverse-Carnot-eff}
@@ -226,7 +227,7 @@ for the ideal case $Q_H = W$ and the efficiency would be 1. However, in practice
 
 \vspace{2mm}
 \noindent
-where $T_C$ and $T_H$ are the cold and hot reservoir temperatures respectively. Equation \eqref{eq:Reverse-Carnot-eff} shows that the efficiency of a Carnot engine is large when the difference between the two temperatures is large and it is small when the tempeartures are similar \cite{Book02}. For a more detailed derivation of equation \eqref{eq:Reverse-Carnot-eff} and for more details about heat engines and heat pumps see \cite{Book02}.
+where $T_C$ and $T_H$ are the cold and hot reservoir temperatures respectively. Equation \eqref{eq:Reverse-Carnot-eff} shows that the efficiency of a Carnot engine is large when the difference between the two temperatures is large and it is small when the tempeartures are similar \cite{Book02}. (For a more detailed derivation of equation \eqref{eq:Reverse-Carnot-eff} and for more details about heat engines and heat pumps see \cite{Book02}.)
 
 \vspace{2mm}
 \noindent
@@ -253,40 +254,37 @@ k = \frac{Q_H}{W}
 \subsection{Laws of Radiation}
 \label{ssec:radiaton-method}
 
-First, the experimental was set-up as shown in \figref{fig:radiation} \cite{Paper01} making all relevant connections to the CASSY-Sensor computer interface. The themperautre sensor (thermocouple) and thermopile shown in \figref{fig:radiation} was connected to the CASSY-senor by a theromocouple adapter and $\mu$V box respectively \cite{Paper01}. 
+First, the experimental was set-up as shown in \figref{fig:radiation} \cite{Paper01} making all relevant connections to the CASSY-Sensor computer interface. The temperautre sensor (thermocouple) and thermopile shown in \figref{fig:radiation} were connected to the CASSY-senor by a theromocouple adapter and $\mu$V box respectively \cite{Paper01}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.55]{"Radiation".pdf}
-\caption{Experimental set-up for investigating the Stefan-Boltmann law using an electric oven \cite{Paper01}.}
+\includegraphics[scale=0.8]{"radiation_setup".pdf}
+\caption{Experimental set-up for investigating the Stefan-Boltmann law using an electric oven. The temperature sensor was used to obtain the temperatures at thirty second intervals over an approximate three hour period during the heating and cool down processes. Whilst the thermopile is set-up in order to obtain the corresponding output voltages at these times \cite{Paper01}.}
 \label{fig:radiation}
 \end{figure}
 
 \vspace{2mm}
 \noindent
-The glass window of the thermopile was used. The thermocouple was then used to measure the room temperature, $T_0$ and the thermopile will be used to measure the corresponding output voltage $V_0$. The uncertainties were also noted. $V_0$ is an offset measurement and was therefore subtracted from all the subsequent measured values of the voltage, $V$ \cite{Paper01} giving
+Before the oven was switched on, the thermocouple was then used to measure the room temperature, $T_0$ and the thermopile was used to measure the corresponding output voltage $V_0$. The uncertainties were also noted for both of these values. $V_0$ was an offset measurement and was therefore subtracted from all the subsequent measured values of the voltage, $V$ \cite{Paper01} giving
 
 \begin{equation}
 \label{eq:voltage-cal}
-V_{cal} = V - V_0
+V = V_{meas} - V_0
 \end{equation}
 
 \vspace{2mm}
 \noindent
-where $V_{cal}$ is the calibrated voltage measurement. 
+where $V$ is the calibrated voltage measurement. 
 
 \vspace{2mm}
 \noindent
-Next, the oven was switched on and the voltage readings will be taken every 25 C up to a final temperature of 450 C \cite{Paper01}. After this, the oven was turned off and the voltage readings will also were recorded during the cool down process. Once the temperature falls below 100 C \cite{Paper01} the voltage measurements were stopped.
+Next, the oven was switched on and the voltage readings were taken every 30 seconds up to a final temperature of 450 C \cite{Paper01}. After this, the oven was turned off and the voltage readings were recorded during the cool down process. Once the temperature falls below 100 C \cite{Paper01} the voltage measurements were stopped.
 
 \vspace{2mm}
 \noindent
-Once all the measurements had been made, the room temperature values were re-checked by removing the thermocouple from the oven and the thermopile was covered.
+The calibrated voltage measurements were obtained using \eqref{eq:voltage-cal} along with the associated uncertainties determined. These measurements were then converted to irradiance values, $M_B'$. A graph of irradiance, $M_B'$ \textit{vs} temperature difference, $T^4 - T_0^4$ was plot and by using equation \eqref{eq:SB-Law1} the Stefan-Boltzmann constant, $\sigma$ was determined. This was then compared with the theoretical value given by \cite{Paper01}.
 
-\vspace{2mm}
-\noindent
-The calibrated voltage measurements were obtained using \eqref{eq:voltage-cal} along with the assocaited uncertainties determined. These measurements and uncertaintes were converted to irradiance values, $M_B'$ using data given by \cite{Paper01} and appropriate propagation of errors respectively. Then a graph of irradiance, $M_B'$ \textit{vs} temperature difference, $T^4 - T_0^4$ were plot and by using equation \eqref{eq:SB-Law1} the Stefan-Boltzmann constant, $\sigma$ was determined. This was then compared with the theoretical value given by \cite{Paper01}.
-
+\newpage
 \subsection{The Thermoelectric Effect}
 \label{ssec:thermoelectric-method}
 
@@ -294,7 +292,7 @@ There were three parts to this experiment: the Seebeck coefficient, conservation
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.55]{"Thermo-Module".pdf}
+\includegraphics[scale=0.75]{"Thermo-Module".pdf}
 \caption{The thermoelectric module used to investigate various properties of the thermoelectric effect. A conventional current enters the device through the red terminal and leaves at the blue terminal \cite{Paper02}.}
 \label{fig:Thermo-Module}
 \end{figure}
@@ -305,23 +303,23 @@ The current passing through the module causes the hot side to heat up and the co
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{"Peltier-Element".pdf}
+\includegraphics[scale=0.8]{"Peltier-Element".pdf}
 \caption{A diagram showing one of the Peltier cooling elements. The charge carriers are electrons in the n-type semiconductor and positive holes in the p-type. In the Peltier effect,  when the conventional current, $I_P$, is applied, the charge carriers in both blocks move from the top to the bottom of the device \cite{Paper02} cooling the top and heating the bottom. In the Seedbeck effect, the charge carriers move from the hot to the cold side, creating an electric field, and hence setting up an e.m.f as shown \cite{Paper02}.}
 \label{fig:Peltier-element}
 \end{figure}
 
-\newpage
 \vspace{2mm}  
 \noindent
 To investigate these concepts, several accessories are provides and these are shown in \figref{fig:accessories} \cite{Paper02}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{"Accessories".pdf}
+\includegraphics[scale=0.55]{"Accessories".pdf}
 \caption{An assortment of accessories which was attached to the thermoelectric module to investigate various principles of the thermoelectric effect \cite{Paper02}.}
 \label{fig:accessories}
 \end{figure}
 
+\newpage
 \vspace{2mm}  
 \noindent    
 Before any further steps were taken the dimensions of the copper block, the length $l$, width $w$ and depth $d$ were measured and uncertainties noted. Three measurements of each dimension were taken in order to improve accuracy. This information was be needed for the second part of the experiment - see \secref{sssec:part2} equation \eqref{eq:specific-heat1} for details.
@@ -344,7 +342,7 @@ Next, the thermometer in the hot side was carefully replaced with one which has 
 
 \vspace{2mm}  
 \noindent
-The cold bath was filled with tap water and the hot one filled with boiled water from a kettle. Measurements were taken two minutes after the water had been poured into the baths in order for the initial variations to settle. The temperatures were then recorded over a thirteen minute period. Temperatures and the corresponding ouptut voltages were taken at thirty second intervals for the first six minutes and then at minute invervals for the remaining time. Once all the measurements had been obtained, the experiment was repeated reversing the temperatures of the two water baths \cite{Paper02}. Then the results for both parts of the experiment were be plotted as output voltage, $V$, \textit{vs} temperature difference, $T_H - T_C = \Delta T$. The gradient was then obtained and using relation \eqref{eq:Seedbeck-coeff}, the Seebeck coefficient was determined and compared to the known value for the device given in \cite{Paper02}: see \secref{sec:results} for details.
+The cold bath was filled with tap water and the hot one filled with boiled water from a kettle. Measurements were taken two minutes after the water had been poured into the baths in order for the initial variations to settle. The temperatures were then recorded over a thirteen minute period. Temperatures and the corresponding ouptut voltages were taken at thirty second intervals for the first six minutes and then at minute invervals for the remaining time. Once all the measurements had been obtained, the experiment was repeated reversing the temperatures of the two water baths \cite{Paper02}. Then the results for both parts of the experiment were be plotted as output voltage, $V$, \textit{vs} temperature difference, $T_H - T_C = \Delta T$. The gradient was then obtained and using relation \eqref{eq:Seebeck-coeff}, the Seebeck coefficient was determined and compared to the known value for the device given in \cite{Paper02}: see \secref{sec:results} for details.
 
 \vspace{2mm}  
 \noindent
@@ -357,7 +355,7 @@ First, the rheostat load resistor was adjusted to a resistance of 5 $\Omega$. Th
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{"Circuit".pdf}
+\includegraphics[scale=0.65]{"Circuit".pdf}
 \caption{Circuit diagram for Part 2 and Part 3 of the experiment \cite{Paper02}. In this case the switch was achieved by unplugging a lead from the Tenma power supply unit and plugging into an ammeter leaving the connection at the other end in the red terminal of the thermoelectric module.}
 \label{fig:circuit}
 \end{figure}
@@ -414,7 +412,7 @@ Which gives the heat extracted from the hot side
 
 \begin{equation}
 \label{eq:heat-extract}
-Q_H = \rho lwdc \overline{T_C}
+Q_H = \rho lwdc \overline T_C
 \end{equation}
 
 \vspace{2mm}  
@@ -423,16 +421,16 @@ and the heat entering the cold side
 
 \begin{equation}
 \label{eq:heat-enter}
-Q_C = \rho lwdc\overline{T_C}
+Q_C = \rho lwdc\overline T_C
 \end{equation}
 
 \vspace{2mm}  
 \noindent
-where $\overline{T_H} $ and $\overline{T_C}$ are the average of the temperature readings from the hot and cold side of the thermoelectric module respectively. Therefore, the values of $Q_H$ and $Q_C$ could then be used to test equation \eqref{eq:Energy-Conservation} as a preliminary check for the work done, $W_P$ and $W_E$, in heat pump and heat engine mode respectively.
+where $\overline T_H$ and $\overline T_C$ are the average of the temperature readings from the hot and cold side of the thermoelectric module respectively. Therefore, the values of $Q_H$ and $Q_C$ could then be used to test equation \eqref{eq:Energy-Conservation} as a preliminary check for the work done, $W_P$ and $W_E$, in heat pump and heat engine mode respectively.
 
 \vspace{2mm}  
 \noindent
-Once the work done, $W$ and the heat extracted $Q_H$ had been calculated, equation \eqref{eq:Heat-eff} was used to calculate the efficiency of the thermoelectric module. Then, by using the average temperatures $\overline{T_H} $ and $\overline{T_C}$ obtained from the data, equation \eqref{eq:Reverse-Carnot-eff} was used to obtain the efficiency of an ideal Carnot engine. Finally, these two efficiencies were compared and more details can be found in \secref{sec:results}.
+Once the work done, $W$ and the heat extracted $Q_H$ had been calculated, equation \eqref{eq:Heat-eff} was used to calculate the efficiency of the thermoelectric module. Then, by using the average temperatures $\overline T_H$ and $\overline T_C$ obtained from the data, equation \eqref{eq:Reverse-Carnot-eff} was used to obtain the efficiency of an ideal Carnot engine. Finally, these two efficiencies were compared and more details can be found in \secref{sec:results}.
 
 \subsubsection{Part 3: Efficiency of the Peltier Heat Engine as a Function of Load}
 \label{sssec:part3}
@@ -451,42 +449,292 @@ In addition to this, much of the equipment used is at high temperatures; for exa
 \section{Results}
 \label{sec:results}
 
-\subsection{The Thermoelectric Effect}
-\label{ssec:thermo-results}
+\subsection{Laws of Radiation}
+\label{ssec:radiation-results}
+
+\figref{fig:radiation_graph} shows a plot of irrdiance against temperature difference to the fourth power. This contains both sets of measurements whilst the oven was heating up and cooling down over the full measurement period outlined in \secref{ssec:radiaton-method}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.0]{"Radiation".pdf}
+\caption{A plot of irradiance vs temperature difference to the fourth power during the heating up and cooling down process of the oven.}
+\label{fig:radiation_graph}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+The values for irradiance $M_B'$ were obtained using
+
+\begin{equation}
+\label{eq:sensitivity}
+M_B' = \frac{V}{\alpha}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $V$ is the voltage at a particular temperature and $\alpha = 30 \pm 10$ $\mu$VW$^{-1}$m$^{-2}$ is the sensitivity of the thermopile \cite{Paper01}. The uncertainties for the irradiance values in \figref{fig:radiation_graph}, $\delta M_B'$, (vertical error bars) were obtained by appropriate propagation of errors
+
+\begin{equation}
+\label{eq:sensitivity-error}
+\delta M_B' = \sqrt{\bigg(\frac{\partial{M_B'}}{\partial{\alpha}}\bigg)^2(\delta \alpha)^2 + \bigg(\frac{\partial{M_B'}}{\partial{V}}\bigg)^2(\delta V)^2 }
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\delta \alpha = \pm 10 \mu$VW$^{-1}$m$^{-2}$ is the uncertainty in the sensitivity of the thermopile and $\delta V = \pm 2.8 \mu$V is the uncertainty in the voltage readings. From \figref{fig:radiation_graph} the gradient of this graph was used to determine the Stefan-Boltzmann constant. The associated uncertainty for this value of the Stefan-Boltzmann constant was simply determined by obtaining the error in the gradient from \figref{fig:radiation_graph}.
+
+\vspace{2mm}
+\noindent
+\tabref{tab:table0} shows a comparison between the experimental and theoretical values of the Stefan-Boltzmann constant.
 
 \vspace{5mm}
 \begin{table*}[h]
 \centering % centre table
-\caption{Table of values for work done in heat pump and heat engine mode for the 5 $\Omega$ resistor; obtained from a graphical approach and using equation \eqref{eq:Energy-Conservation}.}
-\label{tab:table1}
+\caption{Table of calculated and published values for the Stefan-Boltzmann constant.}
+\label{tab:table0}
 \begin{tabular}{|c|c|c|}
 \hline
-Value & Heat Pump Work, $W_P$(J) & Heat Engine Work, $W_E$(J) \\
+Value & Stefan-Boltzmann Constant, $\sigma$(Wm${-2}$K$^{-4}$) \\
 \hline
-Graphical & $776.4 \pm 0.2$ & $0.752 \pm 0.002$ \\
+Experimental & $0.110$ $( \pm 0.001) \times 10 ^{-8}$ \\
 \hline
-Equation \eqref{eq:Energy-Conservation} & $1000 \pm 7100$ & $2300 \pm 7100$ \\
+Theoretical \cite{Book01} & $5.670 \times 10^{-8}$ \\
 \hline
 \end{tabular}
 %\end{center}
 \end{table*}
 
+\newpage
+\subsection{The Thermoelectric Effect}
+\label{ssec:thermo-results}
 
-%\section{Discussion}
-%\label{sec:discussion}
+\subsubsection{Part 1: Seebeck Coefficient}
+\label{sssec:part1_results}
 
+\figref{fig:part1_graph} shows two plots of output voltage against temperature difference.
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.0]{"part1_graph".pdf}
+\caption{A graph of output voltage, V against temperature difference, $\Delta$T between the two baths, shown as the red points and blue line. This also shows the second set of data when the temperatures of the baths were reversed represented by the green points and purple line.}
+\label{fig:part1_graph}
+\end{figure}
 
+\vspace{2mm}
+\noindent
+By determining the gradients of the two plots equation \eqref{eq:Seebeck-coeff} was used to obtain two values for the Seebeck coefficient. The error in these gradients was then used to obtain the uncertainties for these values of the Seebeck coefficient. The weighted average was then taken of these two values to determine a final value for the Seebeck coefficient of the thermoelectric module. This was obtained by using
 
-%\section{Conclusion}
-%\label{sec:conclusion}
+\begin{equation}
+\label{eq:seebeck-average}
+S = \frac{\frac{S_1}{\delta{S_1}^2} + \frac{S_2}{\delta{S_2}^2}}{{\delta S}^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $S_1$ and $S_2$ are the calculated values of the Seebeck coefficient, $\delta S_1$ and $\delta S_2$ are the errors in these values. $\delta S$ is the error in the weighted average of the Seebeck coefficient and was determined using
+
+\begin{equation}
+\label{eq:seebeck-error}
+\delta S = \sqrt{\frac{1}{{S_1}^2} + \frac{1}{{S_2}^2}}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+This was then compared against the theoretical value, as shown in \tabref{tab:table1}.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of calculated and published values for the Seebeck coefficient of the thermoelectric module.}
+\label{tab:table1}
+\begin{tabular}{|c|c|c|}
+\hline
+Value & Seebeck Coefficient, $S$(mVK$^{-1}$) \\
+\hline
+Experimental & $51 \pm 4$ \\
+\hline
+Theoretical \cite{Paper02} & $57$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
 
 \newpage
+\subsubsection{Part 2: Conservation of Energy}
+\label{sssec:part2_results}
+
+\figref{fig:part2a_graph} shows how the power varies for the thermoelectric module over at time interval of sixty seconds in heat pump mode as described by the circuit set-up shown by  \figref{fig:circuit} in \secref{sssec:part2}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"five_ohm_pump".pdf}
+\caption{A plot of power vs time for the thermoelectric module in heat pump mode.}
+\label{fig:part2a_graph}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+\figref{fig:part2b_graph} demonstrates how the power varies over time when the thermoelectric module was in heat engine mode with a 5 $\Omega$ load resistor placed in the circuit described by \figref{fig:circuit} in \secref{sssec:part2}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"five_ohm".pdf}
+\caption{A plot of power vs time for the thermoelectric module in heat engine mode for the 5 $\Omega$ load resistor.}
+\label{fig:part2b_graph}
+\end{figure}
+
+\newpage
+\vspace{2mm}
+\noindent
+To obtain the experimental value for the work done, $W_{exp}$ on or by the system in heat pump and heat engine modes respectively, the trapezium rule was used in the form
+
+\begin{equation}
+\label{eq:trap-rule}
+W_{exp} = \frac{\Delta t}{2}\bigg[P_0 + P_N + 2\sum_{i=1}^{N-1} P_i \bigg]
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\Delta t = 15s$ is the time interval, $P_0$ and $P_N$ are the first and last power measurements respectively, $P_i$ is the $i$th power measurement and $N$ is the number of power measurements taken either in heat pump or heat engine mode \textbf{not} the total combined number. This was used for \figref{fig:part2a_graph} and \figref{fig:part2b_graph} to obtain the work done in heat pump and heat engine mode respectively for the thermoelectric module. The error in the work was then obtained by propagation of errors using
+
+\begin{equation}
+\label{eq:trap-error}
+\delta W_{exp} = \Delta t \bigg[\frac{1}{4}(\delta {P_0}^2 + \delta {P_N}^2) + \sum_{i=1}^{N-1} \delta {P_i}^2 \bigg]
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\delta P_0, \delta P_N $ and $ \delta P_i$ are the errors in the power obtained by propagation of errors from the experimental errors in the measured current and voltage values.
+
+\vspace{2mm}
+\noindent
+These two values of the work done were then compared with the theoretical values obtained by using equation \eqref{eq:Energy-Conservation} from using the values obtained for $Q_H$ from equation \eqref{eq:heat-extract} and for $Q_C$ from \eqref{eq:heat-enter}. The error in $Q_H$, $\delta Q_H$ is given by
+
+\begin{equation}
+\label{eq:heat-error}
+\delta Q_H = \sqrt{\bigg(\frac{\partial{Q_H}}{\partial{l}}\bigg)^2(\delta l)^2 + \bigg(\frac{\partial{Q_H}}{\partial{w}}\bigg)^2(\delta w)^2 + \bigg(\frac{\partial{Q_H}}{\partial{d}}\bigg)^2(\delta d)^2 + \bigg(\frac{\partial{Q_H}}{\partial{\overline T_H}}\bigg)^2(\delta \overline T_H)^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where, $\delta l, \delta w$ and $\delta d$ are the errors in the dimensions of the copper block, $\delta \overline T_H$ is the error in the average of $T_H$ and all other symbols have their usual meaning as explained in \secref{sssec:part2}. \eqref{eq:heat-error} was also applied to $Q_C$, but using $\overline T_C $ in place of $\overline T_H$. Therefore, the resulting error in the \textit{theoretical} value of $W$ using equation \eqref{eq:Energy-Conservation} was finally obtained by using 
+
+\begin{equation}
+\label{eq:energy-error}
+\delta W = \sqrt{{\delta Q_H}^2 + {\delta Q_C}^2 }
+\end{equation}
+
+\vspace{2mm}
+\noindent
+\tabref{tab:table2} compares the theoretical and experimental values of work in addition to their corresponding errors.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of values for the work done in heat pump and heat engine mode for the 5 $\Omega$ resistor; obtained from an experimental graphical approach and using equation \eqref{eq:Energy-Conservation}.}
+\label{tab:table2}
+\begin{tabular}{|c|c|c|}
+\hline
+Value & Heat Pump Work, $W_P$(J) & Heat Engine Work, $W_E$(J) \\
+\hline
+Experimental & $1049 \pm 1$ & $0.752 \pm 0.002$ \\
+\hline
+Theoretical \eqref{eq:Energy-Conservation} & $1100 \pm 200$ & $2100 \pm 100$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+\vspace{2mm}
+\noindent
+The efficiency and Carnot efficiency of the thermoelectric module in heat engine mode are given in \tabref{tab:table3}.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{A table comparing the efficiency and Carnot efficiency for the thermoelectric module tested in heat engine mode with the 5 $\Omega$ load resistor.}
+\label{tab:table3}
+\begin{tabular}{|c|c|c|}
+\hline
+Efficiency, $\eta$ & Carnot Efficiency, $\eta_{ideal}$ \\
+\hline
+$9.36$ $(\pm 0.03) \times 10^{-6}$ & $0.0259 \pm 0.0001$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+\vspace{2mm}
+\noindent
+These values were obtained by using equation \eqref{eq:Heat-eff} for the efficiency and equation \eqref{eq:Reverse-Carnot-eff} for the Carnot efficiency. The values used were the obtained experimental value of work, $W$ from equation \eqref{eq:trap-rule} and the average temperatures of the hot and cold baths $\overline T_H$ and $\overline T_C$ respectively in heat engine mode (with the 5 $\Omega$ load resistor). With consideration for the uncertainties in, $Q_H$, $Q_C$ and $W$, appropriate propagation of errors were used in conjunction with these formulae to obtain the errors given in \tabref{tab:table3}.
+
+\subsubsection{Part 3: Efficiency of the Peltier Heat Engine as a Function of Load}
+\label{sssec:part3_results}
+
+\figref{fig:part3_graph} shows how the efficiency varies due to different load resistances during heat engine mode. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"part3_graph".pdf}
+\caption{A plot of efficiency, $\eta$ against resistance R, for a selection of load resistances during heat engine mode for the thermoelectric module.}
+\label{fig:part3_graph}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+Similar to the efficiency values in \tabref{tab:table3}, the ones in \figref{fig:part3_graph} were also obtained using equation \eqref{eq:Heat-eff} and were compared with the Carnot efficiency values using equation \eqref{eq:Reverse-Carnot-eff} for each resistance. And again, the associated uncertainties for efficiencies, both system and Carnot, were obtained by using appropriate propagation of errors in each case referring to equations \eqref{eq:Heat-eff} and \eqref{eq:Reverse-Carnot-eff} respectively. 
+
+\section{Discussion}
+\label{sec:discussion}
+
+The results for the Stefan-Boltzmann constant given in \tabref{tab:table0} \secref{ssec:radiation-results} indicate that the experimental value is an order of magnitude less than the theoretical. Furthermore, the uncertainty range for the experimental value does not encompass the theoretical value. Whilst performing this experiment there were many factors that led to inaccuracies when determining the irradiance values $M_B'$. For example, from the experimental set-up shown in \secref{ssec:radiaton-method} \figref{fig:radiation} it is clear to see that due to the distances between the thermopile, thermocouple and oven much of the heat generated by the oven was lost to the surrounding environment. So, this would mean that the measured voltages from the thermopile and corresponding irradiances would be smaller (due to this heat loss) and from relation \eqref{eq:Net-Power} would result in a smaller value for the Stefan-Boltzmann constant. 
+
+\vspace{2mm}
+\noindent
+In addition, to this discrepancy the sensitivity of the thermopile given by \cite{Paper01} had a large uncertainty associated with it. This is clearly evident when inspecting \figref{fig:radiation_graph} and these large uncertainties were due to the propagation formula, equation \eqref{eq:sensitivity-error} giving rise to a large error in the irradiance values. This would therefore lead to difficulties when determining the Stefan-Boltzmann constant. Furthermore, throughout the experiment the assumption was made that the burnished brass cylinder behaved like a black body with an emissivity value of $\epsilon = +1$. Most real objects do not behave like a perfect black body and, if relation \eqref{eq:Net-Power2} was considered with an appropriate emissivity of the burnished brass cylinder, then the Stefan-Boltzmann constant would have been determined more reliably by taking this factor into account. 
+
+\vspace{2mm}
+\noindent
+By inspecting \tabref{tab:table1} the experimental value for the Seebeck coefficient of the thermoelectric module obtained is fairly close to the theoretical given by \cite{Paper02}. However, the theoretical value lies outside the uncertainty range of the experimental. When determining the value for the Seebeck coefficient of the thermoelectric module many factors from the experimental process gave rise to inaccuracies. The biggest source of inaccuracy was taking the temperature readings from the thermometers. Parallax error led to systemic errors throughout the experiment and the graded scales on the thermometers were hard to read when measuring the hot and cold side temperatures of the thermoelectric module. The large errors in these temperatures readings is evident in \figref{fig:part1_graph}. In addition, due to the large surface area of the copper block exposed to the environment, some of this heat was lost to the surroundings. These reduced temperatures would have led to lower voltages being generated and by studying equation \eqref{eq:Seebeck-coeff} would then lead to a lower value for $S$. This is shown in \tabref{tab:table1}.
+
+\vspace{2mm}
+\noindent
+When investigating the conservation of energy principles in heat pump and heat engine mode for the 5 $\Omega$ resistor many interesting observations were made. By comparing the values for the experimental and theoretical work done in heat pump mode by the thermoelectric module in \tabref{tab:table2} both values are fairly close to each other. This shows that most of the work is being put into the thermoelectric module from the Tenma power supply in heat pump mode. The theoretical and actual value for the work done are not perfectly equal to each other because some of the heat has been lost to the environment \cite{Paper02}. 
+
+\vspace{2mm}
+\noindent
+However, for heat engine mode the two values obtained for the work done are vastly different from each other. This is because by looking at \tabref{tab:table3} the efficiency of the thermoelectric module in heat engine mode is extremely low compared to that of the Carnot efficiency for the module. There are many possible reasons for why this is the case. One of the main ones is due to the difficulty in recording temperatures from the thermoelectric module. Again, the temperatures were hard to determine due to parallax error and the difficulty in reading the graded scale from the thermometers. Also, during the process much of the input heat, $Q_H$ is easily lost to the surroundings therefore resulting in a large value of wasted heat, $Q_C$ and a low value for the output work, $W$. So, by analysing relation \eqref{eq:Heat-eff}, this leads to a low efficiency for the thermoelectric module in heat engine mode. And as previously stated because of this large portion of heat leaked to the environment, this leads to a low output work as shown in \tabref{tab:table3}. A way of improving the value for the experimental work done would be to perhaps put some insulation material around the thermoelectric module to reduce this heat loss. This would then give a result which maybe more consistent with the one given in theory shown in \tabref{tab:table2}.
+
+\vspace{2mm}
+\noindent
+\tabref{tab:table2} shows that the errors in the theoretical values for the work done are large compared to those obtained experimentally. This is because the main contribution to these errors was due to the uncertainty in $\overline T_C$ and $\overline T_H$. This is evident when looking at equation  \eqref{eq:heat-error}. However, the large error in heat pump mode was analysed and carefully considered. So, for the heat engine part of the experiment, this was reduced by using two $-10$ C to $+50$ C thermometers in place of the two 0 - 100 C thermometers used for determining the temperatures in heat pump mode. This meant that the temperatures could be obtained with more accuracy and the uncertainty was reduced in the subsequent temperature measurements from $\pm 1$ C to $\pm 0.1$ C. The resulting uncertainties for the experimental values were small due to the small errors in the current and voltage measurements during the experiment. This then led to small uncertainties in power and hence by looking at equation  \eqref{eq:trap-error} one can see that this resulted in small errors for the experimental values for the work done. Therefore, the resulting uncertainties in the efficiency of the thermoelectric module were also small due to these small uncertainties in the experimental work done. This is evident when analysing equation \eqref{eq:Heat-eff}. The errors for the Carnot efficiency were also small due to the reduced errors in the temperatures from making a change of thermometers in the heat engine part of the experiment. If more time had been permitted, the heat engine measurements could have been repeated with the $-10$ C to $+50$ C thermometers giving more reliable uncertainties for the experimental value of the work done given in \tabref{tab:table2}. 
+
+\vspace{2mm}
+\noindent
+The final part was to investigate a correlation between the efficiency of the thermoelectric module in heat mode and different load resistances placed in the circuit. A typical  characteristic curve given by the maximum power theorem is given \figref{fig:max_power}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"max_power".pdf}
+\caption{A typical characteristic curve demonstrating the maximum power transfer theorem. The peak of the curve occurs when the load resistance is equal to the internal resistance of the device. Here it is shown to be at $r = R_L$ where $r$ is the internal resistance of the source and $R_L$ is the load resistance in the circuit. Image modified from \cite{Web01}.}
+\label{fig:max_power}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+By inspecting \figref{fig:part3_graph} the efficiency is increasing with load resistance and seems to be peaking around the $10$ $\Omega$ region. This is in contradiction with the maximum power transfer theorem for the thermoelectric module given by a reliable source \cite{Paper02} which indicates that the maximum power, and hence the maximum efficiency, extracted from the thermoelectric module should be around the value of $2.8$ $\Omega$. If more time was permitted, more efficiency measurements would have been taken to investigate this more thoroughly. For example, more readings could have been taken between 3.5 $\Omega$ and 5 $\Omega$. A narrow peak could have occurred in this region leading to the characteristic curve given for the maximum power transfer theorem as shown in \figref{fig:max_power}. Also, more readings could have been taken at higher resistances such as at 15 $\Omega$ and 20 $\Omega$. This may have indicated that the internal resistance of the module is no longer 2.8 $\Omega$ and has changed to a higher value. This could be due to damage or degradation of internal mechanisms inside the thermoelectric module. Thus, leading to the characteristic curve given by the maximum power transfer theorem with its peak moved to a higher resistance.  
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Overall, both of the experiments demonstrated some physically interesting properties involving heat transfer via radiation and conduction. The laws of radiation experiment demonstrate how the irradiance of an object is dependent on the temperature difference between the absolute temperature of the object and the temperature of the environment. This is nicely demonstrated in \figref{fig:radiation_graph}. The value for the Stefan-Boltzmann constant could have been more accurately determined by consideration for the emissivity, $\epsilon$, of the burnished brass cylinder. The thermoelectric effect experiment gave a value for the Seebeck coefficient that closely corresponds with theory. The conservation of energy part of the experiment showed that the efficiency of the thermoelectric module is low compared to the Carnot efficiency. As discussed in \secref{sec:discussion} this was due to many reasons the main one being due to the difficulty with obtaining heat values and temperature measurements from the module. Furthermore, \figref{fig:part3_graph} shows a resemblance to the characteristic maximum power transfer curve given in \figref{fig:max_power}. Even though the peak value of the graphs was not at the expected value of 2.8 $\Omega$ a characteristic curve is still evident and implies that the thermoelectric module internal mechanisms may have undergone some degradation. By undertaking these two experiments, many heat properties and constants were successfully observed and corresponded well with theoretical predictions.
+
 \begin{thebibliography}{9}
-\bibitem{Paper01} College of Engineering Mathematics and Physical Sciences, University of Exeter, \textit{Laws of Radiation Worksheet} (Accessed 19\textsuperscript{th} December 2018).
-\bibitem{Paper02} College of Engineering, Mathematics and Physical Sciences, University of Exeter, \textit{The Thermoelectric Effect Worksheet} (Accessed 19\textsuperscript{th} December 2018).
+\bibitem{Paper01} College of Engineering Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{Laws of Radiation Worksheet} (Accessed 19\textsuperscript{th} December 2018).
+\bibitem{Paper02} College of Engineering, Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{The Thermoelectric Effect Worksheet} (Accessed 19\textsuperscript{th} December 2018).
 \bibitem{Book01} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 17, pages 634 - 637, 2014.
 \bibitem{Book02} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 20, pages 728 - 740, 2014.
+\bibitem{Web01} http://uotechnology.edu.iq/dep-laserandoptoelec-eng/laboratory/1/DC/Experiment\%20No.13.pdf (Accessed 2\textsuperscript{nd} February 2019)
 %\bibitem{Web01} \url{http://simbad.u-strasbg.fr/simbad/}
 %\bibitem{Web02} \url{http://ecommons.luc.edu/cgi/viewcontent.cgi?article=1667&context=luc_theses} See page 22 for refractive index values.
 \end{thebibliography}
