@@ -1,0 +1,315 @@
+% Comments start with % (percent) character and last till the end of the line.
+%
+% The line below tells TeXworks editor to use pdflatex for compilation
+% of this document; remove it if you want to use another engine 
+%
+%!TEX program = pdflatex
+%
+% LaTeX2e document starts with \documentclass[options]{<class-name>}
+% <class-name> can be one of the standard LaTeX document classes: 
+% article, report or book, or some other specialised class.
+%
+\documentclass{article}
+%
+% Preamble of LaTeX document is everything before \begin{document}.
+% Preamble is used to load extension packages and to set up global 
+% parameters and configuration for the entire document.
+%
+% Extension packages providing additional functionality
+\usepackage{amsmath}       % additional math environments
+\usepackage{graphicx}      % graphics import from external files 
+\usepackage{epstopdf}      % automates .eps to .pdf conversion 
+% epstopdf package may require --shell-escape option to pdflatex
+\usepackage{booktabs}      % table typesetting additions
+\usepackage{siunitx}       % number and units formatting
+\usepackage{caption}       % customisation of captions
+\usepackage{url}           % format url addresses
+\usepackage{abstract}		% allows formatting of abstract
+\usepackage[margin=0.3in]{geometry}
+%\usepackage{tikz,pgfplots} % diagrams and data plots
+%
+% set up caption options
+\captionsetup{margin=12pt,font=small,labelfont=bf}
+%
+%removes abstract title
+\renewcommand{\abstractname}{}
+%sets abstract margins
+\setlength{\absleftindent}{10mm}
+\setlength{\absrightindent}{10mm}
+%
+% global options for siunitx
+%\sisetup{seperr,repeatunits=false,per=symbol}
+%
+% some handy commands for referencing;
+% the optional argument overrides the default label, e.g.
+% \figref[FIG.~]{fig:label}
+\newcommand{\figref}[2][\figurename~]{#1\ref{#2}}
+\newcommand{\tabref}[2][\tablename~]{#1\ref{#2}}
+\newcommand{\secref}[2][Section~]{#1\ref{#2}}
+
+
+% The document content starts with \begin{document} 
+% and is finished with \end{document}
+%
+\begin{document}
+\title{Wo01 Waves in a Ripple Tank \& Diffraction and Interference \\ \large{(Initial Report)}} % fill in the title here
+\author{Matthew Evans}% fill in your name here
+\date{14\textsuperscript{th} February 2019} % date of the report
+%\twocolumn[	% makes title and abstract appear over entire page width
+\maketitle % formats the title
+%\begin{onecolabstract}
+%\noindent
+
+%Enter abstract here.
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+This experiment investigates the various properties and characteristics of waves. These physical phenomena are at the heart of many transmission processes; such as the propagation of sound through a medium responsible for audio communication and the transmission of electromagnetic waves in a vaccuum which enables visible light from the Sun to travel to Earth. In addition, quantum mechanics has made the connection between the wave-like nature exhibited by particles and the particle-like nature of waves. Interesting developments have been made due to the study of waves and this is at the forefront of modern technologies.
+
+\vspace{2mm}
+\noindent
+A wave can be thought of as a time-varying disturbance that propagates through a medium or a vacuum. This can be described mathematically as a \textit{wave function} $\psi(x, t)$
+
+\begin{equation}
+\label{eq:wave}
+\psi(x, t) = \psi_0 cos(kx - \omega t)
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where, $\psi_0$ is the wave amplitude, $x$ is the spatial position of the propagating wave at time $t$, $k$ is the wave vector related to the wavelength, $\lambda$ by $k = \frac{2\pi}{\lambda}$, and $\omega$ is the angular frequency related to the time period, $T$, of the wave by $\omega = \frac{2\pi}{T}$. Equation \eqref{eq:wave} only considers the real part of the propagating wave. In most instances, waves also have an imaginary part. From Euler's identity equation \eqref{eq:wave} can be re-expressed as a complex exponential
+
+\begin{equation}
+\label{eq:complex-wave}
+\psi(x, t) = \psi_0 e^{i(kx - \omega t)}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+and all the symbols have their usual meaning as defined for equation \eqref{eq:wave}.
+
+\vspace{2mm}
+\noindent
+The various characteristics of waves is the same for different types of waves \cite{Paper01}. Making use of this physical concept, the first of these experiments investigates wave phenomena using water waves in a ripple tank. In particular, this will study reflection, refraction, diffraction and interference. The latter two phenomena will be studied further in the second experiment where a laser light will be diffracted through single and double slits to investigate interference and diffraction patterns. Furthermore, extensions to these experiments will look into other wave phenomena such as the Doppler effect, multiple slit diffraction and interference and how water wave speed depends on the depth.
+
+
+\section{Theory}
+\label{sec:theory}
+
+When a wave front approaches at an angle to a boundary \textit{reflection} occurs. This is when the angle of incidence, $\theta_i$ is equal to the angle of reflection, $\theta_r$ at the boundary
+
+\begin{equation}
+\label{eq:reflection}
+\theta_i = \theta_r
+\end{equation}
+
+\vspace{2mm}
+\noindent
+\figref{fig:reflection_refraction} describes this pictorially.
+
+\vspace{2mm}
+\noindent
+If the wave passes between two different media and changes speed, as a consequence, it will therefore change direction. This is known as \textit{refraction}. \figref{fig:reflection_refraction} shows a physical representation for this phenomena.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{"reflection_refraction".pdf}
+\caption{A diagram demonstrating the physical processes of reflection and refraction as an incident wave front encounters a boundary. The direction of travel for the incident and reflected waves are shown by the black arrows, whilst the direction of travel for the refracted wave is shown by the red arrow. The two media have refractive indices $n_i$ and $n_t$. The angles, $\theta_i$, $\theta_r$ and $\theta_t$ correspond to the angles of incidence, reflection and refraction respectively between direction of travel and the normal to the boundary.}
+\label{fig:reflection_refraction}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+Refraction of a wave between two different media is described by Snell's Law
+
+\begin{equation}
+\label{eq:refraction}
+n_i sin{\theta_i} = n_t sin{\theta_t}
+\end{equation}
+
+
+\vspace{2mm}
+\noindent
+where $n_i$ and $n_t$ are the refactive indices of the inital and final media respectively, $\theta_i$ is the angle of incidence and $\theta_t$ is the angle of refraction between two different media. This is usually used when considering the refraction of electromagnetic waves at a boundary. However, the physics of waves is the same for different types of waves and, more recently, it has been found \cite{Web01} that water waves, when refracted obey Snell's Law \eqref{eq:refraction}.
+
+\newpage
+\vspace{2mm}
+\noindent
+\textit{Diffraction} occurs when a wave `bends' as it passes through a gap (or slit) between two obstacles or when the wave travels around a barrier. An illustration of the diffraction of light is given in \figref{fig:diffraction} when incident light waves encounter a single slit.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{"diffraction".pdf}
+\caption{An illustration demonstrating the diffraction of light from a single slit and defining some terms. The incident light wave approaches a slit of width $a$ and two beams are considered from the Huygen's wavelets \cite{Book01} formed as a result of passing through the slit. These two beams arrive at a point $P$ creating an interference pattern on the screen and the bottom ray is diffracted through by an angle $\theta$. The distance between the plane of the slit and the screen is $L$ and the vertical distance between the origin, $O$ and point $P$ is $x$. }
+\label{fig:diffraction}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+The intensity of diffracted light from a single slit into an angle $\theta$ \cite{Paper02} is given by
+
+\begin{equation}
+\label{eq:intensity1}
+I = I_0 \frac{sin^2{\alpha}}{\alpha^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\alpha = \frac{\pi asin{\theta}}{\lambda}$, $\lambda$ is the wavelength of the light and $a$ is the slit width.
+
+\vspace{2mm}
+\noindent
+For two slits, the intensity of diffracted light into an angle $\theta$ \cite{Paper02} is
+
+\begin{equation}
+\label{eq:intensity2}
+I = I_0 \frac{sin^2{\alpha}}{\alpha^2} cos^2{\delta}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\delta = \frac{\pi dsin{\theta}}{\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found by \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem this approach can be found from \cite{Web01}.
+
+\vspace{2mm}
+\noindent
+Using equation \eqref{eq:intensity1}, the intensity minima for a single slit occurs when $\alpha$ is a multiple of $\pi$. This therefore means that
+
+\begin{equation}
+\label{eq:min_intensity}
+sin{\theta} = \frac{m \lambda}{a} \quad\quad(m = \pm1, \pm2, ...)
+\end{equation}
+
+\vspace{2mm}
+\noindent
+If L'H{\^o}pital's rule \cite{Book01} is applied to equation \eqref{eq:intensity1} in the limit as the intensity at $\alpha \rightarrow 0$ is found to be $I = I_0$ as expected. When the detector to slit distance is big, the small angle approximation can be used. Equation \eqref{eq:min_intensity} can then be approximated to
+
+\begin{equation}
+\label{eq:small_angle}
+\theta \approx \frac{m\lambda}{a} \quad\quad(m = \pm1, \pm2, ...)
+\end{equation}
+
+
+\vspace{2mm}
+\noindent
+The intensity maxima of a single slit diffraction pattern can be approximately found by using equation \eqref{eq:intensity1} and realising that they occur when the sine function is a maximum ($\pm 1$) \cite{Book01}. In other words, when
+
+\begin{equation}
+\label{eq:alpha_max}
+\alpha = \pm\bigg(m + \frac{1}{2}\bigg)\pi \quad\quad(m = 0, 1, 2, ...)
+\end{equation}
+
+\vspace{2mm}
+\noindent
+However, upon further analysis of applying differentiation to equation \eqref{eq:intensity1} and setting equal to zero to find the maxima it is found that the there is no maxima at $m = 0$ \cite{Book01}. Therefore, when equation \eqref{eq:alpha_max}, with $m \neq 0$, is subsituted into equation \eqref{eq:intensity1} the intensity maxima, $I_m$ is approximately given by \cite{Book01}
+
+\vspace{2mm}
+\noindent
+\begin{equation}
+\label{eq:max_intensity}
+I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad\quad(m =  \pm1, \pm2, ...)
+\end{equation}
+
+
+\section{Method}
+\label{sec:method}
+
+\subsection{Waves in a Ripple Tank}
+\label{ssec:ripple-method}
+
+The ripple tank will be position on an up-turned crate \cite{Paper01} to ensure that the camera set-up is in the best possible position. The tray will be partially be filled with water upto the sloping part of the foam \cite{Paper01} (to reduce reflections from the edges) and a stroboscopic LED will illuminate this from underneath the tray. This stroboscopic LED will in effect `freeze' the movement of the waves so that these can be viewed for further analysis. A camera will be carefully positioned directly above the water tray to capture the motion of the waves. \figref{fig:ripple_tank} shows the experimental set-up.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{"ripple_tank".pdf}
+\caption{A labelled diagram showing the various parts to the ripple tank. Modified from \cite{Paper01}.}
+\label{fig:ripple_tank}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+The frequency of the vibrator will be set to 20Hz to start with along and the stroboscopic LED will also be set to this frequency. The height of the dipper will be carefully adjusted so that the best quality images will be obtained from the camera. These pixel images will then be converted to distances in mm and uncertainties noted. Various different objects and obstacles will be placed in the water enabling various wave phenomena to be investigated:
+
+\begin{enumerate}
+  \item \textbf{The speed of water waves:} Plane waves generated from the vibrator will be investigated to determine the wavelength of the waves and hence the speed of the water waves.
+  \item \textbf{Reflection:} A barrier will be placed in the tray at an angle to the incident wave fronts. The angle of incidence, $\theta_i$ and angle of reflection, $\theta_r$ will be measured to verify relation \eqref{eq:reflection}.
+  \item \textbf{Refraction:} The velocity of water waves depend on the depth. Therefore, an object will be placed underwater will result in the change of velocity of the water waves as they pass over it. This will cause a change in direction of the waves and hence refraction can be investigated.
+  \item \textbf{Single-slit interference:} A barrier with a gap will be placed in front of the dipper \cite{Paper01}. The gap width will be changed and the camera will take pictures at these different widths. In addition, the frequency will also be adjusted to investigate this further. Images of the the minima from the resulting interference patterns will be studied.
+  \item \textbf{Double-slit interference:} Two gaps will be created from barriers in the tray and the Young's fringes generated from the interference patterns will be investigated. 
+  \item \textbf{Double-source Interference:} Two choerent sources will be observed using the double dipper or mechanical vibrators \cite{Paper01}. With the double dipper, Young's diffraction pattern will be observed and with the mechanical vibrator standing waves will be generated for analysis.
+  \item \textbf{Extensions:} Various other wave properties will potentially be investigated:
+  	\begin{itemize}
+     \item Doppler Effect by moving an external vibrator as it is generating waves.
+     \item Speed of water waves as a function of depth.
+     \item Diffraction due to waves passing \textit{around} a barrier.
+   \end{itemize}
+\end{enumerate}
+
+\subsection{Diffraction and Interference}
+\label{ssec:diffraction-method}
+
+\figref{fig:interference} shows the apparatus used for investigating diffraction and interference of light.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{"interference".pdf}
+\caption{A laser will be used to illuminate a rotating slit wheel. This is then diffracted and the light sensor mounted on the linear translator then detects this. The adjustable slits are used to adjust the resolution of the light received by the sensor. The readings obtained by the sensor along with the position of the linear translators are then sent to the interface box so they can be stored on the computer. Image modified from \cite{Paper02}.}
+\label{fig:interference}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+A laser of wavelength 650nm will be used to illuminate one slit on the rotating wheel. This will then be detected by the light sensor mounted on the linear translator. The resulting data collected from the sensor and its position are then stored on the computer. The data can then be analysed using the given software. 
+
+\vspace{2mm}
+\noindent
+The interface box will be turned on. The ``table and graph'' option will be selected \cite{Paper02}. This is necessary in order to analyse the results obtained from the experiment quantitatively. Then Hardware set-up will be selected and the interface will be chosen. The interface box will then be connected to the computer.
+
+\vspace{2mm}
+\noindent
+Then on the displayed image of the interface box, the inputs 1 and 2 will be selected. In order to correspond with the experimental equipment as shown in \figref{fig:interference}, the ``Rotary Motion Sensor'' will then be chosen \cite{Paper02}. Next, ``light intensity \%'' and ``position, m'' \cite{Paper02} will be selected in order to obtain intensity and position measurements obtained from the light sensor and linear translator respectively. During these steps not any exclamation marks indiciating problems with the set-up \cite{Paper02}.
+
+\vspace{2mm}
+\noindent
+Finally, ``Start'' will be chosen to measure intensity, $I$ vs position, $x$ \cite{Paper02}. The resulting .txt files can then be exported to analyse these measurements further. 
+
+\vspace{2mm}
+\noindent
+Once all of the necessary adjustments have been made to the computer software the laser will be carefully aligned to ensure it runs parallel to the optical rail. The slit wheel will be removed at first from the experimental set-up shown in \figref{fig:interference}. This is so the sensor receiving close to 100\% of the laser light \cite{Paper02} and the computer can then record this. This acts as a check to see if the software is performing as expected.
+
+\vspace{2mm}
+\noindent
+The slit wheel will then be returned to examine various diffraction patterns. Different slit widths will also be used to see qualitatvely \cite{Paper02} the diffraction patterns. These will then be compared with theory. Initially, a single slit will be studied with the following conditions, an initial slit separation of $a = 0.04$mm, a 1mm slit in front of the sensor and a wheel position of $L = 0.5$m from the sensor \cite{Paper02}. 
+
+\vspace{2mm}
+\noindent
+Further diffraction experiments will then follow: single-slit, double-slit and multiple-slit patterns will be studied. In addition, different shape apertures will also be used to study generated diffraction patterns.   
+
+
+%\section{Results}
+%\label{sec:results}
+
+
+
+
+%\section{Discussion}
+%\label{sec:discussion}
+
+
+
+
+%\section{Conclusion}
+%\label{sec:conclusion}
+
+
+\begin{thebibliography}{9}
+\bibitem{Paper01} College of Engineering Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{Waves in a Ripple Tank Worksheet} (Accessed 8\textsuperscript{th} February 2019).
+\bibitem{Paper02} College of Engineering, Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{Diffraction and Interference Worksheet} (Accessed 8\textsuperscript{th} February 2019).
+\bibitem{Book01} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 36, pages 1312 - 1322, 2014.
+% \bibitem{Book02} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 20, pages 728 - 740, 2014.
+\bibitem{Web01} \url{https://physicsworld.com/a/working-with-water-waves/} (Accessed 9\textsuperscript{th} February 2019.)
+\bibitem{Web02} \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} Febraury 2019.)
+\end{thebibliography}
+
+\end{document}
