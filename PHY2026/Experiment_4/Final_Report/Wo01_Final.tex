@@ -52,7 +52,7 @@
 % and is finished with \end{document}
 %
 \begin{document}
-\title{Wo01 Waves in a Ripple Tank \& Diffraction and Interference} % fill in the title here
+\title{Mechanical and Electromagnetic Waves} % fill in the title here
 \author{Matthew Evans}% fill in your name here
 \date{14\textsuperscript{th} February 2019} % date of the report
 %\twocolumn[	% makes title and abstract appear over entire page width
@@ -66,7 +66,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-This experiment investigates the various properties and characteristics of waves. These physical phenomena are at the heart of many transmission processes; such as the propagation of sound through a medium responsible for audio communication and the transmission of electromagnetic waves in a vaccuum which enables visible light from the Sun to travel to Earth. In addition, quantum mechanics has made the connection between the wave-like nature exhibited by particles and the particle-like nature of waves. Interesting developments have been made due to the study of waves and this is at the forefront of modern technologies.
+The various properties and characteristics of waves were investigated in these experiments. These physical phenomena are at the heart of many transmission processes; such as the propagation of sound through a medium responsible for audio communication and the transmission of electromagnetic waves in a vaccuum which enables visible light from the Sun to travel to Earth. In addition, quantum mechanics has made the connection between the wave-like nature exhibited by particles and the particle-like nature of waves. Interesting developments have been made due to the study of waves and this is at the forefront of modern technologies.
 
 \vspace{2mm}
 \noindent
@@ -92,12 +92,25 @@ and all the symbols have their usual meaning as defined for equation \eqref{eq:w
 
 \vspace{2mm}
 \noindent
-The various characteristics of waves is the same for different types of waves \cite{Paper01}. Making use of this physical concept, the first of these experiments investigates wave phenomena using water waves in a ripple tank. In particular, this will study reflection, refraction, diffraction and interference. The latter two phenomena will be studied further in the second experiment where a laser light will be diffracted through single and double slits to investigate interference and diffraction patterns. Furthermore, extensions to these experiments will look into other wave phenomena such as the Doppler effect, multiple slit diffraction and interference and how water wave speed depends on the depth.
+The various characteristics of waves is the same for different types of waves \cite{Paper01}. Making use of this physical concept, the first of these experiments investigates wave phenomena using mechanical water waves in a ripple tank. In particular reflection, refraction, diffraction and interference were studied. The latter two phenomena were investigated further in the second experiment where a laser light was diffracted through single and double slits to investigate interference and diffraction patterns. Furthermore, extensions to these experiments looked into other wave phenomena such as the Doppler effect, multiple slit diffraction and interference and how water wave speed depends on the depth.
 
 
 \section{Theory}
 \label{sec:theory}
 
+The speed of mechanical waves often depend upon the medium which they travel, in addition to many other factors. For water waves, the speed depends on depth. For \textit{shallow depths}, this is given by \cite{Web01}
+
+\begin{equation}
+\label{eq:water-waves}
+v \approx \sqrt{gd}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $g$ is the acceleration due to gravity and $d$ is the measured depth of the water used in the ripple tank. For the interested reader, a more detailed analysis of water waves can be found at which analysis \cite{Web01}. 
+
+\vspace{2mm}
+\noindent
 When a wave front approaches at an angle to a boundary \textit{reflection} occurs. This is when the angle of incidence, $\theta_i$ is equal to the angle of reflection, $\theta_r$ at the boundary
 
 \begin{equation}
@@ -115,7 +128,7 @@ If the wave passes between two different media and changes speed, as a consequen
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{"reflection_refraction".pdf}
+\includegraphics[scale=0.4]{"reflection_refraction".pdf}
 \caption{A diagram demonstrating the physical processes of reflection and refraction as an incident wave front encounters a boundary. The direction of travel for the incident and reflected waves are shown by the black arrows, whilst the direction of travel for the refracted wave is shown by the red arrow. The two media have refractive indices $n_i$ and $n_t$. The angles, $\theta_i$, $\theta_r$ and $\theta_t$ correspond to the angles of incidence, reflection and refraction respectively between direction of travel and the normal to the boundary.}
 \label{fig:reflection_refraction}
 \end{figure}
@@ -132,16 +145,16 @@ n_i sin{\theta_i} = n_t sin{\theta_t}
 
 \vspace{2mm}
 \noindent
-where $n_i$ and $n_t$ are the refactive indices of the inital and final media respectively, $\theta_i$ is the angle of incidence and $\theta_t$ is the angle of refraction between two different media. This is usually used when considering the refraction of electromagnetic waves at a boundary. However, the physics of waves is the same for different types of waves and, more recently, it has been found \cite{Web01} that water waves, when refracted obey Snell's Law \eqref{eq:refraction}.
+where $n_i$ and $n_t$ are the refactive indices of the inital and final media respectively, $\theta_i$ is the angle of incidence and $\theta_t$ is the angle of refraction between two different media. This is usually used when considering the refraction of electromagnetic waves at a boundary. However, the physics of waves is the same for different types of waves and, more recently, it has been found \cite{Web02} that water waves, when refracted obey Snell's Law \eqref{eq:refraction}.
 
-\newpage
+
 \vspace{2mm}
 \noindent
 \textit{Diffraction} occurs when a wave `bends' as it passes through a gap (or slit) between two obstacles or when the wave travels around a barrier. An illustration of the diffraction of light is given in \figref{fig:diffraction} when incident light waves encounter a single slit.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{"diffraction".pdf}
+\includegraphics[scale=0.365]{"diffraction".pdf}
 \caption{An illustration demonstrating the diffraction of light from a single slit and defining some terms. The incident light wave approaches a slit of width $a$ and two beams are considered from the Huygen's wavelets \cite{Book01} formed as a result of passing through the slit. These two beams arrive at a point $P$ creating an interference pattern on the screen and the bottom ray is diffracted through by an angle $\theta$. The distance between the plane of the slit and the screen is $L$ and the vertical distance between the origin, $O$ and point $P$ is $x$. }
 \label{fig:diffraction}
 \end{figure}
@@ -170,7 +183,7 @@ I = I_0 \frac{sin^2{\alpha}}{\alpha^2} cos^2{\delta}
 
 \vspace{2mm}
 \noindent
-where $\delta = \frac{\pi dsin{\theta}}{\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found by \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem this approach can be found from \cite{Web01}.
+where $\delta = \frac{\pi dsin{\theta}}{\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found by \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem this approach can be found from \cite{Web03}.
 
 \vspace{2mm}
 \noindent
@@ -178,7 +191,7 @@ Using equation \eqref{eq:intensity1}, the intensity minima for a single slit occ
 
 \begin{equation}
 \label{eq:min_intensity}
-sin{\theta} = \frac{m \lambda}{a} \quad\quad(m = \pm1, \pm2, ...)
+sin{\theta} = \frac{m \lambda}{a} \quad,\quad(m = \pm1, \pm2, ...)
 \end{equation}
 
 \vspace{2mm}
@@ -187,7 +200,7 @@ If L'H{\^o}pital's rule \cite{Book01} is applied to equation \eqref{eq:intensity
 
 \begin{equation}
 \label{eq:small_angle}
-\theta \approx \frac{m\lambda}{a} \quad\quad(m = \pm1, \pm2, ...)
+\theta \approx \frac{m\lambda}{a} \quad,\quad(m = \pm1, \pm2, ...)
 \end{equation}
 
 
@@ -197,7 +210,7 @@ The intensity maxima of a single slit diffraction pattern can be approximately f
 
 \begin{equation}
 \label{eq:alpha_max}
-\alpha = \pm\bigg(m + \frac{1}{2}\bigg)\pi \quad\quad(m = 0, 1, 2, ...)
+\alpha = \pm\bigg(m + \frac{1}{2}\bigg)\pi \quad,\quad(m = 0, 1, 2, ...)
 \end{equation}
 
 \vspace{2mm}
@@ -208,7 +221,7 @@ However, upon further analysis of applying differentiation to equation \eqref{eq
 \noindent
 \begin{equation}
 \label{eq:max_intensity}
-I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad\quad(m =  \pm1, \pm2, ...)
+I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad,\quad(m =  \pm1, \pm2, ...)
 \end{equation}
 
 
@@ -220,29 +233,23 @@ I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad\quad(m =  \pm1, \
 
 \vspace{2mm}
 \noindent
-The ripple tank was placed on an up-turned crate and the camera was carefully mounted on the tripod directly above the ripple tank. These factors were needed to ensure that the camera set-up was in the best possible position for obtaining the required images of the water waves. Then the height of the tripod was noted along with the camera `zoom' focus in order to keep consistency when taking photographs of the waves generated. The tray was then partially filled with water up to the sloping part of the foam \cite{Paper01} to reduce reflections from the edges. Then a stroboscopic LED was used illuminate this from underneath the tray. The stroboscopic LED `froze' the movement of the waves so that these can be captured by the camera and the resulting images can then be analysed. \figref{fig:ripple_setup} shows this experimental setup and \figref{fig:ripple_tank} shows the various ripple tank components.
+The ripple tank was placed on an up-turned crate and the camera was carefully mounted on the tripod directly above the ripple tank. These factors were needed to ensure that the camera set-up was in the best possible position for obtaining the required images of the water waves. Then the height of the tripod was noted along with the camera `zoom' focus in order to keep consistency when taking photographs of the waves generated. The tray was then partially filled with water up to the sloping part of the foam \cite{Paper01} to reduce reflections from the edges. The depth of the water was then measured using a ruler and the uncertainty noted. Then a stroboscopic LED was used illuminate this from underneath the tray. The stroboscopic LED `froze' the movement of the waves so that these can be captured by the camera and the resulting images can then be analysed. \figref{fig:ripple_setup} shows how the images of the travelling wave fronts were generated from the ripple tank.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{"ripple_setup".pdf}
-\caption{The experimental set-up and equipment for the Waves in a Ripple Tank experiment.}
+\includegraphics[scale=0.42]{"ripple_physics".pdf}
+\caption{A side-view of the ripple tank. This shows how the strobing light source in conjunction with the generated waves produced images on the screen, placed directly above the ripple tank. A camera could then be set-up directly above the screen to capture images of the resulting wave fronts.}
 \label{fig:ripple_setup}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.45]{"ripple_tank".pdf}
-\caption{A labelled diagram showing the various parts to the ripple tank. Modified from \cite{Paper01}.}
-\label{fig:ripple_tank}
-\end{figure}
-
+\newpage
 \vspace{2mm}
 \noindent
 The frequency of the vibrator was first set to 20 Hz. The height of the dipper was carefully adjusted so that the best quality images were obtained from the camera. These images were then converted to distances in cm using an image processing program. A calibration image was taken of a rule in by the camera to get a conversion between image distance and `real' distance. The uncertainties in the image processing program in the distances were noted and these were also converted to real distances. \figref{fig:ruler} shows the calibration image used. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{"ruler".pdf}
+\includegraphics[scale=0.42]{"ruler".pdf}
 \caption{A photograph of a ruler was used to convert the image distances to real distances from the camera. The points between a 1cm mark on the ruler were measured in the image processing program and the distance noted. Then this was used as a conversion factor to find the wavelengths of subsequent images taken of the wave fronts in the experiment. $x$ and $y$ are the image distances and these were used to determine the length of the red line which corresponds to 1cm in real distance.}
 \label{fig:ruler}
 \end{figure}
@@ -273,16 +280,15 @@ d = \frac{d'}{0.66}
 \noindent
 to gain the real image distance, $d$, in centimetres.
 
-\newpage
 \vspace{2mm}
 \noindent
 Various different objects and obstacles were placed in the water enabling various wave phenomena to be investigated:
 
 \begin{enumerate}
-  \item \textbf{The speed of water waves:} Plane waves generated from the vibrator were investigated to determine the wavelength of the waves at different frequencies. Three images were obtained for each frequency to gain more reliable results. The wavelengths were then found by using the image processing program in conjunction with equation \eqref{eq:pythagoras}. Then, an average of the three wavelengths for each frequency was obtained, along with propagation of the associated uncertainties, to gain a more reliable value for the wavelength. These wavelengths were then converted to real distances using equation \eqref{eq:conversion} and the uncertainties were also obtained. The speed of the water waves was then determined by plotting a graph of wavelength, $\lambda$ against inverse frequency (time), $1/f$..
+  \item \textbf{The speed of water waves:} Plane waves generated from the vibrator were investigated to determine the wavelength of the waves at different frequencies. Three images were obtained for each frequency to gain more reliable results. The wavelengths were then found by using the image processing program in conjunction with equation \eqref{eq:pythagoras}. Then, an average of the three wavelengths for each frequency was obtained, along with propagation of the associated uncertainties, to gain a more reliable value for the wavelength. These wavelengths were then converted to real distances using equation \eqref{eq:conversion} and the uncertainties were also obtained. The speed of the water waves was then determined by plotting a graph of wavelength, $\lambda$ against inverse frequency (time), $1/f$. This was then compared to the theoretical value of water waves in \textit{shallow depths} calculated by using equation \eqref{eq:water-waves}. 
   \item \textbf{Reflection:} A barrier was placed in the tray at an angle to the incident wave fronts. The angle of incidence, $\theta_i$ and angle of reflection, $\theta_r$ was then measured (using an image processing program) to verify relation \eqref{eq:reflection} for 20 Hz waves. In addition, lower frequency wave fronts were also investigated qualitatively to see how reflection changed at different frequencies.
   \item \textbf{Refraction:} The velocity of water waves depend on the depth. Therefore, an object was be placed underwater and this resulted to change the of velocity of the water waves as they pass over it. This caused a change in direction of the waves and hence refraction could be investigated.
-  \item \textbf{Single-slit interference:} A barrier with a gap was placed in front of the dipper \cite{Paper01}. The gap width was then changed and the camera was used to take pictures at these different widths. In addition, the frequency was also adjusted to investigate this further. Images of the the minima from the resulting interference patterns were be studied.
+  \item \textbf{Single-slit interference:} A barrier with a gap was placed in front of the dipper \cite{Paper01}. The gap width was then changed and the camera was used to take pictures at these different widths. In addition, the frequency was also adjusted while keeping the gap width fixed to investigate this further. Images of the maxima and minima from the resulting interference patterns were then studied.
   \item \textbf{Double-slit interference:} Two gaps were created from barriers in the tray and the Young's fringes generated from the interference patterns were investigated. 
   \item \textbf{Double-source Interference:} Two choerent sources will be observed using the double dipper or mechanical vibrators \cite{Paper01}. With the double dipper, Young's diffraction pattern will be observed and with the mechanical vibrator standing waves will be generated for analysis.
   \item \textbf{Extensions:} Various other wave properties will potentially be investigated:
@@ -296,38 +302,31 @@ Various different objects and obstacles were placed in the water enabling variou
 \subsection{Diffraction and Interference}
 \label{ssec:diffraction-method}
 
-\figref{fig:interference} shows the apparatus used for investigating diffraction and interference of light.
+For investigating the diffraction and interference of electromagnetic waves, a 650nm laser light was used \cite{Paper02} and a rotating slit wheel with various slits was used. Also a light sensor with a variable aperture connected to a computer via an interface box allowed position and intensity readings to be stored. All the settings were then set-up on the computer software in order to obtain the relevant experimental data. 
+
+\vspace{2mm}
+\noindent
+Before any measurements were taken two preliminary measurements were taken. First, the background intensity was recorded from the sensor and was then used to correct the subsequent intensity readings. Then the laser light was used to illuminate the sensor with the aperture open at a maximum (and with no slit wheel in place) so that it was receiving close to $100\%$ intensity \cite{Paper01}. This was then later used to normalise all the intensity readings.
+
+\vspace{2mm}
+\noindent
+After the preliminary measurements were taken, the experiment was first set-up as shown in \secref{sec:theory} \figref{fig:diffraction}. The slit wheel placed at a length if $L = 0.5$m from the screen to investigate diffraction patterns for a single slit. This length was then kept fixed throughout all the subsequent experiments. A light sensor was mounted on a lateral slider was connected to a computer via an interface box. This sensor was placed at the screen distance from the single slit as shown in \figref{fig:diffraction}. The lateral slider could then be used to carefully slide the sensor across the length of the screen, in the `$x$' direction indicated in \figref{fig:diffraction}. The interface box then recorded the sensor's position and received intensity and stored this on the computer for further analysis. This experiment was repeated for different slit widths and sensor aperture sizes to investigate the intensity at various positions in more detail.
+
+\newpage
+\vspace{2mm}
+\noindent
+Once the appropriate investigations for the single slit at various widths and aperture sizes had been investigated, double slit interference patterns were investigated. The experiment was adjusted so, the set-up was as shown in \figref{fig:double_diffraction}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{"interference".pdf}
-\caption{A laser will be used to illuminate a rotating slit wheel. This is then diffracted and the light sensor mounted on the linear translator then detects this. The adjustable slits are used to adjust the resolution of the light received by the sensor. The readings obtained by the sensor along with the position of the linear translators are then sent to the interface box so they can be stored on the computer. Image modified from \cite{Paper02}.}
-\label{fig:interference}
+\includegraphics[scale=0.4]{"double_diffraction".pdf}
+\caption{An illustration demonstrating the diffraction of light from double slits and defining some terms. The incident light wave approaches two slits of width $a$ separated by a distance $d$. The two beams are considered from the Huygen's wavelets \cite{Book01} formed as a result of passing through the slits. These two beams from the slits are assumed to be parallel as $L >> x$ and arrive at a point $P$ creating an interference pattern on the screen. The rays are diffracted through by an angle $\theta$. The distance between the plane of the slit and the screen is $L$ and the vertical distance between the origin, $O$ and point $P$ is $x$.}
+\label{fig:double_diffraction}
 \end{figure}
 
 \vspace{2mm}
 \noindent
-A laser of wavelength 650nm will be used to illuminate one slit on the rotating wheel. This will then be detected by the light sensor mounted on the linear translator. The resulting data collected from the sensor and its position are then stored on the computer. The data can then be analysed using the given software. 
-
-\vspace{2mm}
-\noindent
-The interface box will be turned on. The ``table and graph'' option will be selected \cite{Paper02}. This is necessary in order to analyse the results obtained from the experiment quantitatively. Then Hardware set-up will be selected and the interface will be chosen. The interface box will then be connected to the computer.
-
-\vspace{2mm}
-\noindent
-Then on the displayed image of the interface box, the inputs 1 and 2 will be selected. In order to correspond with the experimental equipment as shown in \figref{fig:interference}, the ``Rotary Motion Sensor'' will then be chosen \cite{Paper02}. Next, ``light intensity \%'' and ``position, m'' \cite{Paper02} will be selected in order to obtain intensity and position measurements obtained from the light sensor and linear translator respectively. During these steps not any exclamation marks indiciating problems with the set-up \cite{Paper02}.
-
-\vspace{2mm}
-\noindent
-Finally, ``Start'' will be chosen to measure intensity, $I$ vs position, $x$ \cite{Paper02}. The resulting .txt files can then be exported to analyse these measurements further. 
-
-\vspace{2mm}
-\noindent
-Once all of the necessary adjustments have been made to the computer software the laser will be carefully aligned to ensure it runs parallel to the optical rail. The slit wheel will be removed at first from the experimental set-up shown in \figref{fig:interference}. This is so the sensor receiving close to 100\% of the laser light \cite{Paper02} and the computer can then record this. This acts as a check to see if the software is performing as expected.
-
-\vspace{2mm}
-\noindent
-The slit wheel will then be returned to examine various diffraction patterns. Different slit widths will also be used to see qualitatvely \cite{Paper02} the diffraction patterns. These will then be compared with theory. Initially, a single slit will be studied with the following conditions, an initial slit separation of $a = 0.04$mm, a 1mm slit in front of the sensor and a wheel position of $L = 0.5$m from the sensor \cite{Paper02}. 
+As for the single slit experiment, a sensor on a lateral slider was used to measure the position and corresponding intensities of the diffraction patterns. Different slit widths and separations alongs with different sensor aperture sizes were used to investigate the resulting interference patters generated from the diffracted laser light.
 
 \vspace{2mm}
 \noindent
@@ -355,8 +354,10 @@ Further diffraction experiments will then follow: single-slit, double-slit and m
 \bibitem{Paper02} College of Engineering, Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{Diffraction and Interference Worksheet} (Accessed 8\textsuperscript{th} February 2019).
 \bibitem{Book01} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 36, pages 1312 - 1322, 2014.
 % \bibitem{Book02} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 20, pages 728 - 740, 2014.
-\bibitem{Web01} \url{https://physicsworld.com/a/working-with-water-waves/} (Accessed 9\textsuperscript{th} February 2019.)
-\bibitem{Web02} \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} Febraury 2019.)
+\bibitem{Web01} \url{http://www.dartmouth.edu/~cushman/books/EFM/chap4.pdf} (Accessed 23\textsuperscript{rd} February 2019.)
+\bibitem{Web02} \url{https://physicsworld.com/a/working-with-water-waves/} (Accessed 9\textsuperscript{th} February 2019.)
+\bibitem{Web03} \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} February 2019.)
+
 \end{thebibliography}
 
 \end{document}
