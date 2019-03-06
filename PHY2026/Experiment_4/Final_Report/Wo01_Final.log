@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  23 FEB 2019 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  3 MAR 2019 17:42
 entering extended mode
 **./Wo01_Final.tex
 (Wo01_Final.tex
@@ -565,7 +565,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen187
 \Gm@dimlist=\toks21
 
-("C:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (Wo01_Final.aux)
+("C:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (Wo01_Final.aux
+
+LaTeX Warning: Label `eq:water-waves' multiply defined.
+
+)
 \openout1 = `Wo01_Final.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
@@ -580,8 +584,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
-
-("C:\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count280
 \scratchdimen=\dimen188
@@ -639,87 +642,88 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<"reflection_refraction".pdf, id=1, 963.6pt x 542.025pt>
-File: "reflection_refraction".pdf Graphic file (type pdf)
-<use "reflection_refraction".pdf>
-Package pdftex.def Info: "reflection_refraction".pdf  used on input line 131.
-(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [1
 
 {C:/Users/Matt/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<"diffraction".pdf, id=18, 963.6pt x 542.025pt>
+<"reflection_refraction".pdf, id=16, 963.6pt x 542.025pt>
+File: "reflection_refraction".pdf Graphic file (type pdf)
+<use "reflection_refraction".pdf>
+Package pdftex.def Info: "reflection_refraction".pdf  used on input line 140.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+<"diffraction".pdf, id=17, 963.6pt x 542.025pt>
 File: "diffraction".pdf Graphic file (type pdf)
 <use "diffraction".pdf>
-Package pdftex.def Info: "diffraction".pdf  used on input line 157.
+Package pdftex.def Info: "diffraction".pdf  used on input line 166.
 (pdftex.def)             Requested size: 351.71843pt x 197.84161pt.
- [2 <./reflection_refraction.pdf> <./diffraction.pdf
 
-pdfTeX warning: pdflatex (file ./diffraction.pdf): PDF inclusion: multiple pdfs
- with page group included in a single page
->]
-<"ripple_physics".pdf, id=61, 963.6pt x 542.025pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./reflection_refraction.pdf>]
+<"ripple_physics".pdf, id=44, 963.6pt x 542.025pt>
 File: "ripple_physics".pdf Graphic file (type pdf)
 <use "ripple_physics".pdf>
-Package pdftex.def Info: "ripple_physics".pdf  used on input line 240.
+Package pdftex.def Info: "ripple_physics".pdf  used on input line 249.
 (pdftex.def)             Requested size: 404.70924pt x 227.64894pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3]
+[3 <./diffraction.pdf>]
 
 pdfTeX warning: pdflatex (file ./ruler.pdf): PDF inclusion: found PDF version <
 1.7>, but at most version <1.5> allowed
-<"ruler".pdf, id=65, 631.60968pt x 522.45187pt>
+<"ruler".pdf, id=66, 631.60968pt x 522.45187pt>
 File: "ruler".pdf Graphic file (type pdf)
 <use "ruler".pdf>
-Package pdftex.def Info: "ruler".pdf  used on input line 252.
+Package pdftex.def Info: "ruler".pdf  used on input line 261.
 (pdftex.def)             Requested size: 265.27426pt x 219.42828pt.
-[4 <./ripple_physics.pdf> <./ruler.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 296.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-("C:\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+[4 <./ripple_physics.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 305.
+
+ ("C:\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
- [5]
-<"double_diffraction".pdf, id=83, 963.6pt x 542.025pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 305.
+ [5 <./ruler.pdf>]
+<"double_diffraction".pdf, id=84, 963.6pt x 542.025pt>
 File: "double_diffraction".pdf Graphic file (type pdf)
 <use "double_diffraction".pdf>
-Package pdftex.def Info: "double_diffraction".pdf  used on input line 322.
+Package pdftex.def Info: "double_diffraction".pdf  used on input line 330.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
- [6 <./double_diffraction.pdf>]
-(Wo01_Final.aux) ) 
+ [6 <./double_diffraction.pdf>] (Wo01_Final.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 15226 strings out of 493305
- 300440 string characters out of 3136285
- 326299 words of memory out of 3000000
- 18678 multiletter control sequences out of 15000+200000
+ 15227 strings out of 493305
+ 300449 string characters out of 3136285
+ 325339 words of memory out of 3000000
+ 18679 multiletter control sequences out of 15000+200000
  542806 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,63p,1019b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmbx9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
-x10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.p
-fb>
-Output written on Wo01_Final.pdf (6 pages, 626271 bytes).
+ 42i,6n,63p,1071b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Wo01_Final.pdf (6 pages, 626462 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

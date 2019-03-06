@@ -70,7 +70,7 @@ The various properties and characteristics of waves were investigated in these e
 
 \vspace{2mm}
 \noindent
-A wave can be thought of as a time-varying disturbance that propagates through a medium or a vacuum. This can be described mathematically as a \textit{wave function} $\psi(x, t)$
+A wave can be thought of as a time-varying disturbance that propagates through a medium or a vacuum. This can be described mathematically as a wave function $\psi(x, t)$
 
 \begin{equation}
 \label{eq:wave}
@@ -79,7 +79,7 @@ A wave can be thought of as a time-varying disturbance that propagates through a
 
 \vspace{2mm}
 \noindent
-where, $\psi_0$ is the wave amplitude, $x$ is the spatial position of the propagating wave at time $t$, $k$ is the wave vector related to the wavelength, $\lambda$ by $k = \frac{2\pi}{\lambda}$, and $\omega$ is the angular frequency related to the time period, $T$, of the wave by $\omega = \frac{2\pi}{T}$. Equation \eqref{eq:wave} only considers the real part of the propagating wave. In most instances, waves also have an imaginary part. From Euler's identity equation \eqref{eq:wave} can be re-expressed as a complex exponential
+where, $\psi_0$ is the wave amplitude, $x$ is the spatial position of the propagating wave at time $t$, $k$ is the wave vector related to the wavelength, $\lambda$ by $k = 2\pi / {\lambda}$, and $\omega$ is the angular frequency related to the time period, $T$, of the wave by $\omega = {2\pi} / {T}$. Equation \eqref{eq:wave} only considers the real part of the propagating wave. In most instances, waves also have an imaginary part. From Euler's identity equation \eqref{eq:wave} can be re-expressed as a complex exponential
 
 \begin{equation}
 \label{eq:complex-wave}
@@ -98,7 +98,16 @@ The various characteristics of waves is the same for different types of waves \c
 \section{Theory}
 \label{sec:theory}
 
-The speed of mechanical waves often depend upon the medium which they travel, in addition to many other factors. For water waves, the speed depends on depth. For \textit{shallow depths}, this is given by \cite{Web01}
+The speed of waves, $v$, can be determined by using 
+
+\begin{equation}
+\label{eq:water-waves}
+v = \lambda f
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\lambda$ is the wavelength and $f$ is the frequency of the waves - the number of waves that pass a given point per second. However, the speed of mechanical waves often depend upon the medium which they travel, in addition to many other factors. For water waves, the speed depends on depth. For shallow depths, this is given by \cite{Book02}
 
 \begin{equation}
 \label{eq:water-waves}
@@ -107,11 +116,11 @@ v \approx \sqrt{gd}
 
 \vspace{2mm}
 \noindent
-where $g$ is the acceleration due to gravity and $d$ is the measured depth of the water used in the ripple tank. For the interested reader, a more detailed analysis of water waves can be found at which analysis \cite{Web01}. 
+where $g$ is the acceleration due to gravity and $d$ is the measured depth of the water used in the ripple tank. For the interested reader, a more detailed analysis of water waves can be found at which analysis \cite{Book02}. 
 
 \vspace{2mm}
 \noindent
-When a wave front approaches at an angle to a boundary \textit{reflection} occurs. This is when the angle of incidence, $\theta_i$ is equal to the angle of reflection, $\theta_r$ at the boundary
+When a wave front approaches at an angle to a boundary reflection occurs. This is when the angle of incidence, $\theta_i$ is equal to the angle of reflection, $\theta_r$ at the boundary
 
 \begin{equation}
 \label{eq:reflection}
@@ -124,7 +133,7 @@ When a wave front approaches at an angle to a boundary \textit{reflection} occur
 
 \vspace{2mm}
 \noindent
-If the wave passes between two different media and changes speed, as a consequence, it will therefore change direction. This is known as \textit{refraction}. \figref{fig:reflection_refraction} shows a physical representation for this phenomena.
+If the wave passes between two different media and changes speed, as a consequence, it will therefore change direction. This is known as refraction. \figref{fig:reflection_refraction} shows a physical representation for this phenomena.
 
 \begin{figure}[h]
 \centering
@@ -145,7 +154,7 @@ n_i sin{\theta_i} = n_t sin{\theta_t}
 
 \vspace{2mm}
 \noindent
-where $n_i$ and $n_t$ are the refactive indices of the inital and final media respectively, $\theta_i$ is the angle of incidence and $\theta_t$ is the angle of refraction between two different media. This is usually used when considering the refraction of electromagnetic waves at a boundary. However, the physics of waves is the same for different types of waves and, more recently, it has been found \cite{Web02} that water waves, when refracted obey Snell's Law \eqref{eq:refraction}.
+where $n_i$ and $n_t$ are the refactive indices of the inital and final media respectively, $\theta_i$ is the angle of incidence and $\theta_t$ is the angle of refraction between two different media. This is usually used when considering the refraction of electromagnetic waves at a boundary. However, the physics of waves is the same for different types of waves and, more recently, it has been found \cite{Web01} that water waves, when refracted obey Snell's Law \eqref{eq:refraction}.
 
 
 \vspace{2mm}
@@ -170,7 +179,7 @@ I = I_0 \frac{sin^2{\alpha}}{\alpha^2}
 
 \vspace{2mm}
 \noindent
-where $\alpha = \frac{\pi asin{\theta}}{\lambda}$, $\lambda$ is the wavelength of the light and $a$ is the slit width.
+where $\alpha = ({\pi asin{\theta}}) / {\lambda}$, $\lambda$ is the wavelength of the light and $a$ is the slit width.
 
 \vspace{2mm}
 \noindent
@@ -183,7 +192,7 @@ I = I_0 \frac{sin^2{\alpha}}{\alpha^2} cos^2{\delta}
 
 \vspace{2mm}
 \noindent
-where $\delta = \frac{\pi dsin{\theta}}{\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found by \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem this approach can be found from \cite{Web03}.
+where $\delta = ({\pi dsin{\theta}}) / {\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found by \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem this approach can be found from \cite{Web02}.
 
 \vspace{2mm}
 \noindent
@@ -238,7 +247,7 @@ The ripple tank was placed on an up-turned crate and the camera was carefully mo
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.42]{"ripple_physics".pdf}
-\caption{A side-view of the ripple tank. This shows how the strobing light source in conjunction with the generated waves produced images on the screen, placed directly above the ripple tank. A camera could then be set-up directly above the screen to capture images of the resulting wave fronts.}
+\caption{A side-view of the ripple tank. This shows how the strobing light source in conjunction with the generated waves produced images on the screen, placed directly above the ripple tank. The crests of the water waves absorb more light than the troughs. Hence, the bright wave fronts on the screen (shown by the yellow peak) represent the troughs of the water waves and the dark bands on the screen represent the peaks of the water waves.  A camera was  set-up directly above the screen to capture images of the resulting wave fronts.}
 \label{fig:ripple_setup}
 \end{figure}
 
@@ -302,17 +311,16 @@ Various different objects and obstacles were placed in the water enabling variou
 \subsection{Diffraction and Interference}
 \label{ssec:diffraction-method}
 
-For investigating the diffraction and interference of electromagnetic waves, a 650nm laser light was used \cite{Paper02} and a rotating slit wheel with various slits was used. Also a light sensor with a variable aperture connected to a computer via an interface box allowed position and intensity readings to be stored. All the settings were then set-up on the computer software in order to obtain the relevant experimental data. 
+By investigating various diffraction and interference patterns of electromagnetic waves an experimental value for the wavelength of the laser light source could be determined and compared to the theoretical value of, 650nm \cite{Paper02}. To achieve this, a rotating slit wheel with various slits was used along with a light sensor which had a variable aperture connected to a computer via an interface box allowed position and intensity readings to be stored. All the settings were then set-up on the computer software in order to obtain the relevant experimental data. 
 
 \vspace{2mm}
 \noindent
-Before any measurements were taken two preliminary measurements were taken. First, the background intensity was recorded from the sensor and was then used to correct the subsequent intensity readings. Then the laser light was used to illuminate the sensor with the aperture open at a maximum (and with no slit wheel in place) so that it was receiving close to $100\%$ intensity \cite{Paper01}. This was then later used to normalise all the intensity readings.
+Before any measurements were taken two preliminary measurements were taken. First, the background intensity was recorded from the sensor and was then used to correct the subsequent intensity readings. Then the laser light was used to illuminate the sensor with the aperture open at a maximum (and with no slit wheel in place) so that it was receiving close to $100\%$ intensity \cite{Paper01}. This was to check that the laser was operating correctly.
 
 \vspace{2mm}
 \noindent
 After the preliminary measurements were taken, the experiment was first set-up as shown in \secref{sec:theory} \figref{fig:diffraction}. The slit wheel placed at a length if $L = 0.5$m from the screen to investigate diffraction patterns for a single slit. This length was then kept fixed throughout all the subsequent experiments. A light sensor was mounted on a lateral slider was connected to a computer via an interface box. This sensor was placed at the screen distance from the single slit as shown in \figref{fig:diffraction}. The lateral slider could then be used to carefully slide the sensor across the length of the screen, in the `$x$' direction indicated in \figref{fig:diffraction}. The interface box then recorded the sensor's position and received intensity and stored this on the computer for further analysis. This experiment was repeated for different slit widths and sensor aperture sizes to investigate the intensity at various positions in more detail.
 
-\newpage
 \vspace{2mm}
 \noindent
 Once the appropriate investigations for the single slit at various widths and aperture sizes had been investigated, double slit interference patterns were investigated. The experiment was adjusted so, the set-up was as shown in \figref{fig:double_diffraction}.
@@ -326,11 +334,15 @@ Once the appropriate investigations for the single slit at various widths and ap
 
 \vspace{2mm}
 \noindent
-As for the single slit experiment, a sensor on a lateral slider was used to measure the position and corresponding intensities of the diffraction patterns. Different slit widths and separations alongs with different sensor aperture sizes were used to investigate the resulting interference patters generated from the diffracted laser light.
+As for the single slit experiment, a sensor on a lateral slider was used to measure the position and corresponding intensities of the diffraction patterns. Different slit widths and separations along with different sensor aperture sizes were used to investigate the resulting interference patters generated from the diffracted laser light.
 
 \vspace{2mm}
 \noindent
-Further diffraction experiments will then follow: single-slit, double-slit and multiple-slit patterns will be studied. In addition, different shape apertures will also be used to study generated diffraction patterns.   
+Once all the position and intensity sets had been obtained for each slit configuration, the intensity readings were shifted by an amount so that the maximum intenisty for the set was positioned at the origin. The intensity readings were then normalised by dividing all the readings by the maximum intensity in the specific set. These normalised readings were then plot as a graph of intensity vs (shifted) position. Using a least squares fit, a function similar to equation \eqref{eq:intensity1} was fitted to the data for the single slit readings. This allowed the wavelength the be to only free parameter in equation \eqref{eq:intensity1} and an experimental value could then be determined along with the associated uncertainty from the fitting procedure. Similarly, a function similar to equation \eqref{eq:intensity2} was fitted to the double slit data along with a single slit envelope function (given by equation \eqref{eq:intensity1}). This allowed more experimental values of the wavelength of the laser source to be determined.
+
+\vspace{2mm}
+\noindent
+Further diffraction experiments involving two, three, four and five slits were then investigated. These patterns could then be qualitatively analysed to see how the number of slits effects the interference patterns of electromagnetic waves.
 
 
 %\section{Results}
@@ -354,9 +366,9 @@ Further diffraction experiments will then follow: single-slit, double-slit and m
 \bibitem{Paper02} College of Engineering, Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{Diffraction and Interference Worksheet} (Accessed 8\textsuperscript{th} February 2019).
 \bibitem{Book01} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 36, pages 1312 - 1322, 2014.
 % \bibitem{Book02} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 20, pages 728 - 740, 2014.
-\bibitem{Web01} \url{http://www.dartmouth.edu/~cushman/books/EFM/chap4.pdf} (Accessed 23\textsuperscript{rd} February 2019.)
-\bibitem{Web02} \url{https://physicsworld.com/a/working-with-water-waves/} (Accessed 9\textsuperscript{th} February 2019.)
-\bibitem{Web03} \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} February 2019.)
+\bibitem{Book02} Barber N.F, \textit{Water Waves}, 1\textsuperscript{st} Edition, Chapter 3, pages 36 - 55, 1969. 
+\bibitem{Web01} Dum\'e B, \textit{Working with Water Waves}, \url{https://physicsworld.com/a/working-with-water-waves/} (Accessed 9\textsuperscript{th} February 2019.)
+\bibitem{Web02} \textit{Fraunhofer Diffraction}, \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} February 2019.)
 
 \end{thebibliography}
 
