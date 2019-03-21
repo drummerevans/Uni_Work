@@ -18,11 +18,12 @@
 % Extension packages providing additional functionality
 \usepackage{amsmath}       % additional math environments
 \usepackage{graphicx}      % graphics import from external files 
-\usepackage{epstopdf}      % automates .eps to .pdf conversion 
+\usepackage{epstopdf}      % automates .eps to .pdf conversion
 % epstopdf package may require --shell-escape option to pdflatex
 \usepackage{booktabs}      % table typesetting additions
 \usepackage{siunitx}       % number and units formatting
 \usepackage{caption}       % customisation of captions
+\usepackage{subcaption} 
 \usepackage{url}           % format url addresses
 \usepackage{abstract}		% allows formatting of abstract
 \usepackage[margin=0.5in]{geometry}
@@ -66,7 +67,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-The various properties and characteristics of waves were investigated in these experiments. These physical phenomena are at the heart of many transmission processes; such as the propagation of sound through a medium responsible for audio communication and the transmission of electromagnetic waves in a vaccuum which enables visible light from the Sun to travel to Earth. In addition, quantum mechanics has made the connection between the wave-like nature exhibited by particles and the particle-like nature of waves. Interesting developments have been made due to the study of waves and this is at the forefront of modern technologies.
+The various properties and characteristics of waves were investigated in these experiments. These physical phenomena are at the heart of many transmission processes; such as the propagation of sound through a medium responsible for audio communication and the transmission of electromagnetic waves in a vacuum which enables visible light from the Sun to travel to Earth. In addition, quantum mechanics has made the connection between the wave-like nature exhibited by particles and the particle-like nature of waves. Interesting developments have been made due to the study of waves and this is at the forefront of modern technologies.
 
 \vspace{2mm}
 \noindent
@@ -92,7 +93,7 @@ and all the symbols have their usual meaning as defined for equation \eqref{eq:w
 
 \vspace{2mm}
 \noindent
-The various characteristics of waves is the same for different types of waves \cite{Paper01}. Making use of this physical concept, the first of these experiments investigates wave phenomena using mechanical water waves in a ripple tank. In particular reflection, refraction, diffraction and interference were studied. The latter two phenomena were investigated further in the second experiment where a laser light was diffracted through single and double slits to investigate interference and diffraction patterns. Furthermore, extensions to these experiments looked into other wave phenomena such as the Doppler effect, multiple slit diffraction and interference and how water wave speed depends on the depth.
+The various characteristics of waves is the same for different types of waves \cite{Paper01}. Making use of this physical concept, the first of these experiments investigates wave phenomena using mechanical water waves in a ripple tank. In particular reflection, refraction, diffraction and interference were studied. The latter two phenomena were investigated further in the second experiment where a laser light was diffracted through single and double slits to investigate interference and diffraction patterns. Furthermore, extensions to these experiments looked into other wave phenomena such as the dependence of water wave speed with  depth and how interference patterns of electromagnetic waves could be used to determine the wavelength of a light source.
 
 
 \section{Theory}
@@ -144,21 +145,6 @@ If the wave passes between two different media and changes speed, as a consequen
 
 \vspace{2mm}
 \noindent
-Refraction of a wave between two different media is described by Snell's Law
-
-\begin{equation}
-\label{eq:refraction}
-n_i sin{\theta_i} = n_t sin{\theta_t}
-\end{equation}
-
-
-\vspace{2mm}
-\noindent
-where $n_i$ and $n_t$ are the refactive indices of the inital and final media respectively, $\theta_i$ is the angle of incidence and $\theta_t$ is the angle of refraction between two different media. This is usually used when considering the refraction of electromagnetic waves at a boundary. However, the physics of waves is the same for different types of waves and, more recently, it has been found \cite{Web01} that water waves, when refracted obey Snell's Law \eqref{eq:refraction}.
-
-
-\vspace{2mm}
-\noindent
 \textit{Diffraction} occurs when a wave `bends' as it passes through a gap (or slit) between two obstacles or when the wave travels around a barrier. An illustration of the diffraction of light is given in \figref{fig:diffraction} when incident light waves encounter a single slit.
 
 \begin{figure}[h]
@@ -192,7 +178,35 @@ I = I_0 \frac{sin^2{\alpha}}{\alpha^2} cos^2{\delta}
 
 \vspace{2mm}
 \noindent
-where $\delta = ({\pi dsin{\theta}}) / {\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found by \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem this approach can be found from \cite{Web02}.
+where $\delta = ({\pi dsin{\theta}}) / {\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found by \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem this approach can be found from \cite{Web01}.
+
+\vspace{2mm}
+\noindent
+For the experimental configuration that was considered, the small angle approximation could be used. Therefore the single slit intensity equation \eqref{eq:intensity1} can be re-expressed as
+
+\begin{equation}
+\label{eq:intensity_small1}
+I \approx I_0 \frac{sin^2{\frac{\pi a x}{L \lambda}}}{\big(\frac{\pi a x}{L \lambda}\big)^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where the intensities are normalised so, $I_0 = 1$ and $L$ is the slit to screen separation distance and $x$ is the screen position ($L >> x$).
+
+\vspace{2mm}
+\noindent
+Similarly, the double slit intensity equation \eqref{eq:intensity2} can be re-expressed due to to the small angle approximation
+
+\begin{equation}
+\label{eq:intensity_small2}
+I \approx I_0 \frac{sin^2{\frac{\pi a x}{L \lambda}}}{\big(\frac{\pi a x}{L \lambda}\big)^2} cos^2{\frac{\pi d x}{L \lambda}}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where again the intensities are normalised in the experiments so $I_0 = 1$ and all the other symbols have their usual meaning with $L >> x$.
+
+
 
 \vspace{2mm}
 \noindent
@@ -237,7 +251,7 @@ I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad,\quad(m =  \pm1, 
 \section{Method}
 \label{sec:method}
 
-\subsection{Waves in a Ripple Tank}
+\subsection{Water Waves in a Ripple Tank}
 \label{ssec:ripple-method}
 
 \vspace{2mm}
@@ -246,7 +260,7 @@ The ripple tank was placed on an up-turned crate and the camera was carefully mo
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.42]{"ripple_physics".pdf}
+\includegraphics[scale=0.4]{"ripple_physics".pdf}
 \caption{A side-view of the ripple tank. This shows how the strobing light source in conjunction with the generated waves produced images on the screen, placed directly above the ripple tank. The crests of the water waves absorb more light than the troughs. Hence, the bright wave fronts on the screen (shown by the yellow peak) represent the troughs of the water waves and the dark bands on the screen represent the peaks of the water waves.  A camera was  set-up directly above the screen to capture images of the resulting wave fronts.}
 \label{fig:ripple_setup}
 \end{figure}
@@ -288,7 +302,7 @@ d = \frac{d'}{R}
 
 \vspace{2mm}
 \noindent
-to gain the real image distance, $d$, in centimetres. The conversion factor was found to be $R = 0.66 \pm 0.1$cm which corresponded to 1cm in real distance.
+to gain the real image distance, $d$, in centimetres. The conversion factor was found to be $R = 0.66 \pm 0.01$ cm which corresponded to 1 cm in real distance.
 
 \vspace{2mm}
 \noindent
@@ -300,14 +314,13 @@ Various different objects and obstacles were placed in the water enabling variou
   \item \textbf{Refraction:} The velocity of water waves depend on the depth. Therefore, an object was be placed underwater and this resulted to change the of velocity of the water waves as they pass over it. This caused a change in direction of the waves and hence refraction could be investigated.
   \item \textbf{Single-slit interference:} A barrier with a gap was placed in front of the dipper \cite{Paper01}. The gap width was then changed and the camera was used to take pictures at these different widths. In addition, the frequency was also adjusted while keeping the gap width fixed to investigate this further. Images of the maxima and minima from the resulting interference patterns were then studied.
   \item \textbf{Double-slit interference:} Two gaps were created from barriers in the tray and the Young's fringes generated from the interference patterns were investigated. 
-  \item \textbf{Double-source Interference:} Two choerent sources will be observed using the double dipper or mechanical vibrators \cite{Paper01}. With the double dipper, Young's diffraction pattern will be observed and with the mechanical vibrator standing waves will be generated for analysis.
-  \item \textbf{Wave Speed as a Function of Depth:} As a preliminary experiment, the water tray was sloped on an angle so that the water was at various depths in the tray. Then a series of images were taken to qualitatively see how the wave speed varies with depth. Once the preliminary experiment had taken place, the tray was emptied and returned to a horizontal position and a spirit level was used to ensure this. The tray was carefully re-filled with water and a vernier calliper was clamped to a tripod to measure different water depths. This was so the wave speed at a fixed frequency, of 20Hz, could be investigated at various depths. Five depths were investigated: 0.2mm, 0.4mm, 0.6mm, 0.8mm and 1.0mm. Using similar techniques for investigating the speed of water waves, a camera was used to take an image at each depth. Three wavelengths were measured from each image using an image processing software and the average was taken to gain a more accurate result. Then, by using the conversion factor \eqref{eq:conversion}, the wavelengths could be converted to real values. The wave speed at each depth was then determined by using equation \eqref{eq:wave-speed} and a graph of $v$ vs $\sqrt{h}$ as then plot in order to determine an experimental value for $g$, the acceleration due to gravity using equation \eqref{eq:water-waves}.
+  \item \textbf{Wave Speed as a Function of Depth:} As a preliminary experiment, the water tray was sloped on an angle so that the water was at various depths in the tray. Then a series of images were taken to qualitatively see how the wave speed varied with depth. Once the preliminary experiment had taken place, the tray was emptied and returned to a horizontal position. To ensure that the tray was horizontal, a spirit level was used. The tray was carefully re-filled with water and a vernier calliper clamped to a tripod was used to measure different water depths in the tray. This was required so that the wave speed at a fixed frequency, of 20 Hz, could be investigated at various depths. Five depths were investigated: 0.2 mm, 0.4 mm, 0.6 mm, 0.8 mm and 1.0 mm. Using similar techniques for investigating the speed of water waves, a camera was used to take an image at each depth. Three wavelengths were measured from each image using an image processing software and the average was taken to achieve a more accurate result. Then, by using the conversion factor \eqref{eq:conversion}, the wavelengths could be converted to real values. The wave speed at each depth was then determined by using equation \eqref{eq:wave-speed} and a graph of $v$ vs $\sqrt{h}$ as then plot in order to determine a value for $g$, the acceleration due to gravity using equation \eqref{eq:water-waves}.
 \end{enumerate}
 
 \subsection{Diffraction and Interference}
 \label{ssec:diffraction-method}
 
-By investigating various diffraction and interference patterns of electromagnetic waves an experimental value for the wavelength of the laser light source could be determined and compared to the theoretical value of, 650nm \cite{Paper02}. To achieve this, a rotating slit wheel with various slits was used along with a light sensor which had a variable aperture connected to a computer via an interface box allowed position and intensity readings to be stored. All the settings were then set-up on the computer software in order to obtain the relevant experimental data. 
+By investigating various diffraction and interference patterns of electromagnetic waves an experimental value for the wavelength of the laser light source could be determined and compared to the known value of, $650 \pm 10$ nm \cite{Web02}. To achieve this, a rotating slit wheel with various slits was used along with a light sensor which had a variable aperture connected to a computer via an interface box allowed position and intensity readings to be stored. All the settings were then set-up on the computer software in order to obtain the relevant experimental data. 
 
 \vspace{2mm}
 \noindent
@@ -315,7 +328,7 @@ Before any measurements were taken two preliminary measurements were taken. Firs
 
 \vspace{2mm}
 \noindent
-After the preliminary measurements were taken, the experiment was first set-up as shown in \secref{sec:theory} \figref{fig:diffraction}. The slit wheel placed at a length if $L = 0.5$m from the screen to investigate diffraction patterns for a single slit. This length was then kept fixed throughout all the subsequent experiments. A light sensor was mounted on a lateral slider was connected to a computer via an interface box. This sensor was placed at the screen distance from the single slit as shown in \figref{fig:diffraction}. The lateral slider could then be used to carefully slide the sensor across the length of the screen, in the `$x$' direction indicated in \figref{fig:diffraction}. The interface box then recorded the sensor's position and received intensity and stored this on the computer for further analysis. This experiment was repeated for different slit widths and sensor aperture sizes to investigate the intensity at various positions in more detail.
+After the preliminary measurements were taken, the experiment was first set-up as shown in \secref{sec:theory} \figref{fig:diffraction}. The slit wheel placed at a length if $L = 0.5$ m from the screen to investigate diffraction patterns for a single slit. This length was then kept fixed throughout all the subsequent experiments. A light sensor was mounted on a lateral slider was connected to a computer via an interface box. This sensor was placed at the screen distance from the single slit as shown in \figref{fig:diffraction}. The lateral slider could then be used to carefully slide the sensor across the length of the screen, in the `$x$' direction indicated in \figref{fig:diffraction}. The interface box then recorded the sensor's position and received intensity and stored this on the computer for further analysis. This experiment was repeated for different slit widths and sensor aperture sizes to investigate the intensity at various positions in more detail.
 
 \vspace{2mm}
 \noindent
@@ -334,15 +347,320 @@ As for the single slit experiment, a sensor on a lateral slider was used to meas
 
 \vspace{2mm}
 \noindent
-Once all the position and intensity sets had been obtained for each slit configuration, the intensity readings were shifted by an amount so that the maximum intenisty for the set was positioned at the origin. The intensity readings were then normalised by dividing all the readings by the maximum intensity in the specific set. These normalised readings were then plot as a graph of intensity vs (shifted) position. Using a least squares fit, a function similar to equation \eqref{eq:intensity1} was fitted to the data for the single slit readings. This allowed the wavelength the be to only free parameter in equation \eqref{eq:intensity1} and an experimental value could then be determined along with the associated uncertainty from the fitting procedure. Similarly, a function similar to equation \eqref{eq:intensity2} was fitted to the double slit data along with a single slit envelope function (given by equation \eqref{eq:intensity1}). This allowed more experimental values of the wavelength of the laser source to be determined.
+Once all the position and intensity sets had been obtained for each slit configuration, the intensity readings were shifted by an amount so that the maximum intensity for the set was positioned at the origin. The intensity readings were then normalised by dividing all the readings by the maximum intensity in the specific set and hence the maximum intensity $I_0 = 1$. These normalised readings were then plot as a graph of intensity vs (shifted) position. Using a least squares fit, a function similar to equation \eqref{eq:intensity_small1} was fitted to the data for the single slit readings. This allowed the wavelength to be the only free parameter in equation \eqref{eq:intensity_small1} and an experimental value could then be determined along with the associated uncertainty from the fitting procedure. Similarly, a function similar to equation \eqref{eq:intensity_small2} was fitted to the double slit data along with a single slit envelope function (given by equation \eqref{eq:intensity_small2}). This allowed more experimental values of the wavelength of the laser source to be determined.
 
 \vspace{2mm}
 \noindent
-Further diffraction experiments involving two, three, four and five slits were then investigated. These patterns could then be qualitatively analysed to see how the number of slits effects the interference patterns of electromagnetic waves.
+Further diffraction experiments involving two, three, four and five slits were then investigated. These patterns could then be qualitatively analysed to see how the number of slits effected the interference patterns of electromagnetic waves.
+
+\newpage
+\section{Results}
+\label{sec:results}
+
+\subsection{Water Waves in a Ripple Tank}
+\label{ssec:ripple-results}
+
+\figref{fig:wavelength_image} visually shows how the wavelength of plane (water) waves varied at two different frequencies of 15 Hz and 20 Hz.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.42]{"Exp_1".pdf}
+\caption{An image showing the wavelengths of plane waves generated by the ripple tank at 15 Hz (left) and 20 Hz (right). By taking images of plane waves at different frequencies the wave speed could then be determined.}
+\label{fig:wavelength_image}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+By measuring the wavelengths of the plane waves at different frequencies as shown in \figref{fig:wavelength_image}, \figref{fig:speed_graph} shows the resulting plot of measured wavelength against time ($1/f$) at a fixed depth of $1 \pm 0.3$ cm. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{"Water_Wave_Speed".pdf}
+\caption{A plot of wavelength, $\lambda$ against time $1/f$ at a fixed water depth of $1.0 \pm 0.3$ cm.}
+\label{fig:speed_graph}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+The gradient was determined from \figref{fig:speed_graph} and by using equation \eqref{eq:wave-speed} the speed of the water waves was determined. The error in the gradient was used to obtain the associated uncertainty for the wave speed. \tabref{tab:table1} shows the water wave speed obtained from \figref{fig:speed_graph} and compares this to the theoretical value obtained by using equation \eqref{eq:water-waves} for a depth of $h = 1.0 \pm 0.3$ cm.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of values for the speed of water waves at a fixed depth of $h = 1.0 \pm 0.3$ cm and varying frequency.}
+\label{tab:table1}
+\begin{tabular}{|c|c|c|}
+\hline
+Value & Water Wave Speed, $v$(ms$^{-1}$) \\
+\hline
+Experimental & $0.18 \pm 0.01$ \\
+\hline
+Theoretical & $0.3 \pm 0.1$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+\vspace{2mm}
+\noindent
+\figref{fig:reflection_image} demonstrates how water waves reflect from a boundary placed at an angle to the incident wave fronts.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{"reflection".pdf}
+\caption{An annotated image showing the reflection of water waves at a frequency of 20 Hz due to a boundary. By measuring the image distances $x$ and $y$ the angle of incidence $\theta_i$ and the angle of reflection $\theta_r$ could then be determined.}
+\label{fig:reflection_image}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+From using \figref{fig:reflection_image} the angle of incidence could quantitatively be obtained by using the relation
+
+\begin{equation}
+\label{eq:incident-angle}
+\theta_i = arctan\bigg(\frac{x}{y}\bigg)
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $x$ and $y$ are the horizontal image distances measured using an image processing program as described in \secref{ssec:ripple-method} and shown in \figref{fig:reflection_image}. Then by using appropriate propagation of errors
+
+\begin{equation}
+\label{eq:incident-errors}
+\delta \theta_i = \sqrt{\bigg(\frac{y}{y^2 + x^2}\bigg)^2(\delta x)^2 + \bigg(\frac{x}{y^2 + x^2}\bigg)^2(\delta y)^2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\delta x$ and $\delta y$ are the errors in the horizontal and vertical image distances respectively the associated uncertainty for the angle of incidence was determined. Relations similar to \eqref{eq:incident-angle} and \eqref{eq:incident-errors} were used to determine the angle of reflection, $\theta_r$, and its associated uncertainty, $\delta \theta_r$ respectively. \tabref{tab:table2} shows the obtained values for the angle of incidence and reflection from \figref{fig:reflection_image}.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of values for the angle of incidence and reflection for water waves at 20 Hz shown in \figref{fig:reflection_image}.}
+\label{tab:table2}
+\begin{tabular}{|c|c|c|}
+\hline
+Angle of Incidence, $\theta_i$ $(^{\circ})$ & Angle of Reflection, $\theta_r$ $(^{\circ})$ \\
+\hline
+$41 \pm 2$ & $41 \pm 2$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
 
 
-%\section{Results}
-%\label{sec:results}
+\vspace{2mm}
+\noindent
+\figref{fig:refraction_image} is an image demonstrating the refraction of water waves as they pass over a submerged semi-circular object.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.55]{"Exp_3".pdf}
+\caption{Two images showing the refraction of water waves at 15 Hz (left) and 20 Hz (right) as they pass over a submerged object.}
+\label{fig:refraction_image}
+\end{figure}
+
+\newpage
+\vspace{2mm}
+\noindent
+\figref{fig:single_interference1} is a selection of annotated images showing how the single-slit interference pattern of water waves varies with different gap widths.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{"Exp_4a".pdf}
+\caption{A selection of annotated images demonstrating how single-slit interference of water waves varies with gap width. Some maxima due to constructive interference and minima due to destructive interference are indicated.}
+\label{fig:single_interference1}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+\figref{fig:single_interference2} shows two annotated images demonstrating how single-slit interference of water waves varies with different frequencies. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.55]{"Exp_4b".pdf}
+\caption{Single-slit interference of water waves at two different frequencies: 15 Hz shown left, and 20 Hz shown right. Some annotations have been included to indicate constructive interference (maxima) and destructive interference (minima).}
+\label{fig:single_interference2}
+\end{figure}
+
+\newpage
+\vspace{2mm}
+\noindent
+\figref{fig:double_interference} demonstrates the Young's slits diffraction pattern generated from double-slit interference of water waves.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.55]{"Exp_5".pdf}
+\caption{An annotated image demonstrating double-slit interference of water waves as they pass through two slits. The annotations highlight the maxima and minima formed due to the interference between the two wave fronts formed by the two slits.}
+\label{fig:double_interference}
+\end{figure}
+
+\newpage
+\vspace{2mm}
+\noindent
+\figref{fig:tray_depth} shows how the wavelength of plane waves varies with depth due to the water tray positioned at a sloping gradient.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{"Exp_7".pdf}
+\caption{An image demonstrating qualitatively how the wavelength of plane waves varies with depth. The tray was angled such that the depth was decreasing in the direction of the propagating waves as indicated by the red arrow. Two wavelengths $\lambda_1$ and $\lambda_2$ are shown at deep and shallow points in the water tray respectively.}
+\label{fig:tray_depth}
+\end{figure}
+
+
+\vspace{2mm}
+\noindent
+By using similar techniques to \figref{fig:speed_graph} plane waves were analysed at various depths to produce \figref{fig:depth_graph}. This shows a plot of wave speed, $v$ against the square-root of various depths, $\sqrt{h}$ of the water tray (not positioned at an angle) at a fixed frequency of 20 Hz.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.0]{"Water_Wave_Depths".pdf}
+\caption{A plot of water wave speed, $v$ against the square root of depth, $\sqrt{h}$ for a fixed frequency of 20 Hz.}
+\label{fig:depth_graph}
+\end{figure}
+
+\newpage
+\vspace{2mm}
+\noindent
+From applying equation \eqref{eq:water-waves} an experimental value for the acceleration due to gravity, $g$ could be determined from \figref{fig:depth_graph} by obtaining the gradient and squaring it. The associated uncertainty  was simply obtained by using the error in the gradient. \tabref{tab:table3} compares the experimental value of $g$ obtained from \figref{fig:depth_graph} to the accepted value.
+
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of values for the acceleration due to gravity, $g$.}
+\label{tab:table3}
+\begin{tabular}{|c|c|c|}
+\hline
+Value & Acceleration Due to Gravity, $g$(ms$^{-2}$) \\
+\hline
+Experimental & $4.4 \pm 0.3$ \\
+\hline
+Accepted & $9.8$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+
+\subsection{Diffraction and Interference}
+\label{ssec:diffraction-method}
+
+\figref{fig:single1} and \figref{fig:single2} show plots of intensity against screen position for the single slit configuration using a 0.3 mm aperture with slit widths of $a = 0.02$ mm and $a = 0.04$ mm respectively. Whereas, \figref{fig:double1} and \figref{fig:double2} show plots of intensity against screen position for the double slits configuration using a 0.3 mm aperture with a slit width of $a = 0.04$ mm and slit separations of $d = 0.25$ mm and $d = 0.5$ mm respectively.
+
+\vspace{2mm}
+\noindent
+\figref{fig:single3} and \figref{fig:single4} show plots of intensity against screen position for the single slit configuration using a different aperture of 1.0 mm with slit widths of $a = 0.02$ mm and $a = 0.04$ mm respectively. \figref{fig:double3} and \figref{fig:double4} show plots of intensity against screen position for the double slits configuration using a 1.0 mm aperture with a slit width of $a = 0.04$ mm and slit separations of $d = 0.25$ mm and $d = 0.5$ mm respectively.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"single_0_3mm_0_02".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the single slit configuration with an aperture of 0.3 mm and slit width of $ a = 0.04$ mm. An intensity function given by equation \eqref{eq:intensity_small1} is fitted to the data, as shown by the blue line.}
+\label{fig:single1}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"single_0_3mm_0_04".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the single slit configuration with an aperture of 0.3 mm and slit width of $a = 0.04$ mm. An intensity function given by equation \eqref{eq:intensity_small1} is fitted to the data, as shown by the blue line.}
+\label{fig:single2}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"double_0_3mm_0_04_0_25".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the double slits configuration with an aperture of 0.3 mm, slit width of $a = 0.04$ mm and slit separation of $d = 0.25$ mm. An intensity function given by equation \eqref{eq:intensity_small2} is fitted to the data, as shown by the blue line, and a single slit envelope using \eqref{eq:intensity_small1} is also plotted, shown by the dashed black line.}
+\label{fig:double1}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"double_0_3mm_0_04_0_5".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the double slits configuration with an aperture of 0.3 mm, slit width of $ a = 0.04$ mm and slit separation of $d = 0.5$ mm. An intensity function given by equation \eqref{eq:intensity_small2} is fitted to the data, as shown by the blue line, and a single slit envelope using \eqref{eq:intensity_small1} is also plotted, shown by the dashed black line.}
+\label{fig:double2}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"single_1_0mm_0_02".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the single slit configuration with an aperture of 1.0 mm and slit width of $ a = 0.04$ mm.. An intensity function given by equation \eqref{eq:intensity_small1} is fitted to the data, as shown by the blue line.}
+\label{fig:single3}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"single_1_0mm_0_04".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the single slit configuration with an aperture of 1.0 mm and slit width of $a = 0.04$ mm. An intensity function given by equation \eqref{eq:intensity_small1} is fitted to the data, as shown by the blue line.}
+\label{fig:single4}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"double_1_0mm_0_04_0_25".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the double slits configuration with an aperture of 1.0 mm, slit width of $a = 0.04$ mm and slit separation of $d = 0.25$ mm. An intensity function given by equation \eqref{eq:intensity_small2} is fitted to the data, as shown by the blue line, and a single slit envelope using \eqref{eq:intensity_small1} is also plotted, shown by the dashed black line.}
+\label{fig:double3}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{"double_1_0mm_0_04_0_5".pdf}
+\caption{A plot of intensity, $I$ against screen position, $x$ for the double slits configuration with an aperture of 1.0 mm, slit width of $ a = 0.04$ mm and slit separation of $d = 0.5$ mm. An intensity function given by equation \eqref{eq:intensity_small2} is fitted to the data, as shown by the blue line, and a single slit envelope using \eqref{eq:intensity_small1} is also plotted, shown by the dashed black line.}
+\label{fig:double4}
+\end{figure}
+
+\clearpage
+\vspace{2mm}
+\noindent
+\tabref{tab:table4} shows the obtained values for the wavelength from the intensity function fitted to the diffraction patterns with the wavelength, $\lambda$ as the only free parameter in equation \eqref{eq:intensity_small1} for the single slit intensity patterns.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of experimental values for the wavelength, $\lambda$ of the laser light source by using a non-linear least squares fit to the data with equation \eqref{eq:intensity_small1} for the single slit intensity patterns.}
+\label{tab:table4}
+\begin{tabular}{|c|c|c|}
+\hline
+Aperture Size (mm) & Slit Width $a$(mm) & $\lambda$(nm) using \eqref{eq:intensity_small1} \\
+\hline
+0.3 & 0.02 & $652 \pm 2$ \\
+\hline
+0.3 & 0.04 & $652 \pm 1$ \\
+\hline
+1.0 & 0.02 & $674 \pm 1$ \\
+\hline
+1.0 & 0.04 & $662 \pm 1$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+\vspace{2mm}
+\noindent
+\tabref{tab:table5} shows the obtained values for the wavelength from the intensity function fitted to the diffraction patterns with the wavelength, $\lambda$ as the only free parameter in equation \eqref{eq:intensity_small2} for the double slit intensity patterns. In addition a single slit `envelope' was also fitted to the double slit data by using equation \eqref{eq:intensity_small1} to obtain another experimental value for the wavelength of the laser light source.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{Table of experimental values for the wavelength, $\lambda$ of the laser light source by using a non-linear least squares fit to the data with equation \eqref{eq:intensity_small2}  and using equation \eqref{eq:intensity_small1} to fit a single slit `envelope' to the data for the double slit intensity patterns.}
+\label{tab:table5}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Aperture Size (mm) & Slit Width $a$(mm) & Slit Separation $d$(mm) & $\lambda$(nm) using \eqref{eq:intensity_small2} & `Envelope' $\lambda_{env}$(nm) using \eqref{eq:intensity_small1} \\
+\hline
+0.3 & 0.04 & 0.25 & $672 \pm 1$ & $338 \pm 7$ \\
+\hline
+0.3 & 0.04 & 0.5 & $656 \pm 1$ & $378 \pm 7$ \\
+\hline
+1.0 & 0.04 & 0.25 & $698 \pm 2$ & $599 \pm 5$ \\
+\hline
+1.0 & 0.04 & 0.5 & $617 \pm 1$ & $645 \pm 3$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+
 
 
 
@@ -363,8 +681,9 @@ Further diffraction experiments involving two, three, four and five slits were t
 \bibitem{Book01} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 36, pages 1312 - 1322, 2014.
 % \bibitem{Book02} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 20, pages 728 - 740, 2014.
 \bibitem{Book02} Barber N.F, \textit{Water Waves}, 1\textsuperscript{st} Edition, Chapter 3, pages 36 - 55, 1969. 
-\bibitem{Web01} Dum\'e B, \textit{Working with Water Waves}, \url{https://physicsworld.com/a/working-with-water-waves/} (Accessed 9\textsuperscript{th} February 2019.)
-\bibitem{Web02} \textit{Fraunhofer Diffraction}, \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} February 2019.)
+\bibitem{Web01} \textit{Fraunhofer Diffraction}, \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} February 2019.)
+\bibitem{Web02} \textit{Red Diode Laser - Basic Optics - OS-8525A}, 
+\url{https://www.pasco.com/prodCatalog/OS/OS-8525_red-diode-laser-basic-optics/index.cfm?fbclid=IwAR3gzuNSAoumEZpwYZQO6tX3j1nLhTtLYklX5U6V6HHw5xyHKdszO1ID00I} (Accessed 15\textsuperscript{th} March 2019).
 
 \end{thebibliography}
 

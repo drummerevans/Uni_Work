@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  8 MAR 2019 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  17 MAR 2019 11:32
 entering extended mode
 **./Wo01_Final.tex
 (Wo01_Final.tex
@@ -530,6 +530,11 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 )
 \c@ContinuedFloat=\count276
 )
+("C:\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+\c@subfigure=\count277
+\c@subtable=\count278
+)
 ("C:\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -552,9 +557,9 @@ Package ifvtex Info: VTeX not detected.
 ("C:\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count277
-\Gm@cntv=\count278
-\c@Gm@tempcnt=\count279
+\Gm@cnth=\count279
+\Gm@cntv=\count280
+\c@Gm@tempcnt=\count281
 \Gm@bindingoffset=\dimen180
 \Gm@wd@mp=\dimen181
 \Gm@odd@mp=\dimen182
@@ -565,34 +570,37 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen187
 \Gm@dimlist=\toks21
 
-("C:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (Wo01_Final.aux)
+("C:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (Wo01_Final.aux
+
+LaTeX Warning: Label `ssec:diffraction-method' multiply defined.
+
+)
 \openout1 = `Wo01_Final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-
-("C:\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+ ("C:\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count280
+\scratchcounter=\count282
 \scratchdimen=\dimen188
 \scratchbox=\box52
-\nofMPsegments=\count281
-\nofMParguments=\count282
+\nofMPsegments=\count283
+\nofMParguments=\count284
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count283
+\MPscratchCnt=\count285
 \MPscratchDim=\dimen189
-\MPnumerator=\count284
-\makeMPintoPDFobject=\count285
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
 \everyMPtoPDFconversion=\toks23
 ) ("C:\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
 "
@@ -645,12 +653,12 @@ Package caption Info: End \AtBeginDocument code.
 <"reflection_refraction".pdf, id=16, 963.6pt x 542.025pt>
 File: "reflection_refraction".pdf Graphic file (type pdf)
 <use "reflection_refraction".pdf>
-Package pdftex.def Info: "reflection_refraction".pdf  used on input line 140.
+Package pdftex.def Info: "reflection_refraction".pdf  used on input line 141.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
 <"diffraction".pdf, id=17, 963.6pt x 542.025pt>
 File: "diffraction".pdf Graphic file (type pdf)
 <use "diffraction".pdf>
-Package pdftex.def Info: "diffraction".pdf  used on input line 166.
+Package pdftex.def Info: "diffraction".pdf  used on input line 152.
 (pdftex.def)             Requested size: 351.71843pt x 197.84161pt.
 
 
@@ -660,8 +668,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <"ripple_physics".pdf, id=44, 963.6pt x 542.025pt>
 File: "ripple_physics".pdf Graphic file (type pdf)
 <use "ripple_physics".pdf>
-Package pdftex.def Info: "ripple_physics".pdf  used on input line 249.
-(pdftex.def)             Requested size: 404.70924pt x 227.64894pt.
+Package pdftex.def Info: "ripple_physics".pdf  used on input line 263.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -673,41 +681,225 @@ pdfTeX warning: pdflatex (file ./ruler.pdf): PDF inclusion: found PDF version <
 <"ruler".pdf, id=66, 631.60968pt x 522.45187pt>
 File: "ruler".pdf Graphic file (type pdf)
 <use "ruler".pdf>
-Package pdftex.def Info: "ruler".pdf  used on input line 261.
+Package pdftex.def Info: "ruler".pdf  used on input line 275.
 (pdftex.def)             Requested size: 240.01418pt x 198.53377pt.
 [4 <./ripple_physics.pdf> <./ruler.pdf>] [5]
 <"double_diffraction".pdf, id=84, 963.6pt x 542.025pt>
 File: "double_diffraction".pdf Graphic file (type pdf)
 <use "double_diffraction".pdf>
-Package pdftex.def Info: "double_diffraction".pdf  used on input line 326.
+Package pdftex.def Info: "double_diffraction".pdf  used on input line 339.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
  [6 <./double_diffraction.pdf>]
-[7] (Wo01_Final.aux) ) 
+
+pdfTeX warning: pdflatex (file ./Exp_1.pdf): PDF inclusion: found PDF version <
+1.7>, but at most version <1.5> allowed
+<"Exp_1".pdf, id=106, 788.9475pt x 453.19313pt>
+File: "Exp_1".pdf Graphic file (type pdf)
+<use "Exp_1".pdf>
+Package pdftex.def Info: "Exp_1".pdf  used on input line 367.
+(pdftex.def)             Requested size: 331.35568pt x 190.33981pt.
+<"Water_Wave_Speed".pdf, id=107, 462.52798pt x 346.89601pt>
+File: "Water_Wave_Speed".pdf Graphic file (type pdf)
+<use "Water_Wave_Speed".pdf>
+Package pdftex.def Info: "Water_Wave_Speed".pdf  used on input line 378.
+(pdftex.def)             Requested size: 393.15063pt x 294.86299pt.
+[7 <./Exp_1.pdf> <./Water_Wave_Speed.pdf>]
+
+pdfTeX warning: pdflatex (file ./reflection.pdf): PDF inclusion: found PDF vers
+ion <1.7>, but at most version <1.5> allowed
+<"reflection".pdf, id=165, 734.98589pt x 594.7821pt>
+File: "reflection".pdf Graphic file (type pdf)
+<use "reflection".pdf>
+Package pdftex.def Info: "reflection".pdf  used on input line 410.
+(pdftex.def)             Requested size: 330.74059pt x 267.64948pt.
+
+
+pdfTeX warning: pdflatex (file ./Exp_3.pdf): PDF inclusion: found PDF version <
+1.7>, but at most version <1.5> allowed
+<"Exp_3".pdf, id=166, 786.68906pt x 378.66469pt>
+File: "Exp_3".pdf Graphic file (type pdf)
+<use "Exp_3".pdf>
+Package pdftex.def Info: "Exp_3".pdf  used on input line 459.
+(pdftex.def)             Requested size: 432.68031pt x 208.26622pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./reflection.pdf>]
+
+pdfTeX warning: pdflatex (file ./Exp_4a.pdf): PDF inclusion: found PDF version 
+<1.7>, but at most version <1.5> allowed
+<"Exp_4a".pdf, id=173, 846.93312pt x 412.11868pt>
+File: "Exp_4a".pdf Graphic file (type pdf)
+<use "Exp_4a".pdf>
+Package pdftex.def Info: "Exp_4a".pdf  used on input line 471.
+(pdftex.def)             Requested size: 508.1638pt x 247.2731pt.
+
+
+pdfTeX warning: pdflatex (file ./Exp_4b.pdf): PDF inclusion: found PDF version 
+<1.7>, but at most version <1.5> allowed
+<"Exp_4b".pdf, id=174, 752.8125pt x 448.67625pt>
+File: "Exp_4b".pdf Graphic file (type pdf)
+<use "Exp_4b".pdf>
+Package pdftex.def Info: "Exp_4b".pdf  used on input line 482.
+(pdftex.def)             Requested size: 414.04816pt x 246.77269pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./Exp_3.pdf> <./Exp_4a.pdf>]
+
+pdfTeX warning: pdflatex (file ./Exp_5.pdf): PDF inclusion: found PDF version <
+1.7>, but at most version <1.5> allowed
+<"Exp_5".pdf, id=184, 415.5525pt x 405.76593pt>
+File: "Exp_5".pdf Graphic file (type pdf)
+<use "Exp_5".pdf>
+Package pdftex.def Info: "Exp_5".pdf  used on input line 494.
+(pdftex.def)             Requested size: 228.55458pt x 223.17195pt.
+[10 <./Exp_4b.pdf> <./Exp_5.pdf>]
+
+pdfTeX warning: pdflatex (file ./Exp_7.pdf): PDF inclusion: found PDF version <
+1.7>, but at most version <1.5> allowed
+<"Exp_7".pdf, id=194, 560.0925pt x 492.33937pt>
+File: "Exp_7".pdf Graphic file (type pdf)
+<use "Exp_7".pdf>
+Package pdftex.def Info: "Exp_7".pdf  used on input line 506.
+(pdftex.def)             Requested size: 336.05809pt x 295.40588pt.
+<"Water_Wave_Depths".pdf, id=195, 462.52798pt x 346.89601pt>
+File: "Water_Wave_Depths".pdf Graphic file (type pdf)
+<use "Water_Wave_Depths".pdf>
+Package pdftex.def Info: "Water_Wave_Depths".pdf  used on input line 518.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./Exp_7.pdf>]
+<"single_0_3mm_0_02".pdf, id=203, 462.52798pt x 346.89601pt>
+File: "single_0_3mm_0_02".pdf Graphic file (type pdf)
+<use "single_0_3mm_0_02".pdf>
+Package pdftex.def Info: "single_0_3mm_0_02".pdf  used on input line 558.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"single_0_3mm_0_04".pdf, id=204, 462.52798pt x 346.89601pt>
+File: "single_0_3mm_0_04".pdf Graphic file (type pdf)
+<use "single_0_3mm_0_04".pdf>
+Package pdftex.def Info: "single_0_3mm_0_04".pdf  used on input line 565.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"double_0_3mm_0_04_0_25".pdf, id=205, 462.52798pt x 346.89601pt>
+File: "double_0_3mm_0_04_0_25".pdf Graphic file (type pdf)
+<use "double_0_3mm_0_04_0_25".pdf>
+Package pdftex.def Info: "double_0_3mm_0_04_0_25".pdf  used on input line 572.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"double_0_3mm_0_04_0_5".pdf, id=206, 462.52798pt x 346.89601pt>
+File: "double_0_3mm_0_04_0_5".pdf Graphic file (type pdf)
+<use "double_0_3mm_0_04_0_5".pdf>
+Package pdftex.def Info: "double_0_3mm_0_04_0_5".pdf  used on input line 579.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"single_1_0mm_0_02".pdf, id=207, 462.52798pt x 346.89601pt>
+File: "single_1_0mm_0_02".pdf Graphic file (type pdf)
+<use "single_1_0mm_0_02".pdf>
+Package pdftex.def Info: "single_1_0mm_0_02".pdf  used on input line 586.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"single_1_0mm_0_04".pdf, id=208, 462.52798pt x 346.89601pt>
+File: "single_1_0mm_0_04".pdf Graphic file (type pdf)
+<use "single_1_0mm_0_04".pdf>
+Package pdftex.def Info: "single_1_0mm_0_04".pdf  used on input line 593.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"double_1_0mm_0_04_0_25".pdf, id=209, 462.52798pt x 346.89601pt>
+File: "double_1_0mm_0_04_0_25".pdf Graphic file (type pdf)
+<use "double_1_0mm_0_04_0_25".pdf>
+Package pdftex.def Info: "double_1_0mm_0_04_0_25".pdf  used on input line 600.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"double_1_0mm_0_04_0_5".pdf, id=210, 462.52798pt x 346.89601pt>
+File: "double_1_0mm_0_04_0_5".pdf Graphic file (type pdf)
+<use "double_1_0mm_0_04_0_5".pdf>
+Package pdftex.def Info: "double_1_0mm_0_04_0_5".pdf  used on input line 607.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./Water_Wave_Depths.pdf>] [13 <./single_0_3mm_0_02.pdf> <./single_0_3mm_0_
+04.pdf
+
+pdfTeX warning: pdflatex (file ./single_0_3mm_0_04.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>] [14 <./double_0_3mm_0_04_0_25.pdf> <./double_0_3mm_0_04_0_5.pdf
+
+pdfTeX warning: pdflatex (file ./double_0_3mm_0_04_0_5.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [15 <./single_1_0mm_0_02.pdf> <./single_1_0mm_0_04.pdf
+
+pdfTeX warning: pdflatex (file ./single_1_0mm_0_04.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>] [16 <./double_1_0mm_0_04_0_25.pdf> <./double_1_0mm_0_04_0_5.pdf
+
+pdfTeX warning: pdflatex (file ./double_1_0mm_0_04_0_5.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 685--687
+[]\OT1/cmr/m/it/10 Red Diode Laser - Ba-sic Op-tics - OS-8525A\OT1/cmr/m/n/10 ,
+ $\OT1/cmtt/m/n/10 https : / / www . pasco . com / prodCatalog / OS / OS-[]8525
+ _
+ []
+
+
+Overfull \hbox (37.27568pt too wide) in paragraph at lines 685--687
+\OT1/cmtt/m/n/10 red-[]diode-[]laser-[]basic-[]optics / index . cfm ? fbclid = 
+IwAR3gzuNSAoumEZpwYZQO6tX3j1nLhTtLYklX5U6V6HHw5xyHKdszO1ID00I$
+ []
+
+[17
+
+] (Wo01_Final.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 15211 strings out of 493305
- 300204 string characters out of 3136285
- 326308 words of memory out of 3000000
- 18666 multiletter control sequences out of 15000+200000
+ 15375 strings out of 493305
+ 303804 string characters out of 3136285
+ 328985 words of memory out of 3000000
+ 18811 multiletter control sequences out of 15000+200000
  542806 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,63p,1377b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmbx9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb>
-<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr17.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt
-10.pfb>
-Output written on Wo01_Final.pdf (7 pages, 628709 bytes).
+ 42i,9n,63p,1425b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmtt10.pfb>
+Output written on Wo01_Final.pdf (17 pages, 1707957 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
+ 762 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
