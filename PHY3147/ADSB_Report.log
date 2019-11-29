@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  25 NOV 2019 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  29 NOV 2019 11:09
 entering extended mode
 **./ADSB_Report.tex
 (ADSB_Report.tex
@@ -576,7 +576,14 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip63
 \thanksmargin=\skip64
 \droptitle=\skip65
-) (ADSB_Report.aux)
+) (ADSB_Report.aux
+
+LaTeX Warning: Label `eq:temp_error' multiply defined.
+
+
+LaTeX Warning: Label `eq:temp_error' multiply defined.
+
+)
 \openout1 = `ADSB_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
@@ -591,8 +598,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
-
-("C:\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
 \scratchdimen=\dimen188
@@ -657,53 +663,144 @@ Package caption Info: End \AtBeginDocument code.
 \tf@toc=\write3
 \openout3 = `ADSB_Report.toc'.
 
- [1]
+ [1] [2]
+<"aug26_0_105_early".pdf, id=29, 462.52798pt x 346.89601pt>
+File: "aug26_0_105_early".pdf Graphic file (type pdf)
+<use "aug26_0_105_early".pdf>
+Package pdftex.def Info: "aug26_0_105_early".pdf  used on input line 270.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
 
-LaTeX Warning: Reference `fig:reflection_refraction' on page 2 undefined on inp
-ut line 140.
+Overfull \hbox (29.62712pt too wide) in paragraph at lines 270--271
+ [][] 
+ []
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+<"aug26_0_105_late".pdf, id=30, 462.52798pt x 346.89601pt>
+File: "aug26_0_105_late".pdf Graphic file (type pdf)
+<use "aug26_0_105_late".pdf>
+Package pdftex.def Info: "aug26_0_105_late".pdf  used on input line 276.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
+
+Overfull \hbox (29.62712pt too wide) in paragraph at lines 276--277
+ [][] 
+ []
+
+<"aug26_0_305_early".pdf, id=31, 462.52798pt x 346.89601pt>
+File: "aug26_0_305_early".pdf Graphic file (type pdf)
+<use "aug26_0_305_early".pdf>
+Package pdftex.def Info: "aug26_0_305_early".pdf  used on input line 288.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
+
+Overfull \hbox (29.62712pt too wide) in paragraph at lines 288--289
+ [][] 
+ []
+
+<"aug26_0_305_late".pdf, id=32, 462.52798pt x 346.89601pt>
+File: "aug26_0_305_late".pdf Graphic file (type pdf)
+<use "aug26_0_305_late".pdf>
+Package pdftex.def Info: "aug26_0_305_late".pdf  used on input line 294.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
+
+Overfull \hbox (29.62712pt too wide) in paragraph at lines 294--295
+ [][] 
+ []
+
+[3] [4 <./aug26_0_105_early.pdf> <./aug26_0_105_late.pdf
+
+pdfTeX warning: pdflatex (file ./aug26_0_105_late.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./aug26_0_305_early.pdf
+
+pdfTeX warning: pdflatex (file ./aug26_0_305_early.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./aug26_0_305_late.pdf
+
+pdfTeX warning: pdflatex (file ./aug26_0_305_late.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>]
+<"aug26_0_505_early".pdf, id=218, 462.52798pt x 346.89601pt>
+File: "aug26_0_505_early".pdf Graphic file (type pdf)
+<use "aug26_0_505_early".pdf>
+Package pdftex.def Info: "aug26_0_505_early".pdf  used on input line 307.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
+
+Overfull \hbox (29.62712pt too wide) in paragraph at lines 307--308
+ [][] 
+ []
+
+<"aug26_0_505_late".pdf, id=219, 462.52798pt x 346.89601pt>
+File: "aug26_0_505_late".pdf Graphic file (type pdf)
+<use "aug26_0_505_late".pdf>
+Package pdftex.def Info: "aug26_0_505_late".pdf  used on input line 313.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
+
+Overfull \hbox (29.62712pt too wide) in paragraph at lines 313--314
+ [][] 
+ []
+
+[5
+
+ <./aug26_0_505_early.pdf> <./aug26_0_505_late.pdf
+
+pdfTeX warning: pdflatex (file ./aug26_0_505_late.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `eq:press_error' on page 6 undefined on input line 394
+.
+
+
+LaTeX Warning: Reference `eq:angle_error' on page 6 undefined on input line 394
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--419
 []\OT1/cmr/m/it/10 Red Diode Laser - Ba-sic Op-tics - OS-8525A\OT1/cmr/m/n/10 ,
  $\OT1/cmtt/m/n/10 https : / / www . pasco . com / prodCatalog / OS / OS-[]8525
  _
  []
 
 
-Overfull \hbox (37.27568pt too wide) in paragraph at lines 286--288
+Overfull \hbox (37.27568pt too wide) in paragraph at lines 417--419
 \OT1/cmtt/m/n/10 red-[]diode-[]laser-[]basic-[]optics / index . cfm ? fbclid = 
 IwAR3gzuNSAoumEZpwYZQO6tX3j1nLhTtLYklX5U6V6HHw5xyHKdszO1ID00I$
  []
 
-[4] (ADSB_Report.aux)
+[6] (ADSB_Report.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 15291 strings out of 493305
- 300966 string characters out of 3136285
- 327519 words of memory out of 3000000
- 18743 multiletter control sequences out of 15000+200000
- 542805 words of font info for 63 fonts, out of 3000000 for 9000
+ 15355 strings out of 493305
+ 302341 string characters out of 3136285
+ 329699 words of memory out of 3000000
+ 18799 multiletter control sequences out of 15000+200000
+ 543422 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,63p,1826b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,63p,1826b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb>
-Output written on ADSB_Report.pdf (6 pages, 223649 bytes).
+/cm/cmbx8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.p
+fb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi9.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr5.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C
+:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9
+.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb><C:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb>
+Output written on ADSB_Report.pdf (8 pages, 588963 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 389 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

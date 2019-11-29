@@ -137,7 +137,7 @@ When a wave front approaches at an angle to a boundary reflection occurs. This i
 
 \vspace{2mm}
 \noindent
-\figref{fig:reflection_refraction} describes this pictorially.
+
 
 \vspace{2mm}
 \noindent
@@ -258,9 +258,140 @@ I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad,\quad(m =  \pm1, 
 
 \section{Results}
 
-\subsection{Electromagnetic Waves}
-\label{ssec:diffraction-results}
+%\subsection{Electromagnetic Waves}
+%\label{ssec:diffraction-results}
 
+\figref{fig:phi0_0.105} shows two plots of radial distance from the centre of the Earth, $R$ against the increment angle measured from the vertical through the centre of the Earth, $\theta$ for a given observed angle range of 0.1$^{\circ}$ - 0.11$^{\circ}$ for early (\figref{fig:sub1}) and late (\figref{fig:sub2}) times of observation on 26\textsuperscript{nd} August 2019 starting at 11:45 am. Furthermore, \figref{fig:phi0_0.305} and \figref{fig:phi0_0.505} show additional plots of these $R$ and $\theta$ positions for different observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. Again, the early times of observation are shown for these different observed angles ranges in \figref{fig:sub3} and \figref{fig:sub5} at observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. Whereas the late times are shown in \figref{fig:sub4} and \figref{fig:sub6} for the observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. All these plot values are shown for the plane positions, in addition to the model relative humidity curves for 0$\%$, 100$\%$ and the best fitting relative humidity curve for the plane positions.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.65]{"aug26_0_105_early".pdf}
+  \caption{$R$ vs $\theta$ for early times (the first 5000s) of observation.}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.65]{"aug26_0_105_late".pdf}
+  \caption{$R$ vs $\theta$ for late times (the last 5000s) of observation.}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Plots of radial distance, $R$ against increment angle, $\theta$ from the vertical through the centre of the Earth for plane positions (shown in black) at a given observed angle range between 0.1$^{\circ}$ - 0.11$^{\circ}$ for early and late times of observation.}
+\label{fig:phi0_0.105}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.65]{"aug26_0_305_early".pdf}
+  \caption{$R$ vs $\theta$ for early times (the first 5000s) of observation.}
+  \label{fig:sub3}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.65]{"aug26_0_305_late".pdf}
+  \caption{$R$ vs $\theta$ for late times (the last 5000s) of observation.}
+  \label{fig:sub4}
+\end{subfigure}
+\caption{Plots of radial distance, $R$ against increment angle, $\theta$ from the vertical through the centre of the Earth for plane positions (shown in black) at a given observed angle range between 0.3$^{\circ}$ - 0.31$^{\circ}$ for early and late times of observation.}
+\label{fig:phi0_0.305}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.65]{"aug26_0_505_early".pdf}
+  \caption{$R$ vs $\theta$ for early times (the first 5000s) of observation.}
+  \label{fig:sub5}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.65]{"aug26_0_505_late".pdf}
+  \caption{$R$ vs $\theta$ for late times (the last 5000s) of observation.}
+  \label{fig:sub6}
+\end{subfigure}
+\caption{Plots of radial distance, $R$ against increment angle, $\theta$ from the vertical through the centre of the Earth for plane positions (shown in black) at a given observed angle range between 0.5$^{\circ}$ - 0.51$^{\circ}$ for early and late times of observation.}
+\label{fig:phi0_0.505}
+\end{figure}
+
+
+\vspace{2mm}
+\noindent
+\tabref{tab:table1} compares the obtained values for the relative humidity from the best fitting (green) curves in \figref{fig:sub1}, \figref{fig:sub3} and \figref{fig:sub5} to the mean of the actual relative humidities obtained from \cite{Web01} along with their estimated errors for each of the observed angle ranges at early times of observation.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{A table comparing generated relative humidities (RH) from an interpolative and least squares method for the various different observed angle, $\phi_0$ ranges investigated to the mean of the actual RH values given by \cite{Web01} for the early times of observation (first 5000s).}
+\label{tab:table1}
+\begin{tabular}{|c|c|c|}
+\hline
+Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\%$) \cite{Web01} \\
+\hline
+0.10 - 0.11 & $99 \pm 8$ & $74 \pm 4$ \\
+\hline
+0.30 - 0.31 & $48 \pm 3$ & $74 \pm 4$ \\
+\hline
+0.50 - 0.51 & $38 \pm 3$ & $74 \pm 4$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+\vspace{2mm}
+\noindent
+\tabref{tab:table2} compares the obtained values for the relative humidity from the best fitting (green) curves in \figref{fig:sub2}, \figref{fig:sub4} and \figref{fig:sub6} to the mean of the actual relative humidities obtained from \cite{Web01} along with their estimated errors for each of the observed angle ranges at late times of observation.
+
+\vspace{5mm}
+\begin{table*}[h]
+\centering % centre table
+\caption{A table comparing generated relative humidities (RH) from an interpolative and least squares method for the various different observed angle, $\phi_0$ ranges investigated to the mean of the actual RH values given by \cite{Web01} for the late times of observation (last 5000s).}
+\label{tab:table2}
+\begin{tabular}{|c|c|c|}
+\hline
+Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\%$) \cite{Web01} \\
+\hline
+0.10 - 0.11 & - & $77 \pm 5$ \\
+\hline
+0.30 - 0.31 & 11 $\pm$ $<$1 & $77 \pm 5$ \\
+\hline
+0.50 - 0.51 & - & $77 \pm 5$ \\
+\hline
+\end{tabular}
+%\end{center}
+\end{table*}
+
+\vspace{2mm}
+\noindent
+The errors for the generated relative humidities were estimated in \tabref{tab:table1} and \tabref{tab:table2} by using the error on the mean for the baseline temperature $T_b$ \cite{Web01}, baseline pressure $P_b$ \cite{Web01} and observed angle $\phi_0$. The following were used to obtain these errors
+
+\begin{equation}
+\label{eq:temp_error}
+\delta{T_b} = \frac{\sigma{(T_b)}}{\sqrt{N_{T{_b}}}}
+\end{equation}
+
+
+\begin{equation}
+\label{eq:press_error}
+\delta{P_b} = \frac{\sigma{(P_b)}}{\sqrt{N_{P{_b}}}}
+\end{equation}
+
+\begin{equation}
+\label{eq:angle_error}
+\delta{\phi_0} = \frac{0.03}{\sqrt{N_{\phi{_0}}}}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\sigma{(T_b)}$, $\sigma{(P_B)}$ are the standard deviations of the baseline temperature and pressure respectively, 0.03 is the known error in the observed angle as given by internal project communications, $N_{T{_b}}$, $N_{P{_b}}$ and $N_{\phi{_0}}$ are the number of baseline temperature, pressure and observed angle readings considered. 
+
+\vspace{2mm}
+\noindent
+These estimated errors given in \eqref{eq:temp_error}, \eqref{eq:press_error} and \eqref{eq:angle_error} were added to the mean values for the baseline temperature, baseline pressure and observed angle when calculating the refracted ray path using the appropriate computer program. This gave an upper bound on the relative humidity value. Thus, the difference between the upper bound of the relative humidity and the relative humidity generated by using the average of these values gave an estimated error for the generated relative humidity value.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -274,7 +405,7 @@ I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad,\quad(m =  \pm1, 
 
 
 \begin{thebibliography}{9}
-\bibitem{Paper01} Stone, E.K and Kitchen M, 2015, Introducing an Approach for Extracting Temperature from Aircraft GNSS, Journal of Atmospherics and Oceanic Technology, Vol 32, pages 736 - 743. 
+\bibitem{Paper01} Stone E.K and Kitchen M, 2015, Introducing an Approach for Extracting Temperature from Aircraft GNSS, Journal of Atmospherics and Oceanic Technology, Vol 32, pages 736 - 743. 
 and Pressure Altitude Reports in ADS-B Messages
 \bibitem{Paper02} College of Engineering, Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{Diffraction and Interference Worksheet} (Accessed 8\textsuperscript{th} February 2019).
 \bibitem{Book01} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, 2014, Chapter 36, pages 1312 - 1322.
@@ -282,7 +413,7 @@ and Pressure Altitude Reports in ADS-B Messages
 \bibitem{Book02} Barber N.F, \textit{Water Waves}, 1\textsuperscript{st} Edition, 1969, Chapter 3, pages 36 - 55. 
 \bibitem{Book03} Pedrotti F.L, Pedrotti S.J, \textit{Introduction to Optics}, (Pearson International Edition) 3\textsuperscript{rd} Edition, 2006, Chapter 11-1: \textit{Diffraction from a Single Slit}, pages 268 - 273.
 \bibitem{Book04} Pedrotti F.L, Pedrotti S.J, \textit{Introduction to Optics},  (Pears onInternational Edition) 3\textsuperscript{rd} Edition, 2006, Chapter 11-5: \textit{Double-Slit Diffraction}, pages 281 - 284.
-\bibitem{Web01} \textit{Fraunhofer Diffraction}, \url{http://people.ucalgary.ca/~lvov/471/labs/fraunhofer.pdf} (Accessed 9\textsuperscript{th} February 2019.)
+\bibitem{Web01} Met Office Weather Observations Website, 22\textsuperscript{nd} November 2019,  \url{https://wow.metoffice.gov.uk/}.)
 \bibitem{Web02} \textit{Red Diode Laser - Basic Optics - OS-8525A}, 
 \url{https://www.pasco.com/prodCatalog/OS/OS-8525_red-diode-laser-basic-optics/index.cfm?fbclid=IwAR3gzuNSAoumEZpwYZQO6tX3j1nLhTtLYklX5U6V6HHw5xyHKdszO1ID00I} (Accessed 15\textsuperscript{th} March 2019).
 
