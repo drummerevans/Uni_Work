@@ -106,144 +106,6 @@ At present, this is difficult to measure directly and only a small number of air
 \section{Theory}
 \label{sec:theory}
 
-The speed of waves, $v$, can be determined by using 
-
-\begin{equation}
-\label{eq:wave-speed}
-v = \lambda f
-\end{equation}
-
-\vspace{2mm}
-\noindent
-where $\lambda$ is the wavelength and $f$ is the frequency of the waves - the number of waves that pass a given point per second. However, the speed of mechanical waves often depend upon the medium which they travel, in addition to many other factors. For water waves, the speed depends on depth. For shallow depths, this is given by \cite{Book02}
-
-\begin{equation}
-\label{eq:water-waves}
-v \approx \sqrt{gh}
-\end{equation}
-
-\vspace{2mm}
-\noindent
-where $g$ is the acceleration due to gravity and $h$ is the measured depth of the water used in the ripple tank. For the interested reader, a more detailed analysis of water waves can be found at \cite{Book02}. 
-
-\vspace{2mm}
-\noindent
-When a wave front approaches at an angle to a boundary reflection occurs. This is when the angle of incidence, $\theta_i$ is equal to the angle of reflection, $\theta_r$ at the boundary
-
-\begin{equation}
-\label{eq:reflection}
-\theta_i = \theta_r
-\end{equation}
-
-\vspace{2mm}
-\noindent
-
-
-\vspace{2mm}
-\noindent
-
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[scale=0.4]{"reflection_refraction".pdf}
-%\caption{Here is my image}
-%\label{fig:reflection_refraction}
-%\end{figure}
-
-
-\vspace{2mm}
-\noindent
-
-
-\begin{equation}
-\label{eq:intensity1}
-I = I_0 \frac{sin^2{\alpha}}{\alpha^2}
-\end{equation}
-
-\vspace{2mm}
-\noindent
-where $\alpha = ({\pi asin{\theta}}) / {\lambda}$, $\lambda$ is the wavelength of the light and $a$ is the slit width.
-
-\vspace{2mm}
-\noindent
-For two slits, the intensity of diffracted light into an angle $\theta$ \cite{Paper02} is
-
-\begin{equation}
-\label{eq:intensity2}
-I = I_0 \frac{sin^2{\alpha}}{\alpha^2} cos^2{\delta}
-\end{equation}
-
-\vspace{2mm}
-\noindent
-where $\delta = ({\pi dsin{\theta}}) / {\lambda}$ and $d$ is the separation distance between the two slits. A derivation for equations \eqref{eq:intensity1} and \eqref{eq:intensity2} involving a geometrical approach and phasor diagrams can be found from \cite{Book01}. These equations can also be dervied by considering Fourier transforms and the convolution theorem and approach using these techniques can be found from \cite{Web01}.
-
-\vspace{2mm}
-\noindent
-For the experimental configuration that was considered, the small angle approximation could be used. Therefore the single slit intensity equation \eqref{eq:intensity1} can be re-expressed as
-
-\begin{equation}
-\label{eq:intensity_small1}
-I \approx I_0 \frac{sin^2{\frac{\pi a x}{L \lambda}}}{\big(\frac{\pi a x}{L \lambda}\big)^2}
-\end{equation}
-
-\vspace{2mm}
-\noindent
-where the intensities are normalised so, $I_0 = 1$ and $L$ is the slit to screen separation distance and $x$ is the screen position ($L >> x$).
-
-\vspace{2mm}
-\noindent
-Similarly, the double slit intensity equation \eqref{eq:intensity2} can be re-expressed due to to the small angle approximation
-
-\begin{equation}
-\label{eq:intensity_small2}
-I \approx I_0 \frac{sin^2{\frac{\pi a x}{L \lambda}}}{\big(\frac{\pi a x}{L \lambda}\big)^2} cos^2{\frac{\pi d x}{L \lambda}}
-\end{equation}
-
-\vspace{2mm}
-\noindent
-where again the intensities are normalised in the experiments so $I_0 = 1$ and all the other symbols have their usual meaning with $L >> x$.
-
-
-
-\vspace{2mm}
-\noindent
-Using equation \eqref{eq:intensity1}, the intensity minima for a single slit occurs when $\alpha$ is a multiple of $\pi$. This therefore means that
-
-\begin{equation}
-\label{eq:min_intensity}
-sin{\theta} = \frac{m \lambda}{a} \quad,\quad(m = \pm1, \pm2, ...)
-\end{equation}
-
-\vspace{2mm}
-\noindent
-If L'H{\^o}pital's rule \cite{Book01} is applied to equation \eqref{eq:intensity1} in the limit as the intensity at $\alpha \rightarrow 0$ is found to be $I = I_0$ as expected. When the detector to slit distance is big, the small angle approximation can be used. Equation \eqref{eq:min_intensity} can then be approximated to
-
-\begin{equation}
-\label{eq:small_angle}
-\theta \approx \frac{m\lambda}{a} \quad,\quad(m = \pm1, \pm2, ...)
-\end{equation}
-
-
-\vspace{2mm}
-\noindent
-The intensity maxima of a single slit diffraction pattern can be approximately found by using equation \eqref{eq:intensity1} and realising that they occur when the sine function is a maximum ($\pm 1$) \cite{Book01}. In other words, when
-
-\begin{equation}
-\label{eq:alpha_max}
-\alpha = \pm\bigg(m + \frac{1}{2}\bigg)\pi \quad,\quad(m = 0, 1, 2, ...)
-\end{equation}
-
-\vspace{2mm}
-\noindent
-However, upon further analysis of applying differentiation to equation \eqref{eq:intensity1} and setting equal to zero to find the maxima it is found that the there is no maxima at $m = 0$ \cite{Book01}. Therefore, when equation \eqref{eq:alpha_max}, with $m \neq 0$, is subsituted into equation \eqref{eq:intensity1} the intensity maxima, $I_m$ is approximately given by \cite{Book01}
-
-\vspace{2mm}
-\noindent
-\begin{equation}
-\label{eq:max_intensity}
-I_m \approx \frac{I_0}{\big(m + \frac{1}{2}\big)^2\pi^2} \quad,\quad(m =  \pm1, \pm2, ...)
-\end{equation}
-
 
 \section{Method}
 \label{sec:method}
@@ -367,7 +229,21 @@ Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\
 
 \vspace{2mm}
 \noindent
-The errors for the generated relative humidities were estimated in \tabref{tab:table1} and \tabref{tab:table2} by using the error on the mean for the baseline temperature $T_b$ \cite{Web01}, baseline pressure $P_b$ \cite{Web01} and observed angle $\phi_0$. The following were used to obtain these errors
+The errors for the actual relative humidities for the early and late times of observation, given by \cite{Web01}, were estimated by using the error on the mean value of the relative humidity using,
+
+
+\begin{equation}
+\label{eq:RH_error}
+\delta{RH} = \frac{\sigma{(RH)}}{\sqrt{N_{RH}}}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\sigma{(RH)}$ is the standard deviation of the average actual relative humidity ($\overline{RH}$) and $N_{RH}$ is the number of RH values used to determine these averages.
+
+\vspace{2mm}
+\noindent
+However, the errors for the generated relative humidities were estimated in \tabref{tab:table1} and \tabref{tab:table2} by using the error on the mean for the baseline temperature $T_b$ \cite{Web01}, baseline pressure $P_b$ \cite{Web01} and observed angle $\phi_0$. The following were used to obtain these errors
 
 \begin{equation}
 \label{eq:temp_error}
@@ -396,6 +272,41 @@ These estimated errors given in \eqref{eq:temp_error}, \eqref{eq:press_error} an
 \section{Discussion}
 \label{sec:discussion}
 
+The results for the determined relative humidities given for the early and late part of the observations in \tabref{tab:table1} and \tabref{tab:table2} respectively show that the relative humidity does vary as a function of time. This is due to the fact that later in the day, the temperature and pressure decreases causing a change in the relative humidity as anticipated in \secref{sec:theory}.
+
+\vspace{2mm}
+\noindent
+By considering the early part of the day, the relative humidities given in \tabref{tab:table1} show discrepencies when compared with the actual relative humidities. The corresponding graphs displaying these best fitting relative humidity curves in \figref{fig:sub1}, \figref{fig:sub3} and \figref{fig:sub5} visually show these discrepencies. For example, in \figref{fig:sub3} and \figref{fig:sub5} show that indeed the plane positions are grouped towards a lower relative humidity. However, when compared to the actual values displayed in \tabref{tab:table1} these generated values are much lower. This could be due to the fact that the relative humidity cannot be treated as a constant, homogenous value. Instead, the relative humidity could be varying as a function of many different factors; such as tempearture, pressure, height, etc. 
+
+\vspace{2mm}
+\noindent
+Furthermore, by considering \figref{fig:sub1} the plane positions seem to be forming two distinct relative humidity curves. This shows that the relative humidity does indeed seem to be different for a specific observed angle range. In this case, there is a shallow observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ above the horizon. From the discussion presented in \secref{sec:theory} this is where most of the refraction occurs due to the denser atmosphere nearer the Earth's surface. Therefore, it would be expected that more refraction would occur because the ADSB signal spends more time in the lower part of the atmosphere for these small observed angles above the horizon according to \secref{sec:theory} FIGURE EARTH. This is shown by the bottom set of plane position data values in \figref{fig:sub1}. However, there is also a set of points that indicate a higher relative humidity. This was investigated further and additional measurements, using the latitude and longitude plane positions, show that the relative humidty, as well as depending on time, also depends on upon the horizontal direction (azimuthal angle). \figref{fig:long_lat_plot} shows a plot of latitude against longitude for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for early observation times.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{"aug26_0_105_long_lat_early".pdf}
+\caption{A plot showing the latitude and longitude plane positions during the early part of observations (first 5000s) for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$.}
+\label{fig:long_lat_plot}
+\end{figure}
+
+\newpage
+\vspace{2mm}
+\noindent
+\figref{fig:long_lat_plot} shows that for this given observed angle range there are three distinct horizontal regions for these plane positions. This shows that the relative humidity also depends upon the horizontal orientation as well as time.
+
+\vspace{2mm}
+\noindent
+Analysing the results for the determined relative humidities given for the late part of the observations in \tabref{tab:table2} show further discrepencies when compared to the actual relative humidites. Many of these relative humidities could not be determined due to the nature of the graphs displayed in \figref{fig:sub2}, and \figref{fig:sub6}. These plots show that the plane positions would yield a best fit relative humidity curve that would be less than 0$\%$. This further indicates that the relative humidity cannot be treated as an absolute constant value and that the gradient of the relative humidity curves in addition to how they curves vary with height should be considered. 
+
+
+\vspace{2mm}
+\noindent
+By considering the refractivity as a function of height, this would mean that a higher ground level relative humidity would give a steeper fall-off gradient with height due to the refractivity relations given in \secref{sec:theory}. For the plots \figref{fig:sub2}, \figref{fig:sub4} and \figref{fig:sub6} we see that the generated relative humidities are less than 0$\%$. Therefore, a systematic shift would be required for the plane positions, so that a model refractivity curve with a low value of relative humidity could be used to represent the data. This would display the same shallow gradient characterisitcs of the plane position data for low relative humidities, but translated to a higher refractivity/relative humidity.
+
+\vspace{2mm}
+\noindent
+This change in relative humidity with height above ground level for the translated curve, this would result in an intially rising relative humidity with height. However, this would have to fall off after some height as this translated refractivity curve would interesect the 100$\%$ refractivity curve (which has a steeper fall off gradient with height) because this translated curve would not be able to go above 100$\%$ due to the definition of relative humidity given in \secref{sec:theory}. Therefore, this means that the relative humidity would initially rise and then fall off again when this intersection between the two refractivity curves against height occurs. Furthermore, this analysis of the results given in \tabref{tab:table2} shows further evidence that the relative humidity cannot be treated as a constant, homogenous value.
 
 
 \section{Conclusion}
