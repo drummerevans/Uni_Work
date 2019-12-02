@@ -27,6 +27,8 @@
 \usepackage{url}           % format url addresses
 \usepackage{abstract}		% allows formatting of abstract
 \usepackage[margin=0.5in]{geometry}
+\usepackage{listings} % to allow computer code to be typeset
+
 
 %\usepackage{tikz,pgfplots} % diagrams and data plots
 %
@@ -58,22 +60,33 @@
 % and is finished with \end{document}
 %
 
-\title{\textbf{Predicting the Weather by Watching Aeroplanes: 
-\newline
-Applying Refractive Techniques to Air-plane ADSB Radio Wave Signals in the Lower Troposphere for Determining Relative Humidities.}} % fill in the title here
+\title{\textbf{\huge Predicting the Weather by Watching Aeroplanes: 
+\\ 
+\Large
+Applying Refractive Techniques to Aeroplane ADSB Radio Wave Signals in the Lower Troposphere for Determining Relative Humidities.}}
+ % fill in the title here
 \author{Matthew Evans}% fill in your name here
 \date{27\textsuperscript{th} March 2019} % date of the report
 \usepackage{titling} % centralises the title
-\renewcommand\maketitlehooka{\null\mbox{}\vfill}
-\renewcommand\maketitlehookd{\vfill\null}
+%\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+%\renewcommand\maketitlehookd{\vfill\null}
 \thispagestyle{empty}
 
 \begin{document}
 
-%\twocolumn[	% makes title and abstract appear over entire page width
+% \twocolumn % makes title and abstract appear over entire page width
 \maketitle % formats the title
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{"raincloud".pdf}
+\label{fig:raincloud}
+\end{figure}
+
 \thispagestyle{empty}
 \newpage
+
+
 
 \vspace*{\fill}
 \begin{abstract}
@@ -89,9 +102,12 @@ Various wave properties were investigated by exploring water waves in a ripple t
 \newpage
 
 \tableofcontents
+
+
 \setcounter{page}{1} % starts page numbering from this contents page
 
 \newpage
+
 
 \section{Introduction}
 \label{sec:introduction}
@@ -106,36 +122,186 @@ At present, this is difficult to measure directly and only a small number of air
 \section{Theory}
 \label{sec:theory}
 
+The refractive index, $n$ is defined by
+
+\begin{equation}
+\label{eq:ref_index}
+n = \frac{c}{v}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $c$ is the speed of an electromagnetic (EM) wave in vacuum and $v$ is the phase velocity in a medium. An important relation that arises from the refractive is Snell's Law. This states that the refractive index multiplied by the sine of the angle between the incident EM wave and the normal to the interface surface between two different media of refractive indices $n_1$ and $n_2$ is conserved:
+
+\begin{equation}
+\label{eq:Snell_law}
+n_1\sin{\theta_1} = n_2\sin{\theta_2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+$\theta_1$ is the angle between the incident ray and the normal (incident angle), $\theta_2$ is the angle between the transmitted ray and the normal (refracted angle). A different form of Snell's Law \eqref{eq:Snell_law} takes into account the radial length of the ray path and is derived as follows: if a radially stratified atmosphere is now considered, \figref{fig:atmosphere} \cite{Paper02}, Snell's Law \eqref{eq:Snell_law} can be applied by considering these atmospheric layers as different media with different respective refractive indices.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.67]{"atmosphere".pdf}
+\caption{A visual illustration the path of a refracted EM ray as it propagates through a radially startified atmosphere. Image adapted from \cite{Paper02}.}
+\label{fig:atmosphere}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+Applying equation \eqref{eq:Snell_law} to the upper two layers in \figref{fig:atmosphere} with refractive indices $n_N$ and $n_{N-1}$ the following is obtained
+
+\begin{equation}
+\label{eq:Snell_law2}
+n_N\sin{\phi_N} = n_{N-1}\sin{\psi}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $\phi_N$ and $\psi$ are the incident and refracted angles respectively. By inspecting the triangle CQP in \figref{fig:atmosphere} and using the law of sines, also noticing that $\sin{\angle{CQP}} \equiv \sin{\phi_{N-1}}$, 
+
+\begin{equation}
+\label{eq:triangle}
+n_Nr_N\sin{\phi_N} = n_{N-1}r_{N-1}\sin{\phi_{N-1}}
+\end{equation}
+
+
+\vspace{2mm}
+\noindent
+where $phi_N$ and $phi_{N-1}$ are the local zenith angles in \figref{fig:atmosphere} with refractive indices $n_N$ and $n_{N-1}$ respectively, $r_N \equiv CP$ and $r_{N-1} \equiv CQ$ are the radial distance defined in \figref{fig:atmosphere}. Equation \eqref{eq:triangle} can be rearranged to yield the radial distance $r_N$ the subject
+
+\begin{equation}
+\label{eq:Snell_law3}
+r_N = \frac{n_{N-1}r_{N-1}\sin{\phi_{N-1}}}{n_N\sin{\phi_N}}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where the radial distance $r_N$ is now the subject of the equation.
+
+\vspace{2mm}
+\noindent
+The refractive index can vary in value from $n = 1$ for a vacuum to higher values for other media. Typically, more water vapour present in the air will cause the refractive index to increase because the phase velocity of an EM wave given in \eqref{eq:ref_index} will decrease. This leads to a useful alternative definition for the refractive index, $n$ in terms of the refractivity, $N$ given in parts per million (ppm)
+
+\begin{equation}
+n = 1  + (N \times 10^{-6})
+\label{eq:refractivity}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $n$ is expressed as the ppm excess above the value of unity. A formal definition of the relative humidity, $RH$ \cite{Book01} is given by
+
+\begin{equation}
+RH = \frac{P_w}{P_s} \times 100\%
+\label{eq:humidity}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $P_w$ is the actual/partial water vapour pressure and $P_s$ is the ``saturation water vapour pressure that is possible for a given temperature before condensation occurs'' \cite{Book01}. The refractivity of air is comprised of two parts: a dry component, $N_{dry}$ and a wet component, $N_{wet}$.
+
+\begin{equation}
+N = N_{dry} + N_{wet}
+\label{eq:refractivity2}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+By using further information from \cite{Paper02} equation \eqref{eq:refractivity2} yields
+
+\begin{equation}
+N = \bigg(77.6\frac{P}{T} - 5.6\frac{P_w}{T} + 3.75 \times 10^5\frac{P_w}{T^2} \bigg) \times 10^6
+\label{eq:refractivity3}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $P$ is the total pressure (in hPa), $T$ is the ambient air temperature (in K) and, as before in the definition of the refractivity \eqref{eq:refractivity}, $N$ is given in ppm. Expressions for $P$, $T$ and $P_w$ in equation \eqref{eq:refractivity3} will now be outlined. Further information and derivations regarding these expressions can be found in \cite{Paper03} (for $P$ and $T$) and \cite{Paper04} (for $P_w$). It can be shown that $T$ varies as a function of altitude given by the following expression
+
+\begin{equation}
+T = T_b + \beta(H - H_b)
+\label{eq:temperature}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $T_b$ is the baseline temperature, $H$ is the height above the baseline height $H_b$, both measure in km and $\beta$ is the temperature gradient (Kkm$^{-1}$). In this case, the troposphere was considered thus, using the information from \cite{Paper03} $\beta = - 6.5$Kkm$^{-1}$. An expression for $P$ is given as,
+
+\begin{equation}
+P = P_b \bigg( 1 + \frac{\beta}{T_b}(H - H_b) \bigg) ^{-\frac{gM_0}{\beta R}}
+\label{eq:pressure}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $P_b$ is the baseline pressure, $g$ is the acceleration due to gravity (in ms$^2$), $M_0$ is the molar mass of air (in kgmol$^{-1}$) and $R$ is the gas constant (in JK$^{-1}$mol$^{-1}$). The partial pressure water vapour pressure $P_w$ can be expressed as the Arden-Buck equation, which is adapted from \cite{Paper04}
+
+\begin{equation}
+P_w = \frac{RH}{100} 6.1121exp \bigg( \bigg(18.678 - \frac{T'}{234.5} \bigg) \bigg (\frac{T'}{257.14 + T'} \bigg) \bigg)
+\label{eq:Arden-Buck}
+\end{equation}
+
+\vspace{2mm}
+\noindent
+where $T'$ is the temperature in \textit{Celcius} ($^{\circ}$).
 
 \section{Method}
 \label{sec:method}
 
-\subsection{Mechanical Waves}
-\label{ssec:ripple-method}
+\subsection{Radio Interferometry}
+\label{ssec:radio-interferometry}
+
+The refractive techniques discussed in \secref{sec:theory} can be applied to ADSB signals transmitted from aircraft. These are 1090 MHz radio waves which are 112 bits long \cite{Book02}, containing aircraft information such as position, velocity, altitude, etc. Therefore, these will be refracted as an EM wave passing through the atmosphere. These broadcasts can be received by using radio interferometric techniques. There are two radio interferometers placed on the fourth and seventh floors of the Physics Building at the University of Exeter, this is illustrated in \figref{fig:interferometry}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{"interferometry".pdf}
+\caption{A diagram illustrating interferometry used to receive ADSB signals. $t$ and $t - \Delta t$ are the times when the first and second radio interferometers, respectively received the ADSB signals, $b$ is the baseline distance between the two receivers, $V_1$ and $V_2$ are the voltages of the first and second signals respectively, $\phi_0$ is the observed angle, $z$ is the zenith angle and $b \cos z$ is the path difference between the two signals. The value of $b$ is known from internal project communications and $\lambda$ is the wavelength of the ADSB signal.}
+\label{fig:interferometry}
+\end{figure}
+
+\vspace{2mm}
+\noindent
+By taking the conjugate product, $V_1 V_2^*$, the time average voltage, $V^2/2$ and the phase, $\alpha = \omega \Delta t = (2 \pi b / \lambda) \cos z$, can be obtained to collect all the relevant aircraft information required for further analysis.
 
 
-\subsection{Electromagnetic Waves}
-\label{ssec:diffraction-method}
+\subsection{Data Analysis}
+\label{ssec:data-analysis}
+
+In order to obtain constant, homogeneous relative humidity values, the first step was to use equation \eqref{eq:Snell_law3} in a computer program, provided by internal project communications, that calculates the radial path of the refracted ray (see Appendix A). This was achieved by using equations \eqref{eq:temperature}, \eqref{eq:pressure} and \eqref{eq:Arden-Buck} in equation \eqref{eq:refractivity3} and modifying the program to obtain a more accurate refractivity value, $N$ at each iteration of the propagating wave. This would then generate model 0$\%$ - 100$\%$ RH curves via inputting initial conditions: the observed angle above the horizon, $\phi_0$ and increment angle step from the vertical, $\delta \theta$. These models can then be compared to the plane data positions, given in radial distance from the centre of the Earth, $R$ (km) to the signal position and the increment angle, $\theta$ (rad), measured from the vertical through the centre of the Earth (where $R$ and $\theta$ are illustrated in \secref{sec:theory} \figref{fig:atmosphere}). 
+
+\vspace{2mm}
+\noindent
+The chosen data set for analysis was 26\textsuperscript{nd} August 2019 starting at 11:45am because this had a nice complete set of data that could be used for further data analysis and was recommended by internal project communications. This data set was then broken-up into early, first 5000s, and late, last 5000s, times of observation as it was anticipated that during the course of the day $T_b$ and $P_b$ would change. These baseline values were obtained from \cite{Web01} (using nearby locations in Exeter) and an average for temperature, $\overline{T_b}$ and pressure, $\overline{P_b}$ was taken for the corresponding times to input into the computer program. Three observed angle ranges were considered: 0.1$^{\circ}$ - 0.11$^{\circ}$, 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$. This gave a good idea of the behaviour of relative humidities at different altitudes. The average of these observed angle ranges, $\overline{\phi_0}$ was then taken from the sub-sectioned data sets in order to feed into the computer program generating the corresponding model curves.
+
+\vspace{2mm}
+\noindent
+Once these model curves had been generated, the data points (plane positions) would be interpolated onto each of the model relative humidity curves using another computer program (see Appendix B). Finally, a third computer program obtains the least-squares difference to find the best fitting model curve that would be represent the plane position data outputting the corresponding relative humidity value in the process (see Appendix C).
+
+\vspace{2mm}
+\noindent
+The generated RH values would then be compared to the actual, average, RH value, $\overline{RH}$ on this day for the corresponding early and late times given by \cite{Web01}.
 
 
 \section{Results}
+\label{sec:results}
+\figref{fig:phi0_0.105} shows two plots of $R$ against $\theta$ for a given observed angle range of 0.1$^{\circ}$ - 0.11$^{\circ}$ for early (\figref{fig:sub1}) and late (\figref{fig:sub2}) times of observation. Furthermore, \figref{fig:phi0_0.305} and \figref{fig:phi0_0.505} show additional plots of these $R$ and $\theta$ positions for different observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. Again, the early times of observation are shown for these different observed angles ranges in \figref{fig:sub3} and \figref{fig:sub5} at observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. The late times are shown in \figref{fig:sub4} and \figref{fig:sub6} for the observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. All these plot values are shown for the plane positions, in addition to the model relative humidity curves for 0$\%$, 100$\%$ and the best fitting relative humidity curve for the plane positions.
 
-%\subsection{Electromagnetic Waves}
-%\label{ssec:diffraction-results}
 
-\figref{fig:phi0_0.105} shows two plots of radial distance from the centre of the Earth, $R$ against the increment angle measured from the vertical through the centre of the Earth, $\theta$ for a given observed angle range of 0.1$^{\circ}$ - 0.11$^{\circ}$ for early (\figref{fig:sub1}) and late (\figref{fig:sub2}) times of observation on 26\textsuperscript{nd} August 2019 starting at 11:45 am. Furthermore, \figref{fig:phi0_0.305} and \figref{fig:phi0_0.505} show additional plots of these $R$ and $\theta$ positions for different observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. Again, the early times of observation are shown for these different observed angles ranges in \figref{fig:sub3} and \figref{fig:sub5} at observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. Whereas the late times are shown in \figref{fig:sub4} and \figref{fig:sub6} for the observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. All these plot values are shown for the plane positions, in addition to the model relative humidity curves for 0$\%$, 100$\%$ and the best fitting relative humidity curve for the plane positions.
-
-\begin{figure}
+\begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.65]{"aug26_0_105_early".pdf}
+  \includegraphics[scale=0.64]{"aug26_0_105_early".pdf}
   \caption{$R$ vs $\theta$ for early times (the first 5000s) of observation.}
   \label{fig:sub1}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.65]{"aug26_0_105_late".pdf}
+  \includegraphics[scale=0.64]{"aug26_0_105_late".pdf}
   \caption{$R$ vs $\theta$ for late times (the last 5000s) of observation.}
   \label{fig:sub2}
 \end{subfigure}
@@ -143,17 +309,18 @@ At present, this is difficult to measure directly and only a small number of air
 \label{fig:phi0_0.105}
 \end{figure}
 
-\begin{figure}
+\newpage
+\begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.65]{"aug26_0_305_early".pdf}
+  \includegraphics[scale=0.64]{"aug26_0_305_early".pdf}
   \caption{$R$ vs $\theta$ for early times (the first 5000s) of observation.}
   \label{fig:sub3}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.65]{"aug26_0_305_late".pdf}
+  \includegraphics[scale=0.64]{"aug26_0_305_late".pdf}
   \caption{$R$ vs $\theta$ for late times (the last 5000s) of observation.}
   \label{fig:sub4}
 \end{subfigure}
@@ -161,18 +328,18 @@ At present, this is difficult to measure directly and only a small number of air
 \label{fig:phi0_0.305}
 \end{figure}
 
-\clearpage
-\begin{figure}
+
+\begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.65]{"aug26_0_505_early".pdf}
+  \includegraphics[scale=0.64]{"aug26_0_505_early".pdf}
   \caption{$R$ vs $\theta$ for early times (the first 5000s) of observation.}
   \label{fig:sub5}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.65]{"aug26_0_505_late".pdf}
+  \includegraphics[scale=0.64]{"aug26_0_505_late".pdf}
   \caption{$R$ vs $\theta$ for late times (the last 5000s) of observation.}
   \label{fig:sub6}
 \end{subfigure}
@@ -227,14 +394,15 @@ Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\
 %\end{center}
 \end{table*}
 
-\vspace{2mm}
+
+\vspace{15mm}
 \noindent
-The errors for the actual relative humidities for the early and late times of observation, given by \cite{Web01}, were estimated by using the error on the mean value of the relative humidity using,
+The errors for the actual relative humidities for the early and late times of observation, given by \cite{Web01}, were estimated by using the error on the mean value of the relative humidity $\delta{\overline{RH}}$,
 
 
 \begin{equation}
 \label{eq:RH_error}
-\delta{RH} = \frac{\sigma{(RH)}}{\sqrt{N_{RH}}}
+\delta{\overline{RH}} = \frac{\sigma{(RH)}}{\sqrt{N_{RH}}}
 \end{equation}
 
 \vspace{2mm}
@@ -243,22 +411,22 @@ where $\sigma{(RH)}$ is the standard deviation of the average actual relative hu
 
 \vspace{2mm}
 \noindent
-However, the errors for the generated relative humidities were estimated in \tabref{tab:table1} and \tabref{tab:table2} by using the error on the mean for the baseline temperature $T_b$ \cite{Web01}, baseline pressure $P_b$ \cite{Web01} and observed angle $\phi_0$. The following were used to obtain these errors
+However, the errors for the generated relative humidities were estimated in \tabref{tab:table1} and \tabref{tab:table2} by using the error on the mean for the baseline temperature $\overline{T_b}$ \cite{Web01}, baseline pressure $\overline{P_b}$ \cite{Web01} and observed angle $\overline{\phi_0}$. The following were used to obtain these errors
 
 \begin{equation}
 \label{eq:temp_error}
-\delta{T_b} = \frac{\sigma{(T_b)}}{\sqrt{N_{T{_b}}}}
+\delta{\overline{T_b}} = \frac{\sigma{(T_b)}}{\sqrt{N_{T{_b}}}}
 \end{equation}
 
 
 \begin{equation}
 \label{eq:press_error}
-\delta{P_b} = \frac{\sigma{(P_b)}}{\sqrt{N_{P{_b}}}}
+\delta{\overline{P_b}} = \frac{\sigma{(P_b)}}{\sqrt{N_{P{_b}}}}
 \end{equation}
 
 \begin{equation}
 \label{eq:angle_error}
-\delta{\phi_0} = \frac{0.03}{\sqrt{N_{\phi{_0}}}}
+\delta{\overline{\phi_0}} = \frac{0.03}{\sqrt{N_{\phi{_0}}}}
 \end{equation}
 
 \vspace{2mm}
@@ -276,58 +444,412 @@ The results for the determined relative humidities given for the early and late 
 
 \vspace{2mm}
 \noindent
-By considering the early part of the day, the relative humidities given in \tabref{tab:table1} show discrepencies when compared with the actual relative humidities. The corresponding graphs displaying these best fitting relative humidity curves in \figref{fig:sub1}, \figref{fig:sub3} and \figref{fig:sub5} visually show these discrepencies. For example, in \figref{fig:sub3} and \figref{fig:sub5} show that indeed the plane positions are grouped towards a lower relative humidity. However, when compared to the actual values displayed in \tabref{tab:table1} these generated values are much lower. This could be due to the fact that the relative humidity cannot be treated as a constant, homogenous value. Instead, the relative humidity could be varying as a function of many different factors; such as tempearture, pressure, height, etc. 
+By considering the early part of the day, the relative humidities given in \tabref{tab:table1} show discrepencies when compared with the actual relative humidities. The corresponding graphs displaying these best fitting relative humidity curves in \figref{fig:sub1}, \figref{fig:sub3} and \figref{fig:sub5} visually show these discrepancies. For example, in \figref{fig:sub3} and \figref{fig:sub5} show that indeed the plane positions are grouped towards a lower relative humidity. However, when compared to the actual values displayed in \tabref{tab:table1} these generated values are much lower. This could be due to the fact that the relative humidity cannot be treated as a constant, homogeneous value. Instead, the relative humidity could be varying as a function of many different factors; such as temperature, pressure, height, etc. 
 
 \vspace{2mm}
 \noindent
-Furthermore, by considering \figref{fig:sub1} the plane positions seem to be forming two distinct relative humidity curves. This shows that the relative humidity does indeed seem to be different for a specific observed angle range. In this case, there is a shallow observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ above the horizon. From the discussion presented in \secref{sec:theory} this is where most of the refraction occurs due to the denser atmosphere nearer the Earth's surface. Therefore, it would be expected that more refraction would occur because the ADSB signal spends more time in the lower part of the atmosphere for these small observed angles above the horizon according to \secref{sec:theory} FIGURE EARTH. This is shown by the bottom set of plane position data values in \figref{fig:sub1}. However, there is also a set of points that indicate a higher relative humidity. This was investigated further and additional measurements, using the latitude and longitude plane positions, show that the relative humidty, as well as depending on time, also depends on upon the horizontal direction (azimuthal angle). \figref{fig:long_lat_plot} shows a plot of latitude against longitude for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for early observation times.
+Furthermore, by considering \figref{fig:sub1} the plane positions seem to be forming two distinct relative humidity curves. This shows that the relative humidity does indeed seem to be different for a specific observed angle range. In this case, there is a shallow observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ above the horizon. From the discussion presented in \secref{sec:theory} \eqref{eq:refractivity3} this is where most of the refraction occurs due to the denser atmosphere nearer the Earth's surface. Therefore, it would be expected that more refraction would occur because the ADSB signal spends more time in the lower part of the atmosphere for these small observed angles above the horizon according to \secref{sec:theory} \figref{fig:atmosphere}. This is shown by the bottom set of plane position data values in \figref{fig:sub1}. However, there is also a set of points that indicate a higher relative humidity. This was investigated further and additional measurements, using the latitude and longitude plane positions, show that the relative humidity, as well as depending on time, also depends on upon the horizontal direction (azimuthal angle). \figref{fig:long_lat_plot} shows a plot of latitude against longitude for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for early observation times.
 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.7]{"aug26_0_105_long_lat_early".pdf}
+\includegraphics[scale=0.65]{"aug26_0_105_long_lat_early".pdf}
 \caption{A plot showing the latitude and longitude plane positions during the early part of observations (first 5000s) for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$.}
 \label{fig:long_lat_plot}
 \end{figure}
 
-\newpage
+
 \vspace{2mm}
 \noindent
 \figref{fig:long_lat_plot} shows that for this given observed angle range there are three distinct horizontal regions for these plane positions. This shows that the relative humidity also depends upon the horizontal orientation as well as time.
 
 \vspace{2mm}
 \noindent
-Analysing the results for the determined relative humidities given for the late part of the observations in \tabref{tab:table2} show further discrepencies when compared to the actual relative humidites. Many of these relative humidities could not be determined due to the nature of the graphs displayed in \figref{fig:sub2}, and \figref{fig:sub6}. These plots show that the plane positions would yield a best fit relative humidity curve that would be less than 0$\%$. This further indicates that the relative humidity cannot be treated as an absolute constant value and that the gradient of the relative humidity curves in addition to how they curves vary with height should be considered. 
+Analysing the results for the determined relative humidities given for the late part of the observations in \tabref{tab:table2} show further discrepancies when compared to the actual relative humidities. Two of these relative humidities could not be determined due to the nature of the graphs displayed in \figref{fig:sub2}, and \figref{fig:sub6}. These plots show that the plane positions would yield a best fit relative humidity curve that would be less than 0$\%$. This further indicates that the relative humidity cannot be treated as an absolute constant value and that the gradient of the relative humidity curves in addition to how they curves vary with height should be considered. 
 
 
 \vspace{2mm}
 \noindent
-By considering the refractivity as a function of height, this would mean that a higher ground level relative humidity would give a steeper fall-off gradient with height due to the refractivity relations given in \secref{sec:theory}. For the plots \figref{fig:sub2}, \figref{fig:sub4} and \figref{fig:sub6} we see that the generated relative humidities are less than 0$\%$. Therefore, a systematic shift would be required for the plane positions, so that a model refractivity curve with a low value of relative humidity could be used to represent the data. This would display the same shallow gradient characterisitcs of the plane position data for low relative humidities, but translated to a higher refractivity/relative humidity.
+By considering the refractivity as a function of altitude, this would mean that a higher ground level relative humidity would give a steeper fall-off gradient with height due to the refractivity relations given in \secref{sec:theory}. Indeed by analysing the corresponding refractivity curve against height for \figref{fig:sub2} the following plot is generated in \figref{fig:refractivity_plot}.
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.65]{"0_105_refractivity_plot".pdf}
+\caption{A plot showing the refractivity $N$ as a function of altitude $h$ (km) for 0$\%$ and 100$\%$ relative humidities at the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for late times of observation (last 5000s).}
+\label{fig:refractivity_plot}
+\end{figure}
+
+\newpage
 \vspace{2mm}
 \noindent
-This change in relative humidity with height above ground level for the translated curve, this would result in an intially rising relative humidity with height. However, this would have to fall off after some height as this translated refractivity curve would interesect the 100$\%$ refractivity curve (which has a steeper fall off gradient with height) because this translated curve would not be able to go above 100$\%$ due to the definition of relative humidity given in \secref{sec:theory}. Therefore, this means that the relative humidity would initially rise and then fall off again when this intersection between the two refractivity curves against height occurs. Furthermore, this analysis of the results given in \tabref{tab:table2} shows further evidence that the relative humidity cannot be treated as a constant, homogenous value.
+So, the plots \figref{fig:sub2}, \figref{fig:sub4} and \figref{fig:sub6} show that the generated relative humidities are less than 0$\%$. According to \figref{fig:refractivity_plot} this would mean a negative absolute value of relative humidity with a shallower gradient refractivity curve. Therefore, a systematic shift would be required for the plane positions, so that a model refractivity curve with a low value of relative humidity could be used to represent the data. This would display the same shallow gradient characteristics of the plane position data for low relative humidities, but translated to a higher refractivity/relative humidity. This change in relative humidity with height above ground level for the translated curve, would result in an initially rising relative humidity with altitude. However, this would have to fall off after some height as this translated refractivity curve, with a shallow gradient, would intersect the 100$\%$ refractivity curve after some altitude (which has a steeper fall off gradient) according to \figref{fig:refractivity_plot} - the translated curve would not be able to go above 100$\%$ due to the definition of relative humidity given in \secref{sec:theory} equation \eqref{eq:humidity}. Therefore, this means that the relative humidity would initially rise and then fall off again with altitude when this intersection between the two refractivity curves occurs. Furthermore, this analysis indicates that the absolute value of the relative humidity at ground level may not be the ultimate factor, but the gradient (i.e. how the humidity behaves as a function of height) could play a more vital role when determining relative humidities.
 
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-
+Overall, the results presented in \secref{sec:results} show some interesting properties of relative humidity that were previously not well known. For example, as well as depending on time and vertical elevation angle, the relative humidity also depends on the horizontal orientation. Thus, by looking in a different direction, different weather systems could be observed at the same as displayed in \secref{sec:results} \figref{fig:sub1}. Although the generated relative humidities presented in \secref{sec:results} \tabref{tab:table1} and \tabref{tab:table2} were not in conjunction with the actual values from \cite{Web01}, it was shown that the absolute value may not be the only way of describing these values. By analysing the corresponding refractivity curves, such as \figref{fig:refractivity_plot} in \secref{sec:discussion} for \figref{fig:sub2}, it was indicated that the gradient of the $R$ vs $\theta$ curves should be taken into account. Therefore, instead of the relative humidity been treated as a constant, homogeneous value, this should be treated as a variable factor shares a relation with time, horizontal orientation and altitude height. Ultimately, this would give more accurate and reliable relative humidity values; thus enabling better precision for the prediction of the weather by forecasting companies such as the Met Office.
 
 
 \begin{thebibliography}{9}
-\bibitem{Paper01} Stone E.K and Kitchen M, 2015, Introducing an Approach for Extracting Temperature from Aircraft GNSS, Journal of Atmospherics and Oceanic Technology, Vol 32, pages 736 - 743. 
+\addcontentsline{toc}{section}{References}
+\bibitem{Paper01} Stone E.K and Kitchen M, 2015, \textit{Introducing an Approach for Extracting Temperature from Aircraft GNSS}, Journal of Atmospherics and Oceanic Technology, Vol 32, pages 736 - 743. 
 and Pressure Altitude Reports in ADS-B Messages
-\bibitem{Paper02} College of Engineering, Mathematics and Physical Sciences, University of Exeter, PHY2026, \textit{Diffraction and Interference Worksheet} (Accessed 8\textsuperscript{th} February 2019).
-\bibitem{Book01} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, 2014, Chapter 36, pages 1312 - 1322.
-% \bibitem{Book02} Young, Hugh D and Freedman, Roger A, \textit{University Physics}, 13\textsuperscript{th} Edition, Chapter 20, pages 728 - 740, 2014.
-\bibitem{Book02} Barber N.F, \textit{Water Waves}, 1\textsuperscript{st} Edition, 1969, Chapter 3, pages 36 - 55. 
-\bibitem{Book03} Pedrotti F.L, Pedrotti S.J, \textit{Introduction to Optics}, (Pearson International Edition) 3\textsuperscript{rd} Edition, 2006, Chapter 11-1: \textit{Diffraction from a Single Slit}, pages 268 - 273.
-\bibitem{Book04} Pedrotti F.L, Pedrotti S.J, \textit{Introduction to Optics},  (Pears onInternational Edition) 3\textsuperscript{rd} Edition, 2006, Chapter 11-5: \textit{Double-Slit Diffraction}, pages 281 - 284.
-\bibitem{Web01} Met Office Weather Observations Website, 22\textsuperscript{nd} November 2019,  \url{https://wow.metoffice.gov.uk/}.)
-\bibitem{Web02} \textit{Red Diode Laser - Basic Optics - OS-8525A}, 
-\url{https://www.pasco.com/prodCatalog/OS/OS-8525_red-diode-laser-basic-optics/index.cfm?fbclid=IwAR3gzuNSAoumEZpwYZQO6tX3j1nLhTtLYklX5U6V6HHw5xyHKdszO1ID00I} (Accessed 15\textsuperscript{th} March 2019).
+\bibitem{Paper02} Mangum J and Wallace P, 2015, \textit{Atmospheric Refractive Electromagnetic Wave Bending and Propagation Delay}, Publications of the Astronomical Society of the Pacific, Vol.127, pages 74 - 91.
+\bibitem{Book01} Vallis Geoffrey K, 2017, \textit{Atmospheric and Oceanic Fluid Dynamics (Fundamentals and Large-Scale Circulation}, 2\textsuperscript{nd} Edition, Chapter 18.1.2, pages 675 - 676.
+\bibitem{Paper03} 1993, \textit{Manual of the ICAO Standard Atmosphere}, Third Edition, pages 7 - 14.
+\bibitem{Paper04} Buck A.L, 1981, \textit{New Equations for Computing Vapor Pressure and Enhancement Factor}, National Center for Atmospheric Research, Vol.20, pages 1527 - 1532.
+\bibitem{Book02} Sun J, \textit{The 1090MHz Riddle: Decoding Mode-S and ADS-B Data}, 29\textsuperscript{th} September 2019 , \url{https://mode-s.org/decode/}.  
+\bibitem{Web01} Met Office Weather Observations Website, 22\textsuperscript{nd} November 2019,  \url{https://wow.metoffice.gov.uk/}.
+
 
 \end{thebibliography}
+
+\appendix
+\section*{Appendix A: Code for Calculating the Path of a Refracted Ray}
+\label{app:appendix_A}
+\addcontentsline{toc}{section}{Appendix A: Code for Calculating the Path of a Refracted Ray}
+
+\begin{footnotesize}
+\begin{lstlisting}[language=c]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+#include "nrutil.h"
+
+main(argc,argv)
+int argc;
+char **argv;
+{
+
+   int ndata;
+   char curr;
+   int i, j;
+   double pi;
+   double *r,*rray,*theta,*phi,*phib,*n,*ndry,*nwet,*ninf;
+   double *T, *P, *init_P; // creating arrays for temp, and pressure
+   double *val_1, *val_2, *P_w; // creating arrays for the exponent values for the wet pressure contribution
+   double input_phi0, phi0,r0;
+   double input_dtheta, dtheta;
+   double RH;
+   double beta, Pb, Tb; // declaring the temperature gradient, sea-level pressure and temp respectively
+   double grav, R, M_0; // declaring the acceleration due to gravity, the gas constant and molar mass of air 
+   double logscale;
+   int ntheta;
+   FILE *fp,*gp;
+   char infile[80],outfile[80];
+
+   FILE *files[101]; // a file pointer, pointing to 101 RH data files for a given observed angle
+
+   if (argc!=3)
+      { fprintf(stderr,"\n Usage: refractray phi0(deg) dtheta(rad)\n\n");
+      exit(1);
+   }
+	 
+   /* sscanf(*++argv,"%s",infile);*/  /* input file name */
+   // sscanf(*++argv,"%s",outfile);  /* output file name */
+   sscanf(*++argv,"%lf",&input_phi0);    /* initial co-zenith angle */
+   sscanf(*++argv,"%lf",&input_dtheta);    /* increment in theta */
+   // sscanf(*++argv,"%lf",&RH); /* relative humidity in percent */
+
+   for(int i = 0; i < 101; i++) {
+      RH = i;
+      phi0 = input_phi0;
+      dtheta = input_dtheta;
+
+      sprintf(outfile, "%.3fphi0_%03dRH.dat", phi0, i); /* output file name */
+      files[i] = fopen(outfile, "w"); /* list of output files with output file name given above */
+
+
+      pi=acos(-1.0);
+      phi0=pi/2.0-phi0*pi/180.0;
+      beta = -6.5; // temp gradient in K(km^-1)
+      Pb = 1018; // sea-level pressure in hPa (1013.25)
+      Tb = 293.15; // sea-level temp in K (288.15)
+      grav = 9.80665;
+      R = 8.31432;
+      M_0 = 0.028964420; // in kg(mol)^-1
+      r0=6365.5; 
+
+      ntheta=(int)5.0*pi/180.0/dtheta;
+
+
+      phi=dvector(0,ntheta-1);
+      phib=dvector(0,ntheta-1);
+      rray=dvector(0,ntheta-1);
+      n=dvector(0,ntheta-1);
+      theta=dvector(0,ntheta-1);
+     
+      T = dvector(0,ntheta-1); // initialising an array for temperatures
+      P = dvector(0,ntheta-1); // intitalising an array for pressures
+      init_P = dvector(0,ntheta-1);
+      val_1 = dvector(0,ntheta-1); 
+      val_2 = dvector(0,ntheta-1);
+      P_w = dvector(0,ntheta-1);
+     
+      val_1[0] = 18.678 - ((Tb - 273.15) / 234.5);
+      val_2[0] = (Tb - 273.15) / (Tb - 16.01);
+      P_w[0] = (RH / 100) * 6.1121 * exp(val_1[0] * val_2[0]);
+
+      theta[0]=0.0;
+      rray[0]=r0;
+      phi[0]=phi0;
+      // printf("First phi value is: %f\n", phi[0]);
+      T[0] = Tb;
+      n[0]=1.0 + (77.6*Pb)/Tb/1e6 - (5.6*P_w[0])/Tb/1e6 + (3.75e5*P_w[0])/pow(Tb, 2)/1e6;
+      phib[0]=pi/2.0-phi0;
+   
+      // printf("phi angle is phi[%f]\n", phi[i]);
+      for (j=1;j<=ntheta;j++)
+         {
+            
+            theta[j]=dtheta*j;
+            // printf("theta angle is theta[%f]\n", theta[j]);
+            rray[j]=rray[j-1]*sin(phi[j-1]-theta[j-1])/sin(phi[j-1]-theta[j]);
+
+            T[j] = (beta * (rray[j] - rray[0])) + Tb;
+            init_P[j] = (((beta * (rray[j] - rray[0])) + Tb)) / Tb; // (in hPa)
+            double exp_P =  (-grav * M_0 * 1000) / (beta * R);
+            P[j] = Pb * pow(init_P[j], exp_P);
+            
+            val_1[j] = 18.678 - ((T[j] - 273.15) / 234.5);
+            val_2[j] = (T[j] - 273.15) / (T[j] - 16.01);
+            P_w[j] = (RH / 100) * 6.1121 * exp(val_1[j] * val_2[j]);
+
+            n[j] = 1 + (77.6 * P[j]/T[j])/1e6 - (5.6 * P_w[j])/T[j]/1e6 + (3.75e5 * P_w[j])/pow(T[j], 2)/1e6;
+
+            phi[j]=asin(n[0]*rray[0]*sin(phi[0])/n[j]/rray[j])+theta[j];
+            phib[j]=atan((rray[j]*cos(theta[j])-rray[0])/(rray[j]*sin(theta[j]))); /* bhatdotrhatv */       
+            }
+
+      gp=fopen(outfile,"w");
+      // fprintf(gp,"#theta R n z T P_w\n");
+      for (j=0;j<ntheta;j++)
+         {
+          fprintf(gp,"%.16g %.16g %.16g %.16g %.16g %.16g\n",theta[j],rray[j],n[j],phi[j]-theta[j],T[j],P_w[j]);
+         }
+
+      free_dvector(theta,0,ntheta-1);
+      free_dvector(rray,0,ntheta-1);
+      free_dvector(phi,0,ntheta-1);
+      free_dvector(phib,0,ntheta-1);
+      free_dvector(n,0,ntheta-1);
+
+      free_dvector(T,0,ntheta-1); // free the memory allocation of the T vector
+      free_dvector(P,0,ntheta-1);
+      free_dvector(init_P,0,ntheta-1);
+      free_dvector(val_1,0,ntheta-1); 
+      free_dvector(val_2,0,ntheta-1);
+      free_dvector(P_w,0,ntheta-1);
+   }
+}
+
+\end{lstlisting}
+\end{footnotesize}
+
+\newpage
+\section*{Appendix B: Code for Calculating Interpolated Radial Distance Values}
+\label{app:appendix_B}
+\addcontentsline{toc}{section}{Appendix B: Code for Calculating Interpolated Radial Distance Values}
+
+
+\begin{footnotesize}
+\begin{lstlisting}[language=Python]
+
+
+import numpy as np
+import os
+
+theta_vals_data = []
+R_vals_data = []
+theta_errs_data = []
+R_errs_data = []
+
+data_values = input("Input the data file you wish to read in: ")
+data_fptr = open(data_values, "r", newline=None) # opening the file with the observed data 
+
+data_result_list = data_fptr.readlines() # creating a list containing observed data results
+
+for result in data_result_list:
+    datum = result.split( )
+    for i in range(0, len(datum)):
+        if i == 0:
+            theta_vals_data.append(float(datum[i]))
+        elif i == 1:
+            R_vals_data.append(float(datum[i]))
+
+data_fptr.close()
+
+filenames = os.listdir(os.curdir)
+filenames = os.listdir(r"/Users/matthewevans/Documents/cprogramming/Graphs/PHY3138/PHY3147/phi0_0.505_late")
+file_list = []
+
+[file_list.append(filename) for filename in filenames]
+
+
+R_model_vals = [] # a list of interpolated R values
+
+for filename in file_list:
+    fpath = os.path.join(r"/Users/matthewevans/Documents/cprogramming/Graphs/PHY3138/PHY3147/phi0_0.505_late", \
+    filename) # reads files from another directory
+    fptr = open(fpath, "r", newline = None)
+    list_of_results = fptr.readlines()
+ 
+    data = []
+    theta_vals = []
+    R_vals = []
+    theta_errs = []
+    R_errs = [] 
+
+    for result in list_of_results:
+        data = result.split( )
+        for i in range(0, len(data)):
+            if i == 0:
+                theta_vals.append(float(data[i]))
+            elif i == 1:
+                R_vals.append(float(data[i]))
+        
+    fptr.close()
+      
+    for i in range(0, len(theta_vals_data)):
+        found_flag = 0
+        R_model = 0
+        for j in range(0, len(theta_vals)):
+            if theta_vals[j] >= theta_vals_data[i] and found_flag == 0:
+              
+
+                R_model = R_vals[j-1] + ((R_vals[j] - R_vals[j-1]) / (theta_vals[j] - theta_vals[j-1])) * \
+                (theta_vals_data[i] - theta_vals[j-1])
+                R_model_vals.append(R_model)
+               
+                found_flag = 1
+
+N = len(data_result_list)
+
+model_data = input("Enter in the file where the RH interpolated values should be stored: ")
+my_file = open(model_data, "w") # opening the interpolated R values data file e.g. 'test_model.dat'
+counter = 0
+for number in R_model_vals:
+    if counter % N == 0 and counter != 0:
+        my_file.write("\n")
+    my_file.write(str(number))
+    my_file.write(" ")
+    
+    counter += 1
+
+my_file.close() 
+
+\end{lstlisting}
+\end{footnotesize}
+
+\section*{Appendix C: Code for Calculating Least-Squares Differences}
+\label{app:appendix_C}
+\addcontentsline{toc}{section}{Appendix C: Code for Calculating Least-Squares Differences}
+
+\begin{footnotesize}
+\begin{lstlisting}[language=Python]
+
+import numpy as np
+import os
+import pandas as pd
+
+theta_vals_data = []
+R_vals_data = []
+theta_errs_data = []
+R_errs_data = []
+
+data_values = input("Input the data file you wish to read in: ")
+fptr = open(data_values, "r", newline=None) # opening the R data values
+
+list_of_results = fptr.readlines()
+
+data  = []
+
+for result in list_of_results:
+    datum = result.split( )
+    for i in range(0, len(datum)):
+        if i == 0:
+            theta_vals_data.append(float(datum[i]))
+        elif i == 1:
+            R_vals_data.append(float(datum[i]))
+        elif i == 2:
+            theta_errs_data.append(float(datum[i]))
+        elif i == 3:
+            R_errs_data.append(float(datum[i]))
+
+
+fptr.close()
+
+R_vals_model = []
+
+model_data = input("Enter in the file with the RH model data: ")
+fptr2 = open(model_data, "r", newline=None) # opening the interpolated R values 'test_model.dat'
+
+list_of_results2 = fptr2.readlines()
+
+data  = []
+
+for result in list_of_results2:
+    datum = result.split( )
+    for i in range(0, len(datum)):
+        R_vals_model.append(float(datum[i]))
+
+        
+fptr2.close()
+
+
+data_values = np.array(R_vals_data) # creating an array for the R data values
+N = len(data_values)
+print(N)
+
+data_errors = np.array(R_errs_data) # creating an array for the R errors
+
+model = np.array(R_vals_model) # creating a 2D array for the model (interpolated) values
+shape = (101, N)
+model_values = model.reshape(shape) 
+
+
+residual_values = []
+ls_values = []
+for i in range(0, len(model_values)):
+
+    residual = 0
+    ls_value = 0
+    for j in range(0, N):
+        residual = data_values[j] - model_values[i][j]
+        ls_value += (residual ** 2) # remember to divide by errors when we get data!
+        if j == (N - 1):
+            residual_values.append(residual)
+            ls_values.append(ls_value)
+
+
+min_value = min(ls_values)
+
+lowest_res_vals = []
+for i in range(0, len(ls_values)): # prints out the minimum values and index number
+    if ls_values[i] == min_value:
+        print("The minimum value is: {:f} " .format(ls_values[i]))
+        print("The corresponding (index number) RH is: {:d} " .format(i))
+
+        lowest_res = 0
+        for j in range(0, N):
+            lowest_res = data_values[j] - model_values[i][j]
+            lowest_res_vals.append(lowest_res)
+
+output_file = input("Enter in the file name you wish to write ls values to: ") # e.g. 'ls_test.dat'
+my_file = open(output_file, "w")
+
+for number in ls_values:
+    my_file.write(str(number))
+    my_file.write("\n")
+
+my_file.close()
+
+
+\end{lstlisting}
+\end{footnotesize}
+
 
 \end{document}

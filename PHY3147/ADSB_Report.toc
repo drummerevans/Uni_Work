@@ -1,8 +1,12 @@
 \contentsline {section}{\numberline {1}Introduction}{2}
 \contentsline {section}{\numberline {2}Theory}{2}
-\contentsline {section}{\numberline {3}Method}{2}
-\contentsline {subsection}{\numberline {3.1}Mechanical Waves}{2}
-\contentsline {subsection}{\numberline {3.2}Electromagnetic Waves}{2}
-\contentsline {section}{\numberline {4}Results}{2}
-\contentsline {section}{\numberline {5}Discussion}{5}
-\contentsline {section}{\numberline {6}Conclusion}{6}
+\contentsline {section}{\numberline {3}Method}{4}
+\contentsline {subsection}{\numberline {3.1}Radio Interferometry}{4}
+\contentsline {subsection}{\numberline {3.2}Data Analysis}{4}
+\contentsline {section}{\numberline {4}Results}{5}
+\contentsline {section}{\numberline {5}Discussion}{7}
+\contentsline {section}{\numberline {6}Conclusion}{9}
+\contentsline {section}{References}{9}
+\contentsline {section}{Appendix A: Code for Calculating the Path of a Refracted Ray}{10}
+\contentsline {section}{Appendix B: Code for Calculating Interpolated Radial Distance Values}{12}
+\contentsline {section}{Appendix C: Code for Calculating Least-Squares Differences}{13}
