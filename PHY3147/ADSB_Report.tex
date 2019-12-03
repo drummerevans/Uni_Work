@@ -9,7 +9,7 @@
 % <class-name> can be one of the standard LaTeX document classes: 
 % article, report or book, or some other specialised class.
 %
-\documentclass{article}
+\documentclass[11pt]{article}
 %
 % Preamble of LaTeX document is everything before \begin{document}.
 % Preamble is used to load extension packages and to set up global 
@@ -66,7 +66,7 @@
 Applying Refractive Techniques to Aeroplane ADSB Radio Wave Signals in the Lower Troposphere for Determining Relative Humidities.}}
  % fill in the title here
 \author{Matthew Evans}% fill in your name here
-\date{27\textsuperscript{th} March 2019} % date of the report
+\date{6\textsuperscript{th} December 2019} % date of the report
 \usepackage{titling} % centralises the title
 %\renewcommand\maketitlehooka{\null\mbox{}\vfill}
 %\renewcommand\maketitlehookd{\vfill\null}
@@ -92,7 +92,7 @@ Applying Refractive Techniques to Aeroplane ADSB Radio Wave Signals in the Lower
 \begin{abstract}
 
 \noindent
-Relative humidities (RH) were measured during this investigation by treating them as homogenous values using plane position data observed at the University of Exeter on 26\textsuperscript{th} August 2019 starting at 11:45am. The data was compared to model relative humidity curves for three different observed angle ranges at early and late times of observation. The least-squares difference was then obtained to find the best fitting model to the data, giving the corresponding relative humidity value for that data set. Generated RH values at early times (first 5000s) of observation were found to be $99 \pm 8\%$, $48 \pm 3\%$ and $38 \pm 3\%$, for observed angles 0.1$^{\circ}$ - 0.11$^{\circ}$, 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively: the actual RH value is $74 \pm 4$ \cite{Web01}. Whereas, the generated RH value at late times (last 5000s) were found to be $11 \pm <1\%$ for an observed angle range $0.3^{\circ} - 0.31^{\circ}$, RH values for the other two observed angle ranges could not be determined: the actual value RH for this time period is $77 \pm 5$ \cite{Web01}. The generated RH values show differences with the known values due to the fact that the RH was treated as a constant value and should in fact be considered as a varying value that depends on other factors such as time, elevation angle and horizontal orientation. Understanding relative humidities allows to give better prediction for weather forecasting, potentially optimising food production for farmers and saving lives in extreme flooding events.
+Relative humidities ($RH$) were measured during this investigation through using Automatic Surveillence Broadcast (ADSB) signal refraction techniques in the troposphere. These measurements were acheived by treating the relative humidities as constant, homogenous values using plane position data observed at the University of Exeter on 26\textsuperscript{th} August 2019 starting at 11:45am. The data was compared to model $RH$ curves for three different observed angle ranges at early and late times of observation. The least-squares difference was then obtained to find the best fitting model to the data, giving the corresponding $RH$ value for that data set. Generated $RH$ values at early times (first 5000s) of observation were found to be $99 \pm 8\%$, $48 \pm 3\%$ and $38 \pm 3\%$, for observed angles 0.1$^{\circ}$ - 0.11$^{\circ}$, 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively: the actual $RH$ value is $74 \pm 4\%$ \cite{Web01}. Whereas, the generated $RH$ value at late times (last 5000s) were found to be $11 \pm$ $<$1$\%$ for an observed angle range $0.3^{\circ}$ - $0.31^{\circ}$, $RH$ values for the other two observed angle ranges could not be determined: the actual value $RH$ for this time period is $77 \pm 5\%$ \cite{Web01}. The generated $RH$ values show differences with the known values due to the fact that the $RH$ was treated as a constant value and this showed that the $RH$  should in fact be considered as a varying value that depends on other factors such as time, elevation angle and horizontal orientation. Understanding relative humidities would allow better prediction for weather forecasting, potentially optimising food production for farmers and saving lives in extreme flooding events.
 \thispagestyle{empty}
 \end{abstract}
 \vspace*{\fill}
@@ -112,11 +112,11 @@ Relative humidities (RH) were measured during this investigation by treating the
 \section{Introduction}
 \label{sec:introduction}
 
-The Earth's weather in the troposphere is a complicated dynamical system with many factors playing a crucial role in its development. Four of the most important are temperature, pressure, wind velocity and humidity. During this project, the relative humidity (RH) of the troposphere was investigated by treating it as constant (homogeneous) in order to obtain a relative humidity values. By obtaining values for the relative humidity many benefits can be obtained. One benefit might be that by knowing the relative humidity this could be used in our day-to-day lives to gain an idea of what the weather will be on a particular day, another is that this could give more accurate rainfall patterns allowing farmers to optimise weather conditions when planting crops. Furthermore, the prediction of heavy rainfall could be predicated {\textemdash} saving lives in the case of serious flooding. Thus, the relative humidity of the troposphere is of crucial interest to weather forecasters and this project was carried out in association with the Met Office to help develop their forecasting techniques.
+The Earth's weather in the troposphere is a complicated dynamical system with many factors playing a crucial role in its development. Four of the most important are temperature, pressure, wind velocity and humidity. During this project, the relative humidity ($RH$) of the troposphere was investigated by treating it as constant (homogeneous) in order to output relative humidity values for given plane position data. By obtaining values for the relative humidity many benefits can be obtained. One benefit might be that by knowing the relative humidity this could be used in our day-to-day lives to gain an idea of what the weather will be on a particular day, another is that this could give more accurate rainfall patterns allowing farmers to optimise weather conditions. Furthermore, the prediction of heavy rainfall could be predicated {\textemdash} saving lives in the case of serious flooding. Thus, the relative humidity of the troposphere is of crucial interest to weather forecasters and this project was carried out in association with the Met Office to help develop their forecasting techniques.
 
 \vspace{2mm}
 \noindent
-At present, this is difficult to measure directly and only a small number of aircraft have such devices, for example Aircraft Meteorological Data Relay (AMDAR), on board \cite{Paper01} and these are often expensive which limits further opportunities using this method of measurement. An alternative approach in measuring humidity which has been proposed \cite{Paper01} is to use Automatic Dependent Surveillance Broadcast (ADSB) signals from air planes where many of these aircraft have this equipment on board. Therefore, these broadcasts containing aircraft information such as position, velocity, altitude and so on, can be continually obtained by ground monitoring facilities from many different aircraft. By studying how ADSB radio wave signals are refracted within the Earth's lower atmosphere, this could provide a way of obtaining the water vapour distribution thus give relative humidity values.
+At present, this is difficult to measure directly and only a small number of aircraft have such measuring devices, for example Aircraft Meteorological Data Relay (AMDAR), on board \cite{Paper01} and these are often expensive which limits further opportunities using this method of measurement. An alternative approach in measuring humidity which has been proposed \cite{Paper01} is to use Automatic Dependent Surveillance Broadcast (ADSB) signals from air planes where many of these aircraft have this equipment on board. Therefore, these broadcasts containing aircraft information such as position, velocity, altitude, etc can be continually obtained by ground monitoring facilities from many different aircraft. By studying how ADSB radio wave signals are refracted within the Earth's lower atmosphere, this could provide a way of obtaining the water vapour distribution thus giving relative humidity values.
 
 
 \section{Theory}
@@ -131,7 +131,7 @@ n = \frac{c}{v}
 
 \vspace{2mm}
 \noindent
-where $c$ is the speed of an electromagnetic (EM) wave in vacuum and $v$ is the phase velocity in a medium. An important relation that arises from the refractive is Snell's Law. This states that the refractive index multiplied by the sine of the angle between the incident EM wave and the normal to the interface surface between two different media of refractive indices $n_1$ and $n_2$ is conserved:
+where $c$ is the speed of an electromagnetic (EM) wave in vacuum and $v$ is the EM phase velocity in a medium. An important relation that arises from the refractive index is Snell's Law. This states that the refractive index multiplied by the sine of the angle between the incident EM wave and the normal to the interface surface between two different media with refractive indices $n_1$ and $n_2$ is conserved:
 
 \begin{equation}
 \label{eq:Snell_law}
@@ -140,18 +140,19 @@ n_1\sin{\theta_1} = n_2\sin{\theta_2}
 
 \vspace{2mm}
 \noindent
-$\theta_1$ is the angle between the incident ray and the normal (incident angle), $\theta_2$ is the angle between the transmitted ray and the normal (refracted angle). A different form of Snell's Law \eqref{eq:Snell_law} takes into account the radial length of the ray path and is derived as follows: if a radially stratified atmosphere is now considered, \figref{fig:atmosphere} \cite{Paper02}, Snell's Law \eqref{eq:Snell_law} can be applied by considering these atmospheric layers as different media with different respective refractive indices.
+$\theta_1$ is the angle between the incident ray and the normal (incident angle), $\theta_2$ is the angle between the transmitted, refracted, ray and the normal (refracted angle). A different form of Snell's Law \eqref{eq:Snell_law} takes into account the radial length of the ray path and is derived as follows: if a radially stratified atmosphere is now considered, \figref{fig:atmosphere} \cite{Paper02}, Snell's Law \eqref{eq:Snell_law} can be applied by considering these atmospheric layers as different media with different respective refractive indices.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.67]{"atmosphere".pdf}
-\caption{A visual illustration the path of a refracted EM ray as it propagates through a radially startified atmosphere. Image adapted from \cite{Paper02}.}
+\includegraphics[scale=0.8]{"atmosphere2".pdf}
+\caption{A visual illustration showing the path of a refracted EM ray as it propagates through a radially startified atmosphere with different refractive indices $n_N$, $n_{N-1}$, $\dots$. Image adapted from \cite{Paper02}.}
 \label{fig:atmosphere}
 \end{figure}
 
+\newpage
 \vspace{2mm}
 \noindent
-Applying equation \eqref{eq:Snell_law} to the upper two layers in \figref{fig:atmosphere} with refractive indices $n_N$ and $n_{N-1}$ the following is obtained
+Applying Snell's Law \eqref{eq:Snell_law} to the upper two layers in \figref{fig:atmosphere} with refractive indices $n_N$ and $n_{N-1}$ the following is obtained
 
 \begin{equation}
 \label{eq:Snell_law2}
@@ -160,7 +161,7 @@ n_N\sin{\phi_N} = n_{N-1}\sin{\psi}
 
 \vspace{2mm}
 \noindent
-where $\phi_N$ and $\psi$ are the incident and refracted angles respectively. By inspecting the triangle CQP in \figref{fig:atmosphere} and using the law of sines, also noticing that $\sin{\angle{CQP}} \equiv \sin{\phi_{N-1}}$, 
+where $\phi_N$ and $\psi$ are the incident and refracted angles respectively. By inspecting the triangle CQP in \figref{fig:atmosphere} and using the law of sines, noticing that $\sin{\angle{CQP}} \equiv \sin{\phi_{N-1}}$ the following can be derived: 
 
 \begin{equation}
 \label{eq:triangle}
@@ -170,7 +171,7 @@ n_Nr_N\sin{\phi_N} = n_{N-1}r_{N-1}\sin{\phi_{N-1}}
 
 \vspace{2mm}
 \noindent
-where $phi_N$ and $phi_{N-1}$ are the local zenith angles in \figref{fig:atmosphere} with refractive indices $n_N$ and $n_{N-1}$ respectively, $r_N \equiv CP$ and $r_{N-1} \equiv CQ$ are the radial distance defined in \figref{fig:atmosphere}. Equation \eqref{eq:triangle} can be rearranged to yield the radial distance $r_N$ the subject
+where $\phi_N$ and $\phi_{N-1}$ are the local zenith angles in \figref{fig:atmosphere} with refractive indices $n_N$ and $n_{N-1}$ respectively, $r_N \equiv CP$ and $r_{N-1} \equiv CQ$ are the radial distances to the relevant interfaces defined in \figref{fig:atmosphere}. Equation \eqref{eq:triangle} can be rearranged to make the radial distance $r_N$ the subject.
 
 \begin{equation}
 \label{eq:Snell_law3}
@@ -179,11 +180,7 @@ r_N = \frac{n_{N-1}r_{N-1}\sin{\phi_{N-1}}}{n_N\sin{\phi_N}}
 
 \vspace{2mm}
 \noindent
-where the radial distance $r_N$ is now the subject of the equation.
-
-\vspace{2mm}
-\noindent
-The refractive index can vary in value from $n = 1$ for a vacuum to higher values for other media. Typically, more water vapour present in the air will cause the refractive index to increase because the phase velocity of an EM wave given in \eqref{eq:ref_index} will decrease. This leads to a useful alternative definition for the refractive index, $n$ in terms of the refractivity, $N$ given in parts per million (ppm)
+The refractive index can vary in value from $n = 1$ for a vacuum to higher values for other media. Typically, the more water vapour present there is in the air, the refractive index will increase because the phase velocity of an EM wave given in \eqref{eq:ref_index} will decrease. This leads to a useful alternative definition for the refractive index, $n$ in terms of the refractivity, $N$ given in parts per million (ppm)
 
 \begin{equation}
 n = 1  + (N \times 10^{-6})
@@ -219,7 +216,7 @@ N = \bigg(77.6\frac{P}{T} - 5.6\frac{P_w}{T} + 3.75 \times 10^5\frac{P_w}{T^2} \
 
 \vspace{2mm}
 \noindent
-where $P$ is the total pressure (in hPa), $T$ is the ambient air temperature (in K) and, as before in the definition of the refractivity \eqref{eq:refractivity}, $N$ is given in ppm. Expressions for $P$, $T$ and $P_w$ in equation \eqref{eq:refractivity3} will now be outlined. Further information and derivations regarding these expressions can be found in \cite{Paper03} (for $P$ and $T$) and \cite{Paper04} (for $P_w$). It can be shown that $T$ varies as a function of altitude given by the following expression
+where $P$ is the total pressure (in hPa), $T$ is the ambient air temperature (in K). Expressions for $P$, $T$ and $P_w$ in equation \eqref{eq:refractivity3} will now be outlined. Further information and derivations regarding these following expressions can be found in \cite{Paper03}, for $P$ and $T$, and \cite{Paper04} for $P_w$. It can be shown that $T$ varies as a function of altitude given by the following expression
 
 \begin{equation}
 T = T_b + \beta(H - H_b)
@@ -228,7 +225,7 @@ T = T_b + \beta(H - H_b)
 
 \vspace{2mm}
 \noindent
-where $T_b$ is the baseline temperature, $H$ is the height above the baseline height $H_b$, both measure in km and $\beta$ is the temperature gradient (Kkm$^{-1}$). In this case, the troposphere was considered thus, using the information from \cite{Paper03} $\beta = - 6.5$Kkm$^{-1}$. An expression for $P$ is given as,
+where $T_b$ is the baseline temperature, $H$ is the height above the baseline height $H_b$, both measure in km and $\beta$ is the temperature gradient (Kkm$^{-1}$). In this case, the troposphere was considered (first 11km of altitude above sea level) thus, using the information from \cite{Paper03} $\beta = - 6.5$Kkm$^{-1}$. An expression for $P$ is given as,
 
 \begin{equation}
 P = P_b \bigg( 1 + \frac{\beta}{T_b}(H - H_b) \bigg) ^{-\frac{gM_0}{\beta R}}
@@ -237,7 +234,7 @@ P = P_b \bigg( 1 + \frac{\beta}{T_b}(H - H_b) \bigg) ^{-\frac{gM_0}{\beta R}}
 
 \vspace{2mm}
 \noindent
-where $P_b$ is the baseline pressure, $g$ is the acceleration due to gravity (in ms$^2$), $M_0$ is the molar mass of air (in kgmol$^{-1}$) and $R$ is the gas constant (in JK$^{-1}$mol$^{-1}$). The partial pressure water vapour pressure $P_w$ can be expressed as the Arden-Buck equation, which is adapted from \cite{Paper04}
+where $P_b$ is the baseline pressure, $g$ is the acceleration due to gravity (9.80655ms$^2$), $M_0$ is the molar mass of air (0.028964420kgmol$^{-1}$) and $R$ is the gas constant (8.31432 JK$^{-1}$mol$^{-1}$) {\textemdash} the values for these constants were obtained from \cite{Paper03}. The partial water vapour pressure, $P_w$ can be expressed as the Arden-Buck equation, which is adapted from \cite{Paper04}
 
 \begin{equation}
 P_w = \frac{RH}{100} 6.1121 \exp \bigg( \bigg(18.678 - \frac{T'}{234.5} \bigg) \bigg (\frac{T'}{257.14 + T'} \bigg) \bigg)
@@ -254,15 +251,16 @@ where $T'$ is the temperature in \textit{Celcius} ($^{\circ}$C).
 \subsection{Radio Interferometry}
 \label{ssec:radio-interferometry}
 
-The refractive techniques discussed in \secref{sec:theory} can be applied to ADSB signals transmitted from aircraft. These are 1090 MHz radio waves which are 112 bits long \cite{Book02}, containing aircraft information such as position, velocity, altitude, etc. Therefore, these will be refracted as an EM wave passing through the atmosphere. These broadcasts can be received by using radio interferometric techniques. There are two radio interferometers placed on the fourth and seventh floors of the Physics Building at the University of Exeter, this is illustrated in \figref{fig:interferometry}.
+The refractive techniques discussed in \secref{sec:theory} can be applied to ADSB signals transmitted from aircraft. These are 1090MHz radio waves which are 112 bits long \cite{Book02}, containing aircraft information such as position, velocity, altitude, etc. Therefore, these will be refracted through the atmosphere. These broadcasts can be received using radio interferometric techniques. There are two radio interferometers placed on the fourth and seventh floors of the Physics Building at the University of Exeter, this is illustrated in \figref{fig:interferometry}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{"interferometry".pdf}
-\caption{A diagram illustrating interferometry used to receive ADSB signals. $t$ and $t - \Delta t$ are the times when the first and second radio interferometers, respectively received the ADSB signals, $b$ is the baseline distance between the two receivers, $V_1$ and $V_2$ are the voltages of the first and second signals respectively, $\phi_0$ is the observed angle, $z$ is the zenith angle and $b \cos z$ is the path difference between the two signals. The value of $b$ is known from internal project communications and $\lambda$ is the wavelength of the ADSB signal.}
+\includegraphics[scale=0.65]{"interferometry".pdf}
+\caption{A diagram illustrating radio interferometry used to receive ADSB signals. $t$ and $t - \Delta t$ are the times when the first and second radio interferometers, respectively received the ADSB signals, $b$ is the baseline distance between the two receivers, $V_1$ and $V_2$ are the output voltages of the first and second signals respectively, $\phi_0$ is the observed angle, $z$ is the zenith angle and $b \cos z$ is the path difference between the two signals. The value of $b$ is known from internal project communications and $\lambda$ is the wavelength of the ADSB signal.}
 \label{fig:interferometry}
 \end{figure}
 
+\newpage
 \vspace{2mm}
 \noindent
 By taking the conjugate product, $V_1 V_2^*$, the time average voltage, $V^2/2$ and the phase, $\alpha = \omega \Delta t = (2 \pi b / \lambda) \cos z$, can be obtained to collect all the relevant aircraft information required for further analysis.
@@ -271,11 +269,11 @@ By taking the conjugate product, $V_1 V_2^*$, the time average voltage, $V^2/2$ 
 \subsection{Data Analysis}
 \label{ssec:data-analysis}
 
-In order to obtain constant, homogeneous relative humidity values, the first step was to use equation \eqref{eq:Snell_law3} in a computer program, provided by internal project communications, that calculates the radial path of the refracted ray (see Appendix A). This was achieved by using equations \eqref{eq:temperature}, \eqref{eq:pressure} and \eqref{eq:Arden-Buck} in equation \eqref{eq:refractivity3} and modifying the program to obtain a more accurate refractivity value, $N$ at each iteration of the propagating wave. This would then generate model 0$\%$ - 100$\%$ RH curves via inputting initial conditions: the observed angle above the horizon, $\phi_0$ and increment angle step from the vertical, $\delta \theta$. These models can then be compared to the plane data positions, given in radial distance from the centre of the Earth, $R$ (km) to the signal position and the increment angle, $\theta$ (rad), measured from the vertical through the centre of the Earth (where $R$ and $\theta$ are illustrated in \secref{sec:theory} \figref{fig:atmosphere}). 
+In order to obtain constant, homogeneous relative humidity values, the first step was to use equation \eqref{eq:Snell_law3} in a computer program, provided by internal project communications, that calculates the radial path of the refracted ray (see Appendix A). This was achieved by using equations \eqref{eq:temperature}, \eqref{eq:pressure} and \eqref{eq:Arden-Buck} in equation \eqref{eq:refractivity3} and modifying the program to obtain a more accurate refractivity value, $N$ at each iteration of the propagating wave: taking care with unit conversion from the equations given in \secref{sec:theory} in the process. This would then generate model 0$\%$ - 100$\%$ RH curves via inputting initial conditions: the observed angle above the horizon, $\phi_0$ and an increment angle step from the vertical, $\delta \theta$. These models can then be compared to the plane data positions. These are given in radial distance from the centre of the Earth, $R$ (km) to the signal position and the increment angle, $\theta$ (rad) measured from the vertical through the centre of the Earth (where $R$ and $\theta$ are illustrated in \secref{sec:theory} \figref{fig:atmosphere}). 
 
 \vspace{2mm}
 \noindent
-The chosen data set for analysis was 26\textsuperscript{nd} August 2019 starting at 11:45am because this had a nice complete set of data that could be used for further data analysis and was recommended by internal project communications. This data set was then broken-up into early, first 5000s, and late, last 5000s, times of observation as it was anticipated that during the course of the day $T_b$ and $P_b$ would change. These baseline values were obtained from \cite{Web01} (using nearby locations in Exeter) and an average for temperature, $\overline{T_b}$ and pressure, $\overline{P_b}$ was taken for the corresponding times to input into the computer program. Three observed angle ranges were considered: 0.1$^{\circ}$ - 0.11$^{\circ}$, 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$. This gave a good idea of the behaviour of relative humidities at different altitudes. The average of these observed angle ranges, $\overline{\phi_0}$ was then taken from the sub-sectioned data sets in order to feed into the computer program generating the corresponding model curves.
+The chosen data set for analysis was 26\textsuperscript{nd} August 2019 starting at 11:45am because this had a nice complete set of data that could be used for further data analysis and was recommended by internal project communications. This data set was then broken-up into early, first 5000s, and late, last 5000s, times of observation as it was anticipated that during the course of the day $T_b$ and $P_b$ would change. These baseline values were obtained from \cite{Web01} (using nearby locations in Exeter) and an average for temperature, $\overline{T_b}$ and pressure, $\overline{P_b}$ was taken for the corresponding early and late times to input into the computer program. Three observed angle ranges were considered: 0.1$^{\circ}$ - 0.11$^{\circ}$, 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$. This gave a good idea of the behaviour of relative humidities at different altitudes. The average of these observed angle ranges, $\overline{\phi_0}$ was then taken from the sub-sectioned data sets in order to feed into the computer program generating the corresponding model relative humidity curves.
 
 \vspace{2mm}
 \noindent
@@ -283,12 +281,12 @@ Once these model curves had been generated, the data points (plane positions) wo
 
 \vspace{2mm}
 \noindent
-The generated RH values would then be compared to the actual, average, RH value, $\overline{RH}$ on this day for the corresponding early and late times given by \cite{Web01}.
+The generated RH values would then be compared to the actual, average, RH value, $\overline{RH}$ on this day for the corresponding early and late observation times given by \cite{Web01}.
 
 
 \section{Results}
 \label{sec:results}
-\figref{fig:phi0_0.105} shows two plots of $R$ against $\theta$ for a given observed angle range of 0.1$^{\circ}$ - 0.11$^{\circ}$ for early (\figref{fig:sub1}) and late (\figref{fig:sub2}) times of observation. Furthermore, \figref{fig:phi0_0.305} and \figref{fig:phi0_0.505} show additional plots of these $R$ and $\theta$ positions for different observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. Again, the early times of observation are shown for these different observed angles ranges in \figref{fig:sub3} and \figref{fig:sub5} at observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. The late times are shown in \figref{fig:sub4} and \figref{fig:sub6} for the observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. All these plot values are shown for the plane positions, in addition to the model relative humidity curves for 0$\%$, 100$\%$ and the best fitting relative humidity curve for the plane positions.
+\figref{fig:phi0_0.105} shows two plots of $R$ against $\theta$ for a given observed angle range of 0.1$^{\circ}$ - 0.11$^{\circ}$ for early (\figref{fig:sub1}) and late (\figref{fig:sub2}) times of observation. Furthermore, \figref{fig:phi0_0.305} and \figref{fig:phi0_0.505} show additional plots of these $R$ and $\theta$ positions for different observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. Again, the early times of observation are shown for these different observed angles ranges in \figref{fig:sub3} and \figref{fig:sub5} at observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. The late times are shown in \figref{fig:sub4} and \figref{fig:sub6} for the observed angle ranges of 0.3$^{\circ}$ - 0.31$^{\circ}$ and 0.5$^{\circ}$ - 0.51$^{\circ}$ respectively. All these plot values are shown for the plane positions, in addition to the model relative humidity curves for 0$\%$, 100$\%$ and the best fitting relative humidity curve (shown in green) for the plane positions.
 
 
 \begin{figure}[h]
@@ -309,7 +307,6 @@ The generated RH values would then be compared to the actual, average, RH value,
 \label{fig:phi0_0.105}
 \end{figure}
 
-\newpage
 \begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
@@ -329,7 +326,7 @@ The generated RH values would then be compared to the actual, average, RH value,
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -347,7 +344,7 @@ The generated RH values would then be compared to the actual, average, RH value,
 \label{fig:phi0_0.505}
 \end{figure}
 
-
+\cleardoublepage
 \vspace{2mm}
 \noindent
 \tabref{tab:table1} compares the obtained values for the relative humidity from the best fitting (green) curves in \figref{fig:sub1}, \figref{fig:sub3} and \figref{fig:sub5} to the mean of the actual relative humidities obtained from \cite{Web01} along with their estimated errors for each of the observed angle ranges at early times of observation.
@@ -355,11 +352,11 @@ The generated RH values would then be compared to the actual, average, RH value,
 \vspace{5mm}
 \begin{table*}[h]
 \centering % centre table
-\caption{A table comparing generated relative humidities (RH) from an interpolative and least squares method for the various different observed angle, $\phi_0$ ranges investigated to the mean of the actual RH values given by \cite{Web01} for the early times of observation (first 5000s).}
+\caption{A table comparing generated relative humidities ($RH$) from an interpolative and least squares method for the various different observed angle, $\phi_0$ ranges investigated to the mean of the actual RH values given by \cite{Web01} for the early times of observation (first 5000s).}
 \label{tab:table1}
 \begin{tabular}{|c|c|c|}
 \hline
-Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\%$) \cite{Web01} \\
+Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated $RH$ ($\%$) & Actual $RH$ ($\%$) \cite{Web01} \\
 \hline
 0.10 - 0.11 & $99 \pm 8$ & $74 \pm 4$ \\
 \hline
@@ -378,11 +375,11 @@ Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\
 \vspace{5mm}
 \begin{table*}[h]
 \centering % centre table
-\caption{A table comparing generated relative humidities (RH) from an interpolative and least squares method for the various different observed angle, $\phi_0$ ranges investigated to the mean of the actual RH values given by \cite{Web01} for the late times of observation (last 5000s).}
+\caption{A table comparing generated relative humidities ($RH$) from an interpolative and least squares method for the various different observed angle, $\phi_0$ ranges investigated to the mean of the actual RH values given by \cite{Web01} for the late times of observation (last 5000s).}
 \label{tab:table2}
 \begin{tabular}{|c|c|c|}
 \hline
-Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\%$) \cite{Web01} \\
+Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated $RH$ ($\%$) & Actual $RH$ ($\%$) \cite{Web01} \\
 \hline
 0.10 - 0.11 & - & $77 \pm 5$ \\
 \hline
@@ -397,7 +394,7 @@ Observed Angle Range $\phi_0$ ($^{\circ}$) & Generated RH ($\%$) & Actual RH ($\
 
 \vspace{15mm}
 \noindent
-The errors for the actual relative humidities for the early and late times of observation, given by \cite{Web01}, were estimated by using the error on the mean value of the relative humidity $\delta{\overline{RH}}$,
+The errors for the actual relative humidities for the early and late times of observation, given by \cite{Web01}, were estimated by using the error on the mean value of the actual relative humidity $\delta{\overline{RH}}$,
 
 
 \begin{equation}
@@ -407,11 +404,11 @@ The errors for the actual relative humidities for the early and late times of ob
 
 \vspace{2mm}
 \noindent
-where $\sigma{(RH)}$ is the standard deviation of the average actual relative humidity ($\overline{RH}$) and $N_{RH}$ is the number of RH values used to determine these averages.
+where $\sigma{(RH)}$ is the standard deviation of the average actual relative humidity ($\overline{RH}$) and $N_{RH}$ is the number of RH values used to determine this average.
 
 \vspace{2mm}
 \noindent
-However, the errors for the generated relative humidities were estimated in \tabref{tab:table1} and \tabref{tab:table2} by using the error on the mean for the baseline temperature $\overline{T_b}$ \cite{Web01}, baseline pressure $\overline{P_b}$ \cite{Web01} and observed angle $\overline{\phi_0}$. The following were used to obtain these errors
+The errors for the generated relative humidities were estimated in \tabref{tab:table1} and \tabref{tab:table2} by using the error on the mean for the baseline temperature $\overline{T_b}$ \cite{Web01}, baseline pressure $\overline{P_b}$ \cite{Web01} and observed angle $\overline{\phi_0}$. The following were used to obtain these errors
 
 \begin{equation}
 \label{eq:temp_error}
@@ -435,12 +432,12 @@ where $\sigma{(T_b)}$, $\sigma{(P_B)}$ are the standard deviations of the baseli
 
 \vspace{2mm}
 \noindent
-These estimated errors given in \eqref{eq:temp_error}, \eqref{eq:press_error} and \eqref{eq:angle_error} were added to the mean values for the baseline temperature, baseline pressure and observed angle when calculating the refracted ray path using the appropriate computer program. This gave an upper bound on the relative humidity value. Thus, the difference between the upper bound of the relative humidity and the relative humidity generated by using the average of these values gave an estimated error for the generated relative humidity value.
+These estimated errors given in equations \eqref{eq:temp_error}, \eqref{eq:press_error} and \eqref{eq:angle_error} were added to the mean values for the baseline temperature ($T_{upp} = \overline{T_b} + \delta{\overline{T_b}}$), baseline pressure, ($P_{upp} = \overline{P_b} + \delta{\overline{P_b}}$) and observed angle, ($\phi_{0_{upp}} = \overline{\phi_0} + \delta{\overline{phi_0}}$) when calculating the refracted ray path using the appropriate computer program. This gave an upper bound on the relative humidity value. Thus, the difference between the upper bound of the relative humidity and the generated relative humidity using the average of these values gave an estimated error for the generated relative humidity value.
 
 \section{Discussion}
 \label{sec:discussion}
 
-The results for the determined relative humidities given for the early and late part of the observations in \tabref{tab:table1} and \tabref{tab:table2} respectively show that the relative humidity does vary as a function of time. This is due to the fact that later in the day, the temperature and pressure decreases causing a change in the relative humidity as anticipated in \secref{sec:theory}.
+The results for the determined relative humidities given for the early and late part of the observations in \tabref{tab:table1} and \tabref{tab:table2} respectively show that the relative humidity does vary as a function of time. This is due to the fact that later in the day, the temperature and pressure changes, due to the Earth's orbit around the Sun, causing a change in the relative humidity as anticipated in \secref{sec:theory} equation \eqref{eq:humidity}.
 
 \vspace{2mm}
 \noindent
@@ -448,12 +445,12 @@ By considering the early part of the day, the relative humidities given in \tabr
 
 \vspace{2mm}
 \noindent
-Furthermore, by considering \figref{fig:sub1} the plane positions seem to be forming two distinct relative humidity curves. This shows that the relative humidity does indeed seem to be different for a specific observed angle range. In this case, there is a shallow observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ above the horizon. From the discussion presented in \secref{sec:theory} \eqref{eq:refractivity3} this is where most of the refraction occurs due to the denser atmosphere nearer the Earth's surface. Therefore, it would be expected that more refraction would occur because the ADSB signal spends more time in the lower part of the atmosphere for these small observed angles above the horizon according to \secref{sec:theory} \figref{fig:atmosphere}. This is shown by the bottom set of plane position data values in \figref{fig:sub1}. However, there is also a set of points that indicate a higher relative humidity. This was investigated further and additional measurements, using the latitude and longitude plane positions, show that the relative humidity, as well as depending on time, also depends on upon the horizontal direction (azimuthal angle). \figref{fig:long_lat_plot} shows a plot of latitude against longitude for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for early observation times.
+Furthermore, by considering \figref{fig:sub1} the plane positions seem to be forming two distinct relative humidity curves. This shows that the relative humidity does indeed seem to be different for a specific observed angle range. In this case, there is a shallow observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ above the horizon. From the discussion presented in \secref{sec:theory} equation \eqref{eq:refractivity3} this is where most of the refraction occurs because the atmosphere is denser nearer the Earth's surface. Therefore, it would be expected that more refraction would occur because the ADSB signal spends more time in the lower part of the atmosphere for these small observed angles above the horizon according to \secref{sec:theory} \figref{fig:atmosphere}. This is shown by the bottom set of plane position data values in \figref{fig:sub1}. However, there is also a set of points that indicate a higher relative humidity. This was investigated further and additional measurements were plotted by using the latitude and longitude plane positions. This shows that the relative humidity, as well as depending on time, also depends on upon the horizontal direction (azimuthal angle). \figref{fig:long_lat_plot} shows a plot of latitude against longitude for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for early observation times.
 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.65]{"aug26_0_105_long_lat_early".pdf}
+\includegraphics[scale=0.69]{"aug26_0_105_long_lat_early".pdf}
 \caption{A plot showing the latitude and longitude plane positions during the early part of observations (first 5000s) for the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$.}
 \label{fig:long_lat_plot}
 \end{figure}
@@ -461,11 +458,11 @@ Furthermore, by considering \figref{fig:sub1} the plane positions seem to be for
 
 \vspace{2mm}
 \noindent
-\figref{fig:long_lat_plot} shows that for this given observed angle range there are three distinct horizontal regions for these plane positions. This shows that the relative humidity also depends upon the horizontal orientation as well as time.
+\figref{fig:long_lat_plot} shows that for this given observed angle range there are three distinct horizontal regions for these plane positions. This shows that the relative humidity also depends upon the horizontal orientation as well as time and vertical orientation.
 
 \vspace{2mm}
 \noindent
-Analysing the results for the determined relative humidities given for the late part of the observations in \tabref{tab:table2} show further discrepancies when compared to the actual relative humidities. Two of these relative humidities could not be determined due to the nature of the graphs displayed in \figref{fig:sub2}, and \figref{fig:sub6}. These plots show that the plane positions would yield a best fit relative humidity curve that would be less than 0$\%$. This further indicates that the relative humidity cannot be treated as an absolute constant value and that the gradient of the relative humidity curves in addition to how they curves vary with height should be considered. 
+Analysing the results for the determined relative humidities given for the late part of the observations in \secref{sec:results} \tabref{tab:table2} show further differences when compared to the actual relative humidities. Two of these relative humidities could not be determined due to the nature of the graphs displayed in \figref{fig:sub2}, and \figref{fig:sub6}. These plots show that the plane positions would yield a best fit relative humidity curve that would be less than 0$\%$. This further indicates that the relative humidity cannot be treated as an absolute constant value and that the gradient of the relative humidity curves, in addition to how they curves vary with height, should also be considered. 
 
 
 \vspace{2mm}
@@ -474,21 +471,24 @@ By considering the refractivity as a function of altitude, this would mean that 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.65]{"0_105_refractivity_plot".pdf}
-\caption{A plot showing the refractivity $N$ as a function of altitude $h$ (km) for 0$\%$ and 100$\%$ relative humidities at the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for late times of observation (last 5000s).}
+\includegraphics[scale=0.69]{"0_105_refractivity_plot".pdf}
+\caption{A plot showing the refractivity, $N$ as a function of altitude, $h$ (km) for 0$\%$ and 100$\%$ relative humidities at the observed angle range 0.1$^{\circ}$ - 0.11$^{\circ}$ for late times of observation (last 5000s).}
 \label{fig:refractivity_plot}
 \end{figure}
 
-\newpage
 \vspace{2mm}
 \noindent
-So, the plots \figref{fig:sub2}, \figref{fig:sub4} and \figref{fig:sub6} show that the generated relative humidities are less than 0$\%$. According to \figref{fig:refractivity_plot} this would mean a negative absolute value of relative humidity with a shallower gradient refractivity curve. Therefore, a systematic shift would be required for the plane positions, so that a model refractivity curve with a low value of relative humidity could be used to represent the data. This would display the same shallow gradient characteristics of the plane position data for low relative humidities, but translated to a higher refractivity/relative humidity. This change in relative humidity with height above ground level for the translated curve, would result in an initially rising relative humidity with altitude. However, this would have to fall off after some height as this translated refractivity curve, with a shallow gradient, would intersect the 100$\%$ refractivity curve after some altitude (which has a steeper fall off gradient) according to \figref{fig:refractivity_plot} - the translated curve would not be able to go above 100$\%$ due to the definition of relative humidity given in \secref{sec:theory} equation \eqref{eq:humidity}. Therefore, this means that the relative humidity would initially rise and then fall off again with altitude when this intersection between the two refractivity curves occurs. Furthermore, this analysis indicates that the absolute value of the relative humidity at ground level may not be the ultimate factor, but the gradient (i.e. how the humidity behaves as a function of height) could play a more vital role when determining relative humidities.
+As mentioned, the plots \figref{fig:sub2}, \figref{fig:sub4} and \figref{fig:sub6} show that the generated relative humidities are less than 0$\%$. According to \figref{fig:refractivity_plot} this would mean a negative absolute value of relative humidity with a characteristic shallowe gradient refractivity curve. Therefore, a systematic shift would be required for the plane positions, so that a model refractivity curve with a low value of relative humidity could be used to represent the data. This would display the same shallow gradient characteristics of the plane position data for low relative humidities, but translated to a higher baseline refractivity/relative humidity. 
+
+\vspace{2mm}
+\noindent
+If the change in relative humidity with height above ground level is now considered for the translated curve, this would result in an initially rising relative humidity with altitude. However, this would have to fall off after some height as this translated refractivity curve, with a shallow gradient, would intersect the 100$\%$ refractivity curve after some altitude (which has a steeper fall off gradient) according to \figref{fig:refractivity_plot} \textemdash the translated curve would not be able to go above 100$\%$ due to the definition of relative humidity given in \secref{sec:theory} equation \eqref{eq:humidity}. Therefore, this means that the relative humidity would initially rise and then fall off again with altitude when this intersection between the two refractivity curves occurs. Moreover, this analysis leads to the conclusion that the absolute value of the relative humidity at ground level may not be the ultimate factor, but the gradient (i.e. how the humidity behaves as a function of height) could play a more vital role when determining relative humidities.
 
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-Overall, the results presented in \secref{sec:results} show some interesting properties of relative humidity that were previously not well known. For example, as well as depending on time and vertical elevation angle, the relative humidity also depends on the horizontal orientation. Thus, by looking in a different direction, different weather systems could be observed at the same as displayed in \secref{sec:results} \figref{fig:sub1}. Although the generated relative humidities presented in \secref{sec:results} \tabref{tab:table1} and \tabref{tab:table2} were not in conjunction with the actual values from \cite{Web01}, it was shown that the absolute value may not be the only way of describing these values. By analysing the corresponding refractivity curves, such as \figref{fig:refractivity_plot} in \secref{sec:discussion} for \figref{fig:sub2}, it was indicated that the gradient of the $R$ vs $\theta$ curves should be taken into account. Therefore, instead of the relative humidity been treated as a constant, homogeneous value, this should be treated as a variable factor shares a relation with time, horizontal orientation and altitude height. Ultimately, this would give more accurate and reliable relative humidity values; thus enabling better precision for the prediction of the weather by forecasting companies such as the Met Office.
+Overall, the results presented in \secref{sec:results} show some interesting properties of relative humidity that were not well known before the undertaking of this project. For example, as well as depending on time and vertical elevation angle, the relative humidity also depends on the horizontal orientation. Thus, by looking in a different direction, different weather systems could be observed at the same as displayed in \secref{sec:results} \figref{fig:sub1}. Although the generated relative humidities presented in \secref{sec:results} \tabref{tab:table1} and \tabref{tab:table2} were not in conjunction with the actual values from \cite{Web01}, it was shown that the absolute value may not be the only way of describing these values. By analysing the corresponding refractivity curves, such as \figref{fig:refractivity_plot} in \secref{sec:discussion} for \figref{fig:sub2}, it was indicated that the gradient of the refractivity curves should be taken into account. Therefore, instead of the relative humidity been treated as a constant, homogeneous value, this should be treated as a variable factor that shares a relation with time, horizontal orientation and altitude. Ultimately, this would give more accurate and reliable relative humidity values; thus enabling better precision for the prediction of the weather by forecasting companies, such as the Met Office, through using ADSB signal refractive techniques.
 
 
 \begin{thebibliography}{9}
@@ -649,7 +649,7 @@ char **argv;
 \end{lstlisting}
 \end{footnotesize}
 
-\newpage
+
 \section*{Appendix B: Code for Calculating Interpolated Radial Distance Values}
 \label{app:appendix_B}
 \addcontentsline{toc}{section}{Appendix B: Code for Calculating Interpolated Radial Distance Values}

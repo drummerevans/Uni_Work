@@ -2,11 +2,11 @@
 \contentsline {section}{\numberline {2}Theory}{2}
 \contentsline {section}{\numberline {3}Method}{4}
 \contentsline {subsection}{\numberline {3.1}Radio Interferometry}{4}
-\contentsline {subsection}{\numberline {3.2}Data Analysis}{4}
-\contentsline {section}{\numberline {4}Results}{5}
-\contentsline {section}{\numberline {5}Discussion}{7}
-\contentsline {section}{\numberline {6}Conclusion}{9}
-\contentsline {section}{References}{9}
-\contentsline {section}{Appendix A: Code for Calculating the Path of a Refracted Ray}{10}
-\contentsline {section}{Appendix B: Code for Calculating Interpolated Radial Distance Values}{12}
-\contentsline {section}{Appendix C: Code for Calculating Least-Squares Differences}{13}
+\contentsline {subsection}{\numberline {3.2}Data Analysis}{5}
+\contentsline {section}{\numberline {4}Results}{6}
+\contentsline {section}{\numberline {5}Discussion}{9}
+\contentsline {section}{\numberline {6}Conclusion}{11}
+\contentsline {section}{References}{11}
+\contentsline {section}{Appendix A: Code for Calculating the Path of a Refracted Ray}{11}
+\contentsline {section}{Appendix B: Code for Calculating Interpolated Radial Distance Values}{13}
+\contentsline {section}{Appendix C: Code for Calculating Least-Squares Differences}{15}
