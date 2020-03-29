@@ -1,0 +1,525 @@
+
+\documentclass[11pt]{article}
+%
+% Preamble of LaTeX document is everything before \begin{document}.
+% Preamble is used to load extension packages and to set up global 
+% parameters and configuration for the entire document.
+%
+\usepackage{amsmath}
+
+\usepackage{blindtext}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{abstract}
+\usepackage{wasysym}
+\setlength{\columnsep}{0.75cm}
+\usepackage[margin=0.4in]{geometry}
+\setlength{\footskip}{25pt}
+% \usepackage{txfonts}
+\usepackage{comment}
+\usepackage{changepage}
+\usepackage{listings} % to allow computer code to be typeset
+
+% \renewcommand{\familydefault}{\cmrdefault} % renews font
+\newif\ifUseBibTeX
+\UseBibTeXtrue
+\newif\ifRefByNum
+\RefByNumtrue
+\ifRefByNum
+\usepackage{cite}
+\bibliographystyle{ieeetr}
+\else
+\UseBibTeXfalse
+\usepackage{aas_macros}
+\usepackage[round]{natbib}
+\setcitestyle{aysep={}}
+\usepackage{scrextend}
+\bibliographystyle{mn2e}
+\fi
+
+%\usepackage{tikz,pgfplots} % diagrams and data plots
+%
+% set up caption options
+\captionsetup{margin=12pt,font=small,labelfont=bf}
+%
+%removes abstract title
+
+\renewcommand{\abstractname}{Abstract}
+\renewcommand{\abstractnamefont}{\normalfont\Large\bfseries}
+
+%sets abstract margins
+\setlength{\absleftindent}{10mm}
+\setlength{\absrightindent}{10mm}
+
+%
+% global options for siunitx
+%\sisetup{seperr,repeatunits=false,per=symbol}
+%
+% some handy commands for referencing;
+% the optional argument overrides the default label, e.g.
+% \figref[FIG.~]{fig:label}
+\newcommand{\figref}[2][\figurename~]{#1\ref{#2}}
+\newcommand{\tabref}[2][\tablename~]{#1\ref{#2}}
+\newcommand{\secref}[2][Section~]{#1\ref{#2}}
+
+
+% The document content starts with \begin{document} 
+% and is finished with \end{document}
+\begin{document}
+\baselineskip 24pt
+\begin{titlepage}
+
+   \begin{center}
+       \vspace*{2cm}
+ 
+       {\huge{\textbf{Meteorological Information Derived from a Combination of Video and ADS-B}}}
+ 
+       \vspace{0.5cm}
+       
+       \vspace{1.5cm}
+ 
+       \textbf{James Wiseman, Matthew Lacey, Oscar Mitchell and Matthew Evans}
+ 
+       \vspace{5cm}
+ 
+ 
+       College of Engineering, Mathematics, and Physical Sciences\\
+       University of Exeter\\
+       
+       March 2020
+ 
+   \end{center}
+\end{titlepage}
+
+
+
+\onecolumn
+
+\begin{abstract}
+\thispagestyle{empty} % turns off page numbering for the Abstract page
+\noindent
+The roll angle for an incoming aircraft at Exeter Airport on 6\textsuperscript{th} March 2020 was investigated, attempting to derive the direction of the prevailing wind. This was achieved through the use of optical video camera observations, positioned at the far end of the runway, capturing the motion of the incoming aircraft and the transmissions of Automatic Dependent Surveillance Broadcast (ADS-B) were simultaneously captured by 1090MHz receivers deployed at the University of Exeter Physics Building. The optical and ADS-B roll angle data were then compared against each other showing some similar variation characteristics over time, albeit the ADS-B method was of much lower resolution. An average value for the optical roll measurements was computed: $0.28 \pm 0.50^{\circ}$. Due to this positive average roll angle value, this inferred a Southerly prevailing wind direction for that observation; this obtained value did not correspond to the North Westerly wind reported that day from \cite{Web07}. However further consideration should be taken into account when evaluating the roll angle such as, the pilot's steering, which may reduce the reliability of measurements \textendash also the yaw angle could be investigated as a function of altitude to provide a better estimate for the wind direction. Deriving meteorological information, such as wind direction, from alternative methods could prove useful for both meteorologists and the aviation industry when it comes to effective planning, economic benefits and safety for aircraft landings.
+
+\begin{adjustwidth}{45pt}{45pt}
+\end{adjustwidth}
+\end{abstract}
+
+
+\newpage
+\tableofcontents
+%\newpage
+\thispagestyle{empty} % turns off page numbering for the table of contents page
+\twocolumn
+%\vspace*{\fill}
+
+\vspace{5mm} % takes one free line before rest of text
+
+
+
+
+
+\setcounter{page}{1} % starts page numbering from this contents page
+
+\newpage
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+Aircraft have many variables that are susceptible to meteorological conditions and these can be readily seen in aircraft motion: for example, deviations from a glide path (an imaginary straight line from the end of the runway to the incoming aircraft) and variations within the rotational axes of aircraft. These sources of variation could mean that by optically analysing aircraft, particularly during descent upon arrivals to airports, many weather conditions could be derived from the surrounding environment.
+
+Aircraft also provide information in the way of Automatic Dependent Surveillance Broadcasts (ADS-B). These are 1090MHz radio waves which are 112 bits long \cite{Book01} and contain aircraft information such as position, velocity, altitude, etc. Plus, many aircraft in the UK have ADS-B already fitted and by the 7\textsuperscript{th} June 2020 all aircraft that weigh more than 5,700kg or have a maximum cruising true airspeed of more than 250knots will be equipped with ADS-B \cite{Web03}. These extra aircraft with ADS-B installed could provide extra sources for meteorological measurements. By utilising a combination of optical measurements, through the use of video cameras, and ADS-B, by employing 1090MHz receivers, many meteorological conditions could be obtained.
+
+One such condition which could be investigated is the wind velocity, $\Vec{v_w}$ as this is vital knowledge for any aviation service. This is defined in terms of the velocity of an aircraft relative to the ground (ground velocity), $\Vec{v_g}$ and the velocity of an aircraft relative to the air (air velocity), $\Vec{v_a}$. The mathematical vector equation relating these velocities is
+
+\begin{equation}
+\label{eq:wind_vel}
+\Vec{v_w} = \Vec{v_g} - \Vec{v_a}.
+\end{equation}
+
+Thus, by utilising the ADS-B measurements given for the air speed and ground speed of the aircraft, the wind velocity can be easily found. Moreover, by making use of optical measurement techniques, the wind velocity could also be derived from observations in the variation of aircraft motion. These two methods could be compared to investigate the viability of both processes.
+
+Furthermore, providing alternative techniques for deriving meteorological information could be of benefit to weather forecasters, such as the Met Office which this project was carried out in association with. The Met Office is designated by the Civil Aviation Authority (CAA) to ensure safe and reliable transport \cite{Web01}. In addition to this, the Met Office provides a fundamental weather service to the public and commercial sector in the form of the `Public Weather Service' (PWS); this service protects lives, property and infrastructure from weather impacts \cite{Web02}. The PWS provides large economic benefits to the UK and the value to the aviation sector is roughly £400m per annum \cite{Web02}: a valuable part of the Met Office weather services. So, utilising these alternative methods for obtaining meteorological information could provide financial benefits to the Met Office. Furthermore, many wider benefits could brought to the aviation sector such as, ensuring safe aircraft travel, reducing fuel consumption (saving on running costs and reducing environmental impacts in the way of reduced CO$_2$ emissions \cite{Paper01}) and anticipating delay times at airports.
+
+
+
+\section{Theory}
+\label{sec:theory}
+
+There are three aircraft axes of rotation: roll ($\phi$), pitch ($\theta$) and yaw ($\psi$) about the $x$,  $y$ and $z$ axes in the Earth's reference frame respectively. These are known as the `Euler angles' and are illustrated in \figref{fig:aircraft_angles} \cite{Web01}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.46]{"aircraft_axes".jpg}
+\caption{A visual illustration defining aircraft components and Euler angles: roll ($\phi$), pitch ($\theta$) and yaw $(\psi$) {\textendash} including their positive rotational directions along with the co-ordinate axes defined in the Earth's frame of reference. Image adapted from \cite{Web04}.}
+\label{fig:aircraft_angles}
+\end{figure}
+
+
+During motion, the aircraft is susceptible to change in orientation about these axes from numerous forces. These variations in angles can be characterised by the following three moment equations \cite{Book02} relating the angular momenta $L$, $M$ and $N$ about the $x$, $y$ and $z$ axes respectively:
+
+\begin{equation}
+\label{eq:roll_moment}
+L = I_x\ddot{\phi} + (I_z - I_y)\dot{\theta}\dot{\psi}
+\end{equation}
+
+\begin{equation}
+\label{eq:pitch_moment}
+M = I_y\ddot{\theta} + (I_x - I_z)\dot{\psi}\dot{\phi}
+\end{equation}
+
+\begin{equation}
+\label{eq:yaw_moment}
+N = I_z\ddot{\psi} + (I_y - I_x)\dot{\phi}\dot{\theta}
+\end{equation}
+
+where $I_x$, $I_y$ and $I_z$ are the moments of inertia about the $x$, $y$ and $z$ axes respectively. The terms $\dot{\phi}$, $\dot{\theta}$ and $\dot{\psi}$ in equations \eqref{eq:roll_moment}, \eqref{eq:pitch_moment} and \eqref{eq:yaw_moment} are the rates of change (angular velocities) of the roll, pitch and yaw angles respectively, with $\ddot{\phi}$, $\ddot{\theta}$ and $\ddot{\psi}$ acting as the roll, pitch and yaw angular accelerations respectively.
+
+By observing the aircraft face-on (along the $x$ axis) in \figref{fig:aircraft_angles} and considering the motion in two dimensions $(y,z)$ the nature of such forces acting upon the roll angle $\phi$ can be investigated. For example, fin lift in addition to body lift arises from cross-winds (directed along the $y$ axis) plus, up-draft forces (directed along the $z$ axis) acting from underneath the right and left wings have considerable impacts on the rate of change of roll angle of the aircraft. By using the co-ordinate positions of the aircraft wing tips in two dimensions $(y,z)$ and employing the standard trigonometric relation,
+
+\begin{equation}
+\label{eq:roll_angle}
+\phi = \arctan{\Big(\frac{z_2 - z_1}{y_2 - y_1}\Big)}
+\end{equation}
+
+where $(y_1,z_1)$ and $(y_2, z_2)$ are the right and left wing tip co-ordinates respectively, the roll angle, $\phi$ can be readily found from an approaching aircraft.
+
+The roll angle also has profound effects during the change in direction of aircraft motion. There is an interesting relation between the radius of the turn $R$ and the roll angle $\phi$ involving the air speed $v_a$ of the aircraft. This can be best understood by considering a `banked turn' of an aircraft \figref{fig:bank_turn} \cite{Web05}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.54]{"bank_turn".jpg}
+\caption{An illustration showing the forces acting on an aircraft of mass $m$ travelling at an air speed of $v_a$ whilst sweeping a radius $R$ during a `banked turn'; where $L_F$ is the lift force and the centripetal force is given by $m{v_a}^2/R$. Image adapted from \cite{Web02}.}
+\label{fig:bank_turn}
+\end{figure}
+
+From \figref{fig:bank_turn} and using Newton's second law, balancing forces along the horizontal reveals,
+
+\begin{equation}
+\label{eq:lift1}
+L_F \sin{\phi} = \frac{m{v_a}^2}{R}
+\end{equation}
+
+where $L_F$ is the lift force of the aircraft, $m$ and $v_a$ is the aircraft mass and airspeed respectively with the radius of the turn given by $R$. By balancing vertical forces in \figref{fig:bank_turn}, the lift force $L_F$ can be expressed as 
+
+\begin{equation}
+\label{eq:lift2}
+L_F = \frac{mg}{cos{\phi}}
+\end{equation}
+
+where $g$ is the acceleration due to the Earth's gravity. Substituting equation \eqref{eq:lift2} into equation \eqref{eq:lift1} and rearranging for the radius of the turn yields,
+
+\begin{equation}
+\label{eq:turn_radius}
+R = \frac{{v_a}^2}{g \tan{\phi}}
+\end{equation}
+
+which expresses the $R$ in terms of $v_A$ and $\phi$. This shows, explicitly, how the turn radius and roll angle are related to one another.
+
+
+\section{Experimental Method}
+\label{sec:method}
+
+\subsection{Optical and ADS-B Roll Measurements}
+\label{ssec:roll-method}
+
+The roll angle for a `TUI Airways' aircraft with call sign `TOM3KM', arriving into Exeter airport on the 6\textsuperscript{th} March 2020 approximately between the times of 4:45pm - 5:00pm was investigated both optically and using ADS-B. By analysing the roll angle, this could give insightful information into the wind velocity $\Vec{v_w}$ and, in particular, the wind direction during the aircraft landing.
+
+The optical investigation was undertaken by using a `Canon EOS 700D' with a `Sirius' 60-300mm focal camera lens and `Hoya' 67mm UV filter attached. This camera was used with a 25 frames per second (fps) for recording. The camera was mounted on a tripod to ensure video stability whilst capturing the optical data for the incoming aircraft. This was positioned approximately at a distance $D \sim 2$km from the end of the runway, as shown in \figref{fig:runway} (in reality the camera was offset to the runway see \secref{sec:discussion}). This set-up allowed video footage of the aircraft to be captured face-on (along the $x$ axis, as described in \secref{sec:theory}) during its descent. The start and end times of the recording were also noted, in addition to the longitude and latitude co-ordinates. These measurements were required for calibration with the times and positions from the ADS-B data. 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.38]{"runway".jpg}
+\caption{A plan view of the observation set-up for collecting optical roll data from the landing aircraft `TOM3KM'. The distance $D \sim 2$km is the distance from the camera to the end of the runway and $d$ is the distance between the right and left wing tips.}
+\label{fig:runway}
+\end{figure}
+
+
+Whilst the optical investigation was carried out, the ADS-B measurements were received simultaneously from the incoming aircraft from the University of Exeter Physics Building. A note of the time started for the ADS-B data collection was also taken for later calibration with the optical measurements.
+
+After all the relevant measurements were taken from both the optical and ADS-B, computational analysis of the data was performed. A python based module `OpenCV' was employed in a modified script (see Appendix A) from a recommended source \cite{Web06} to track and output the pixel co-ordinate positions from both wing tips of the aircraft. This program output the top-left $(y,z)$ co-ordinate corners of the tracking boxes as well as the width, $w$ and height, $h$ of the boxes. To obtain the co-ordinate positions for the tracking box centres $(y_{c_i},z_{c_i})$, where $i = 1$ or $i = 2$ denoting the right and left wings respectively, the following formulae were employed;
+
+\begin{equation}
+\label{eq:y_centre}
+y_{c_i} = \frac{y_i + w_i}{2}
+\end{equation}
+
+
+\begin{equation}
+\label{eq:z_centre}
+z_{c_i} = \frac{z_i - h_i}{2}
+\end{equation}
+
+hence, equations \eqref{eq:y_centre} and \eqref{eq:z_centre} can be used to yield the $(y,z)$ positions for the right and left wing tips of the aircraft. Once these centre co-ordinates were computed for both wings, they were then substituted into equation \eqref{eq:roll_angle} to obtain the roll angle at a particular time instant, $t'$. 
+
+To obtain this time instant, the frame number was divided by the fps (= 25). After converting from frame number to time, this time instant was then calibrated to match the ADS-B time by using
+
+\begin{equation}
+\label{eq:}
+t = {t' - \Delta{t}}
+\end{equation}
+
+where $t$ is the calibrated optical time, $\Delta{t}$ is the time difference between the optical and ADS-B time. Thus, a plot of the roll angle against time for the optical and ADS-B data could then be generated and compared with one another.
+
+
+\subsection{Euler Angles}
+\label{ssec:euler}
+
+In order to extract the Euler angles of an aircraft from video footage the method of matching a 3D model to a given frame of the footage was to be employed. This involves changing the 3D orientation of a model of the same aircraft seen in the footage until it best matches, by eye, the video frame upon which it is overlaid. From here, Euler angles were to be measured from the model's orientation. These Euler angles are then to be compared to the corresponding video footage to test for any discrepancy. In this case, 3D modelling software `Blender' and `SolidWorks' were utilised, Blender being preferred for ease of reading angle measurements.
+
+\section{Results and Discussion}
+\label{sec:discussion}
+
+\subsection{Optical and ADS-B Roll Analysis}
+\label{ssec:ssec:roll-analysis}
+
+\figref{fig:total_roll} shows a plot of roll angle against time for both the optical and ADS-B data from the aircraft `TOM3KM'. $t = 0$ is the time at which the optical observations commenced for the landing aircraft.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.62]{"TOM3KM_total_roll".pdf}
+\caption{A plot of roll $\phi$ against time $t$ displaying the results obtained from the optical and ADS-B data from the aircraft `TOM3KM'.}
+\label{fig:total_roll}
+\end{figure}
+
+Studying \figref{fig:total_roll} further, the roll angle measured from ADS-B changes significantly at $t \sim -350$s and $t \sim -220$s. Following the discussion made in \secref{sec:theory}, regarding `banked turns' in aircraft and considering relation \eqref{eq:turn_radius}, this change can be linked to the directional change of the aircraft in the latitude vs longitude plot displayed in \figref{fig:long_lat}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.62]{"long_lat".pdf}
+\caption{A plot of latitude against longitude for the aircraft `TOM3KM'.}
+\label{fig:long_lat}
+\end{figure}
+
+Indeed, \figref{fig:long_lat} nicely demonstrates two changes in the aircraft's direction in the form of anti-clockwise turns. These represent a form of `banked turn' as described in \secref{sec:theory} and they correspond with the changes in the aircraft roll angle from \figref{fig:total_roll}. Thus, there is a fundamental relationship between the change in roll angle and the changes that occur within the direction of travel for the aircraft as predicted by equation \eqref{eq:turn_radius}.
+
+By considering the later times of observation in \figref{fig:total_roll}, an interesting comparison can be made between the optical and ADS-B roll angle data. This is illustrated in \figref{fig:roll}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.62]{"TOM3KM_combined_roll7".pdf}
+\caption{A plot of roll $\phi$ against time $t$ displaying the results obtained from the optical and ADS-B data from the aircraft `TOM3KM' for the later times of observation in \figref{fig:total_roll}.}
+\label{fig:roll}
+\end{figure}
+
+Here \figref{fig:roll} shows some discrepancies between the optical and ADS-B roll angle data. It is clear to see that the resolution of the ADS-B data is much lower than that captured from the optical method. This makes it difficult to gain precise results from the ADS-B method but, one can still note some similarities between the two methods. At $t = 10$s there is a sudden change in roll angle for the optical data. At a slightly earlier time this changes is also captured by the ADS-B data. However, this highlights an unphysical time difference between the two methods: one would expect the change in the optical data to occur first as this is unfolding almost instantaneously, whereas the ADS-B approach takes slightly longer due to processing times, etc. This discrepancy could be due to an error made in the times noted for the optical or ADS-B data. Thus, for future work the times obtained from both measurements needs to be carefully measured. And, ideally, both techniques should be carried out at the same location to mitigate this error.
+
+Furthermore, by analysing the optical data in \figref{fig:roll} the amplitude of oscillations in the roll angle decreases with time. This implies that the stability of the aircraft increases over time and suggests that the wind speed is decreasing at lower altitudes as the aircraft comes into land. 
+
+However, during the times of observation, the camera lens was frequently buffeted by the winds causing a slight instability in the video footage. Hence there could be some discrepancies in the measurements of the optical roll angles, regarding the preciseness of measurements, using the techniques described in \secref{ssec:roll-method}. These discrepancies can be analysed further by considering a Gaussian plot for the optical roll angle data, as shown in \figref{fig:Gaussian-roll}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.62]{"Gaussian Graph7".pdf}
+\caption{A Gaussian distribution for the roll angles obtained from the optical data measurements.}
+\label{fig:Gaussian-roll}
+\end{figure}
+
+\figref{fig:Gaussian-roll} shows a slight `kink' in the Gaussian distribution due to the lack of roll angle measurements obtained between the values of $-0.25^{\circ}$ and $0.25^{\circ}$. This highlights the instability in the camera lens due to the buffeting wind whilst undertaking observations. To mitigate this in future measurements, a wind break could be used during observation to increase the stability of the lens without compromising the quality of the recording; or a video stabilisation software could be employed provided the quality of the recording is not compromised after processing.
+
+In addition to the discrepancies in the stability of the camera lens, the camera set-up depicted in \secref{ssec:roll-method} \figref{fig:runway} was difficult to achieve and, during observations, the camera was slightly offset to the runway. This is shown from a map photo (taken via a smart phone) in \figref{fig:map}. This set-up could also add further discrepancies to the accuracy of the obtained optical roll angles in the form of a parallax error.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{"observation_pos".JPG}
+\caption{A map view of the observations site (blue circle) with respect to the end of the runway (red marker) during the data collection for the aircraft `TOM3KM'. This also includes the compass north direction (in the bottom right of the image) showing that the arriving aircraft is approaching from the North Easterly direction.}
+\label{fig:map}
+\end{figure}
+
+
+However, despite these discrepancies, an estimate for the roll angle mean, $\overline{\phi}$ and standard deviation, $\sigma_{\phi}$ was obtained from \figref{fig:Gaussian-roll}: this was found to be $0.28 \pm 0.50^{\circ}$. Although the standard deviation is large, suggesting that the optical data values are spread far from the mean, the mean value could be used to make an estimate for the wind direction. By considering this positive roll angle obtained and studying its positive orientation \figref{fig:aircraft_angles} in \secref{sec:theory}, this suggests that the prevailing wind is from the Southerly direction. But, this is not in accordance with the North Westerly ($300^{\circ}$) wind direction given for that day \cite{Web07}. This is shown in \figref{fig:wind-direction}. Therefore, one cannot simply use the average roll angle value to determine the wind direction. Instead, studying how the roll angle varies with time, such as in \figref{fig:roll}, or altitude is a more valid approach. Indeed, if the yaw angle was also considered as a function of altitude, this could give a better indication as to how the wind direction varies with altitude as the aircraft comes into land.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{"wind_direction".JPG}
+\caption{An image showing the speed and direction of the prevailing wind (i.e. $\Vec{v_w}$) during the observations of `TOM3KM' on the 6\textsuperscript{th} March 2020 at Exeter Airport. Image adapted from \cite{Web07}.}
+\label{fig:wind-direction}
+\end{figure}
+
+
+So, the roll angle could be used to determine the prevailing wind direction. But, one should also note that there are many other factors that need to be taken into account for the roll angle. For example, the pilot's steering of the aircraft could significantly alter the roll. Therefore, the roll angle cannot simply be deduced from meteorological conditions and all these other factors need to be carefully considered for future investigations.
+
+% BELOW IS FOR DISCUSSION ON SQUINT TO RUNWAY
+% In reality the camera set-up displayed in \figref{fig:runway} was difficult to achieve and the camera was slightly offset to the runway. So, the longitude and latitude co-ordinates were measured using Global Positioning System (GPS) {\textendash} via a smart phone {\textendash} for later reference (these co-ordinates were also needed to calibrate the ADS-B positional data).
+
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Overall, the results presented in \secref{sec:discussion} show some interesting features in the roll angle for landing aircraft. Even though there were discrepancies within the optical methods of observation, the improvement suggestions made in \secref{ssec:ssec:roll-analysis} could improve this process. In particular, if the set-up was automated, stabilised and more aligned with the runway as indicated in \secref{ssec:roll-method} \figref{fig:runway}, in addition to being located at an airport with a high rate of air-traffic, e.g. Heathrow, a vast array of meteorological information, such as wind speed, wind direction, etc could be obtained at a regular updated rate due to the consistent flow of arriving air traffic. Therefore, using a combination of video recordings and ADS-B measurements for incoming aircraft could provide the Met Office with an alternative method to obtain meteorological information which would significantly benefit the aviation sector.
+
+
+\cleardoublepage
+\begin{thebibliography}{9}
+\addcontentsline{toc}{section}{References}
+
+\bibitem{Book01} Sun J, \textit{The 1090MHz Riddle: Decoding Mode-S and ADS-B Data}, 20\textsuperscript{th} March 2020 , \url{https://mode-s.org/decode/}. 
+\bibitem{Web01} `Aviation Regulated Services', 20\textsuperscript{th} March 2020,  \url{https://www.metoffice.gov.uk/services/transport/aviation/regulated}.
+\bibitem{Web02} `How valuable is the Met Office?', 20\textsuperscript{th} March 2020,  \url{https://www.metoffice.gov.uk/about-us/what/pws/value}.
+\bibitem{Web03} `Europe ADS-B Mandate Coming June 2020', 20\textsuperscript{th} March 2020,  \url{https://www.ainonline.com/aviation-news/business-aviation/2019-05-19/europe-ads-b-mandate-coming-june-2020}.
+\bibitem{Paper01} Singh V, \& Sharma S.K, 2015, \textit{Fuel Consumption in Air Transport: a Review, Classification, Critique, Simple meta-analysis, and future research implications}, European Transport Research Review 7, Article Number: 12, pages 1 - 24. 
+\bibitem{Book02} Schmidt Louis V, 1998, \textit{Introduction to Aircraft Flight Dynamics}, 1\textsuperscript{st} Edition, Chapter 4, pages 93 - 107.
+\bibitem{Web04} `Aircraft Rotations (Body Axes)' (NASA, Glenn Research Center), 17\textsuperscript{th} March 2020,  \url{https://www.grc.nasa.gov/www/k-12/airplane/rotations.html}.
+\bibitem{Web05} `Banking Turn' (NASA, Glenn Research Center), 17\textsuperscript{th} March 2020,  \url{https://www.grc.nasa.gov/WWW/k-12/airplane/turns.html}.
+\bibitem{Web06} `Tracking multiple objects with OpenCV', 6\textsuperscript{th} March 2020,  \url{https://www.pyimagesearch.com/2018/08/06/tracking-multiple-objects-with-opencv/}
+\bibitem{Web07} `flightradar24: Exeter Airport Arrivals', 6\textsuperscript{th} March 2020,  \url{https://www.flightradar24.com/data/airports/ext/arrivals}
+
+
+\end{thebibliography}
+
+\onecolumn
+\appendix
+\section*{Appendix A: Code for Calculating the Path of a Refracted Ray}
+\label{app:appendix_A}
+\addcontentsline{toc}{section}{Appendix A: Code for Tracking Multiple Objects}
+
+\begin{footnotesize}
+\begin{lstlisting}[language=Python,showstringspaces=false]
+
+# import the necessary packages
+from imutils.video import VideoStream
+from imutils.video import FPS
+import argparse
+import imutils
+import time
+import cv2
+import numpy as np
+
+# opening output .csv file
+file1 = open("optical_data8.csv", "w")
+# recording the times since starting the video analysis to a separate .csv file
+
+# construct the argument parser and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-v", "--video", type=str,
+	help="path to input video file")
+ap.add_argument("-t", "--tracker", type=str, default="kcf",
+	help="OpenCV object tracker type")
+args = vars(ap.parse_args())
+
+# initialize a dictionary that maps strings to their corresponding
+# OpenCV object tracker implementations
+OPENCV_OBJECT_TRACKERS = {
+	"csrt": cv2.TrackerCSRT_create,
+	"kcf": cv2.TrackerKCF_create,
+	"boosting": cv2.TrackerBoosting_create,
+	"mil": cv2.TrackerMIL_create,
+	"tld": cv2.TrackerTLD_create,
+	"medianflow": cv2.TrackerMedianFlow_create,
+	"mosse": cv2.TrackerMOSSE_create
+}
+# initialize OpenCV's special multi-object tracker
+trackers = cv2.MultiTracker_create()
+
+# initialize the bounding box coordinates of the object we are going
+# to track
+initBB = None
+
+# if a video path was not supplied, grab the reference to the web cam
+if not args.get("video", False):
+	print("[INFO] starting video stream...")
+	vs = VideoStream(src=0).start()
+	time.sleep(1.0)
+
+# otherwise, grab a reference to the video file
+else:
+	vs = cv2.VideoCapture(args["video"])
+
+# initialize the FPS throughput estimator
+fps = None
+
+
+
+
+frame_count = 0
+# loop over frames from the video stream
+while True:
+	# grab the current frame, then handle if we are using a
+	# VideoStream or VideoCapture object
+	frame = vs.read()
+	frame = frame[1] if args.get("video", False) else frame
+	frame_count += 1
+	# check to see if we have reached the end of the stream
+	if frame is None:
+		break
+	# resize the frame (so we can process it faster)
+	frame = imutils.resize(frame, width=1000)
+
+	# check to see if we are currently tracking an object
+	if initBB is not None:
+		# grab the new bounding box coordinates of the object
+		(success, box) = tracker.update(frame)
+
+	#printing the start time of the video in seconds
+
+	# grab the updated bounding box coordinates (if any) for each
+	# object that is being tracked
+	(success, boxes) = trackers.update(frame)
+	# loop over the bounding boxes and draw then on the frame
+	counter = 0
+	for box in boxes:
+		counter += 1
+		(x, y, w, h) = [int(v) for v in box]
+		cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+		
+		# print(counter, epoch_time, x, y, w, h)
+	
+		# writing counter, times, x,y coords with box width and height to .csv file
+		file1.write("{:d},{:d},{:d},{:d},{:d},{:d}\n" \ 
+		.format(counter, frame_count, x, y, w, h))
+		fps.update()
+		fps.stop()
+
+		# initialize the set of information we'll be displaying on
+		# the frame
+		info = [
+			("Tracker", args["tracker"]),
+			("Success", "Yes" if success else "No"),
+			("FPS", "{:.2f}".format(fps.fps())),
+		]
+	# show the output frame
+	cv2.imshow("Frame", frame)
+	key = cv2.waitKey(1) & 0xFF
+	# if the 's' key is selected, we are going to "select" a bounding
+	# box to track
+	if key == ord("s"):
+		# select the bounding box of the object we want to track (make
+		# sure you press ENTER or SPACE after selecting the ROI)
+		box = cv2.selectROI("Frame", frame, fromCenter=False,
+			showCrosshair=True)
+		# create a new object tracker for the bounding box and add it
+		# to our multi-object tracker
+		tracker = OPENCV_OBJECT_TRACKERS[args["tracker"]]()
+		trackers.add(tracker, frame, box)
+
+		# start OpenCV object tracker using the supplied bounding box
+		# coordinates, then start the FPS throughput estimator as well
+		tracker.init(frame, initBB)
+		fps = FPS().start()
+
+	# if the `q` key was pressed, break from the loop
+	elif key == ord("q"):
+		break
+# if we are using a webcam, release the pointer
+if not args.get("video", False):
+	vs.stop()
+# otherwise, release the file pointer
+else:
+	vs.release()
+
+#closing output .csv files
+file1.close()
+
+# close all windows
+cv2.destroyAllWindows()
+\end{lstlisting}
+\end{footnotesize}
+
+
+\end{document}
